@@ -17,7 +17,7 @@
               <p class="text-caption mt-1">{{ user.email }}</p>
               <v-divider class="my-3"></v-divider>
               <v-btn rounded variant="text" @click="signOut">
-                Disconnect
+                <v-icon icon="mdi-logout"></v-icon>Logout
               </v-btn>
             </div>
           </v-card-text>

@@ -76,44 +76,4 @@ watch(() => route.params.path, loadContent)
 onMounted(loadContent)
 </script>
 
-<style>
-/* Minimal Typography for Reading */
-.markdown-body {
-  font-family: 'Georgia', serif; /* Classic book feel */
-  line-height: 1.8;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.87);
-}
 
-.markdown-body h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-  color: #ffca28; /* Amber accent */
-}
-
-.markdown-body h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 0.5rem;
-}
-
-.markdown-body p {
-  margin-bottom: 1.5rem;
-}
-
-.markdown-body ul {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.markdown-body blockquote {
-  border-left: 4px solid #ffca28;
-  padding-left: 1rem;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 1.5rem 0;
-}
-</style>
