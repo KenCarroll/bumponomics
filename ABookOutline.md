@@ -18,6 +18,13 @@
 *   **Progress = People + Problems**: The algebra of agency.
 
 #### **Chapter 2: The Problems with Problems**
+
+
+*   **Complex DynamicEnvironments**: Volatility, Uncertainty, Complexity, Ambiguity.
+
+*   **Wicked Problems**: Messy, complex, and often unsolvable.
+
+
 *   **The Ladder of Awareness**: making problems visible, accessible, and actionable.
 *   **Complex Adaptive Problems (CAPs)**: Problems as complex adaptive systems.
 *   **Fitness Landscapes**: Problems as gradients of energy in a landscape.
@@ -37,9 +44,7 @@ Feedback (learnings)
 
 *   **Theories of Changem**: Human Transformations.
 
-*   **Wicked Problems**: Messy, complex, and often unsolvable.
 
-*   **VUCA**: Volatility, Uncertainty, Complexity, Ambiguity.
 
 #### **Chapter 3: The B.U.M.P.S. Philosophy**
 *   **BUMPStrategy**: The BUMPS mission and strategy. Using BUMPS thinking to develop BUMPS thinking (problem-solving problem-solving).
@@ -91,7 +96,7 @@ Feedback (learnings)
 
 ### **Part II: The Taxonomy of the xUMPS**
 
-#### **Chapter 4: The Landscape of Difficulty**
+#### **Chapter 4: BUMPS, HUMPS, and LUMPS**
 *   **BUMPS (Big Untamed Meaningful Problematic Situations)**:
     *   The "Macro" level. Societal, strategic, and existential challenges.
 *   **HUMPS ([Human/Huge?] Untamed Meaningful Problematic Situations)**:

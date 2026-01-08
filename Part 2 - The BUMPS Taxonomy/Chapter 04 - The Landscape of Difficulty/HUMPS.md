@@ -1,0 +1,7 @@
+# HUMPS (Huge Untransformed Meaningful Problematic Situations)
+
+HUMPS are the largest, most complex, and most challenging problems that exist. They are the akin to 'missions' in terms of military strategy, but for problem solving. HUMPS define the trajectory of travel for our organizations and societies. 
+
+HUMPS are the patterns. BUMPS are the instances. LUMPS are the details. 
+
+HUMPS can be difficult to graph is life because they are often so large that they are not visible due to our relative scale to them. 
