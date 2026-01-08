@@ -20,6 +20,10 @@
             <v-icon start size="small">mdi-robot</v-icon>
             AI Chat
           </v-tab>
+          <v-tab value="reviews">
+            <v-icon start size="small">mdi-star-outline</v-icon>
+            Reviews
+          </v-tab>
           <v-tab value="comments">
             <v-icon start size="small">mdi-comment-text-outline</v-icon>
             Comments
@@ -33,6 +37,11 @@
         <!-- Chat Tab -->
         <v-window-item value="chat" class="h-100">
           <chat-panel @close="isOpen = false" />
+        </v-window-item>
+
+        <!-- Reviews Tab -->
+        <v-window-item value="reviews" class="h-100">
+          <site-review-list />
         </v-window-item>
 
         <!-- Comments Tab -->
@@ -53,6 +62,7 @@
 import { ref, watch, onUnmounted } from 'vue'
 import ChatPanel from './ChatPanel.vue'
 import CommentSidebar from './CommentSidebar.vue'
+import SiteReviewList from './SiteReviewList.vue'
 
 const props = defineProps({
   modelValue: Boolean,

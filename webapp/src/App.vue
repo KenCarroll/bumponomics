@@ -6,6 +6,12 @@
       
       <v-spacer></v-spacer>
       
+      <!-- Search Toggle -->
+      <v-btn icon class="mr-2" @click="searchOpen = true">
+        <v-icon>mdi-magnify</v-icon>
+        <v-tooltip activator="parent" location="bottom">Search Book</v-tooltip>
+      </v-btn>
+
       <!-- AI Chat Toggle -->
       <v-btn 
         v-if="user" 
@@ -18,6 +24,17 @@
         <v-tooltip activator="parent" location="bottom">Ask AI</v-tooltip>
       </v-btn>
 
+        <!-- Reviews Toggle -->
+        <v-btn 
+          icon 
+          class="mr-2" 
+          :color="rightDrawerOpen && rightTab === 'reviews' ? 'primary' : undefined"
+          @click="toggleRightDrawer('reviews')"
+        >
+          <v-icon>mdi-star-box-outline</v-icon>
+          <v-tooltip activator="parent" location="bottom">Read Reviews</v-tooltip>
+        </v-btn>
+
       <!-- Comments Toggle -->
       <v-btn 
         icon 
@@ -29,6 +46,8 @@
         <v-tooltip activator="parent" location="bottom">Comments</v-tooltip>
       </v-btn>
       
+
+
       <login-button class="mr-4" />
     </v-app-bar>
 
@@ -45,7 +64,7 @@
       </div>
       <v-divider class="mb-2"></v-divider>
       
-      <app-drawer :items="contentItems" />
+      <app-drawer :items="contentItems" is-root />
 
       <template v-slot:append>
         <v-divider></v-divider>
@@ -89,12 +108,15 @@
       
       <v-spacer></v-spacer>
       
-      <!-- Theme Toggle (Moved to Bottom) -->
+    <!-- Theme Toggle (Moved to Bottom) -->
       <v-btn icon density="compact" variant="text" @click="toggleTheme">
         <v-icon size="small">{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
         <v-tooltip activator="parent" location="top">{{ isDark ? 'Light Mode' : 'Dark Mode' }}</v-tooltip>
       </v-btn>
     </v-footer>
+
+    <!-- Global Search Dialog -->
+    <search-dialog v-model="searchOpen" />
   </v-app>
 </template>
 
@@ -104,6 +126,7 @@ import { useRoute } from 'vue-router'
 import AppDrawer from '@/components/AppDrawer.vue'
 import LoginButton from '@/components/LoginButton.vue'
 import RightSidebar from '@/components/RightSidebar.vue'
+import SearchDialog from '@/components/SearchDialog.vue'
 import contentItems from '@/content.json'
 import { useAuth } from '@/composables/useAuth'
 import { usePreferences } from '@/composables/usePreferences'
@@ -111,12 +134,14 @@ import { usePreferences } from '@/composables/usePreferences'
 const route = useRoute()
 const drawer = ref(true)
 const isDocked = ref(false)
+const searchOpen = ref(false)
 
 // Unified Right Drawer State
 const rightDrawerOpen = ref(false)
 const rightTab = ref('chat') // 'chat' or 'comments'
 
 const { user } = useAuth()
+// ... existing logic ...
 const { isDark, toggleTheme } = usePreferences()
 
 // Toggle Right Drawer and specific tab

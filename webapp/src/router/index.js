@@ -21,10 +21,12 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/home',
       name: 'home',
-      redirect: to => {
-        return firstPath ? { name: 'read', params: { path: firstPath } } : { name: 'about' }
-      }
+      component: () => import('../views/HomeView.vue')
     },
     {
       path: '/read/:path(.*)', // Catch-all for paths with slashes

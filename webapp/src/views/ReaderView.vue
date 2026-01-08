@@ -11,6 +11,15 @@
     </div>
 
     <div v-else class="markdown-body pt-4 pb-10">
+      <!-- File Header with Icon -->
+      <div v-if="currentFile" class="d-flex align-center mb-6 text-primary">
+        <v-icon size="32" class="mr-4">{{ getIcon(currentFile) }}</v-icon>
+        <h1 class="text-h4 font-weight-bold ma-0" style="line-height: 1.2;">
+          {{ currentFile.title || currentFile.name }}
+        </h1>
+      </div>
+      <v-divider class="mb-8"></v-divider>
+
       <!-- Rendered Content -->
       <div v-html="renderedContent"></div>
     </div>
@@ -22,8 +31,11 @@ import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import contentTree from '@/content.json'
+import { useIcons } from '@/composables/useIcons'
 
 const route = useRoute()
+const { getIcon } = useIcons()
+
 const md = new MarkdownIt({
   html: true,
   linkify: true,
@@ -33,6 +45,7 @@ const md = new MarkdownIt({
 const loading = ref(false)
 const error = ref(false)
 const markdownSource = ref('')
+const currentFile = ref(null)
 
 // Flatten tree to find content easily by path
 const flatten = (nodes) => {
@@ -62,6 +75,7 @@ const loadContent = () => {
 
   if (fileNode && fileNode.content) {
     markdownSource.value = fileNode.content
+    currentFile.value = fileNode
   } else {
     error.value = true
   }
