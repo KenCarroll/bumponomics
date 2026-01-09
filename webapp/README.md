@@ -42,3 +42,7 @@ npm run build
 ```sh
 npm run lint
 ```
+### Auto-Generate the Table of Contents
+
+npm run gen-content
+

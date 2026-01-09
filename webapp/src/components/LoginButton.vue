@@ -16,6 +16,37 @@
               <h3>{{ user.displayName }}</h3>
               <p class="text-caption mt-1">{{ user.email }}</p>
               <v-divider class="my-3"></v-divider>
+              
+              <!-- Subscription Status -->
+              <v-btn
+                v-if="!isSubscribed"
+                rounded
+                variant="tonal"
+                color="primary"
+                class="mb-3 w-100"
+                :loading="subLoading"
+                @click.stop="handleSubscribe"
+              >
+                <v-icon start icon="mdi-email-plus-outline"></v-icon>
+                Subscribe
+              </v-btn>
+              
+              <div v-else class="mb-3">
+                 <v-btn
+                  rounded
+                  variant="text"
+                  color="success"
+                  class="w-100 mb-1"
+                  prepend-icon="mdi-check-circle"
+                  readonly
+                >
+                  Subscribed
+                </v-btn>
+                <div class="text-caption text-medium-emphasis text-decoration-underline cursor-pointer" @click.stop="handleUnsubscribe">
+                  Unsubscribe
+                </div>
+              </div>
+
               <v-btn rounded variant="text" @click="signOut">
                 <v-icon icon="mdi-logout"></v-icon>Logout
               </v-btn>
@@ -44,7 +75,34 @@
 </template>
 
 <script setup>
+import { ref, watch, onMounted } from 'vue'
 import { useAuth } from '@/composables/useAuth'
+import { useNewsletter } from '@/composables/useNewsletter'
 
 const { user, loading, error, signInWithGoogle, signOut } = useAuth()
+const { subscribe, unsubscribe, checkSubscriptionStatus, isSubscribed, loading: subLoading } = useNewsletter()
+
+const handleSubscribe = async () => {
+  if (user.value?.email) {
+    await subscribe(user.value.email)
+    await checkSubscriptionStatus(user.value.email)
+  }
+}
+
+const handleUnsubscribe = async () => {
+  if (user.value?.email) {
+    await unsubscribe(user.value.email)
+    // isSubscribed is updated inside useNewsletter, but consistent re-check doesn't hurt
+    await checkSubscriptionStatus(user.value.email)
+  }
+}
+
+// Check status whenever user changes or component mounts
+watch(user, async (newUser) => {
+  if (newUser?.email) {
+    await checkSubscriptionStatus(newUser.email)
+  } else {
+    isSubscribed.value = false
+  }
+}, { immediate: true })
 </script>
