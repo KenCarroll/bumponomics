@@ -4,9 +4,10 @@ const ICON_MAP = {
   'Part 1 - The Premise': 'mdi-lightbulb-on-outline',
   'Part 2 - The BUMPS Taxonomy': 'mdi-shape-outline',
   'Part 3 - Game Theory': 'mdi-chess-knight',
-  'Chapter 01 - Introduction': 'mdi-book-open-page-variant',
-  'Chapter 02 - The Problems with Problems': 'mdi-alert-octagon-outline',
-  'Chapter 03 - The BUMPS Philosophy': 'mdi-compass-outline',
+  '1.1 - The Glue of Society': 'mdi-book-open-page-variant',
+  '1.2 - The Problems with Problems': 'mdi-alert-octagon-outline',
+  '1.3 - The BUMPS Philosophy': 'mdi-compass-outline',
+  'Contents': 'mdi-format-list-bulleted',
 }
 
 export function useIcons() {

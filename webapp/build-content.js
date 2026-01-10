@@ -10,7 +10,7 @@ const CONTENT_ROOT = path.resolve(__dirname, '../');
 const OUTPUT_JSON = path.resolve(__dirname, 'src/content.json');
 const OUTPUT_MD = path.resolve(CONTENT_ROOT, 'CONTENTS.md');
 
-const IGNORE_DIRS = ['webapp', '.git', 'node_modules', '.gemini', '.agent', '.vscode', 'dist', 'public'];
+const IGNORE_DIRS = ['webapp', '.git', 'node_modules', '.gemini', '.agent', '.vscode', 'dist', 'public', 'workflows', 'Supporting-Docs'];
 const IMAGE_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
 
 function scanDirectory(dir, depth = 0) {
@@ -44,9 +44,9 @@ function scanDirectory(dir, depth = 0) {
         });
       }
     } else if (item.isFile() && item.name.endsWith('.md')) {
-      // Skip the generated CONTENTS.md to avoid recursion loops or clutter
-      if (item.name === 'CONTENTS.md') continue;
-      // Skip generic files if needed, but let's keep most
+      // We want CONTENTS.md to be available in the JSON so ReaderView can read it.
+      // But we might filter it out of the drawer list in the UI.
+      // if (item.name === 'CONTENTS.md') continue;
       
       const content = fs.readFileSync(fullPath, 'utf-8');
       // Simple extraction of title from first line # if present
@@ -76,21 +76,41 @@ function scanDirectory(dir, depth = 0) {
 
 function generateMarkdownTOC(nodes, depth = 0) {
   let markdown = '';
-  // Use 2 spaces for indentation
-  const indent = '  '.repeat(depth);
-
+  
+  // Sort nodes so files come after directories or mixed? 
+  // The scanDirectory function already sorts.
+  
   for (const node of nodes) {
     if (node.type === 'directory') {
-      // Make directory name bold, remove "Part X - " prefix if you want cleaner look, but for now exact match is safer
-      markdown += `${indent}- **${node.name}**\n`;
+      if (depth === 0) {
+        // Top Level (Part) -> H2 with separator
+        markdown += `\n## ${node.name}\n---\n\n`;
+      } else if (depth === 1) {
+        // Second Level (Chapter) -> H3
+        markdown += `\n### ${node.name}\n\n`;
+      } else {
+        // Deeper -> Bold text
+        markdown += `${'  '.repeat(depth - 1)}- **${node.name}**\n`;
+      }
+      
       markdown += generateMarkdownTOC(node.children, depth + 1);
     } else {
-      // Use encodeURI for the path to handle spaces
-      // Relative path from root is what we have in node.path
-      // The CONTENTS.md is in root, so links should be just the path.
-      // e.g. "Part 1/.../file.md"
+      // File -> List item
+      // Skip self-reference in the Markdown (but keep in JSON for routing)
+      if (node.name === 'CONTENTS.md') continue;
+
       const linkPath = node.path.split(path.sep).map(encodeURIComponent).join('/');
-      markdown += `${indent}- [${node.title}](${linkPath})\n`;
+      // Indent based on depth, but if we are inside a Chapter (H3), we want list items to be relatively flat?
+      // Standard markdown: headers break lists. So simple list items under headers work well.
+      // If we are deep, we need indentation?
+      // Actually, if we use headers for parents, we don't need deep indentation for children of those parents.
+      // But if depth > 2 (sub-folders), we started using lists.
+      
+      const indent = depth > 1 ? '  '.repeat(depth - 1) : '- '; 
+      // If depth 0 or 1 (under H2 or H3), just use bullet
+      // But wait, if depth 2 (under H3), standard list '-' is fine.
+      
+      markdown += `- [${node.title}](${linkPath})\n`;
     }
   }
   return markdown;
@@ -100,11 +120,26 @@ console.log('Building content index...');
 console.log(`Scanning root: ${CONTENT_ROOT}`);
 const tree = scanDirectory(CONTENT_ROOT);
 
+// Create CONTENTS.md content first
+// Remove the H1 "# Book Contents" because ReaderView adds its own header based on title.
+const tocContent = `*Auto-generated on ${new Date().toLocaleString()}*\n\n` + generateMarkdownTOC(tree);
+
+// Update the node in the tree so the JSON has the fresh content
+const contentsNode = tree.find(node => node.name === 'CONTENTS.md');
+if (contentsNode) {
+  contentsNode.content = tocContent;
+  contentsNode.title = 'Contents'; // Explicitly set title to match ICON_MAP and "Contents"
+}
+
 // Create src/content.json
 fs.writeFileSync(OUTPUT_JSON, JSON.stringify(tree, null, 2));
 console.log(`Content index written to ${OUTPUT_JSON}`);
 
-// Create CONTENTS.md
-const tocContent = `# Book Contents\n\n*Auto-generated on ${new Date().toLocaleString()}*\n\n` + generateMarkdownTOC(tree);
+// Write CONTENTS.md to disk
+// We can add the H1 back for the file on disk if we want it to look good in a text editor, 
+// OR we can keep it consistent. Let's keep it consistent so what you see is what you get.
+// Actually, if I open it in Obsidian, I might want the header. 
+// But the user said "lose the other one". 
+// Let's stick to the generated content being 1:1.
 fs.writeFileSync(OUTPUT_MD, tocContent);
 console.log(`Markdown TOC written to ${OUTPUT_MD}`);

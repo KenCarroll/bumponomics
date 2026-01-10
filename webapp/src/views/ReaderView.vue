@@ -32,6 +32,7 @@ import { useRoute } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import contentTree from '@/content.json'
 import { useIcons } from '@/composables/useIcons'
+import YouTubeEmbed from '@/utils/markdownItVideo'
 
 const route = useRoute()
 const { getIcon } = useIcons()
@@ -41,6 +42,7 @@ const md = new MarkdownIt({
   linkify: true,
   typographer: true
 })
+md.use(YouTubeEmbed)
 
 const loading = ref(false)
 const error = ref(false)
@@ -61,10 +63,10 @@ const allFiles = flatten(contentTree)
 const loadContent = () => {
   loading.value = true
   error.value = false
-  
+
   // Clean the path param (decode URI component)
   const targetPath = route.params.path ? decodeURIComponent(route.params.path) : null
-  
+
   if (!targetPath) {
     // If no path, maybe show the first file?
     loading.value = false
@@ -90,4 +92,52 @@ watch(() => route.params.path, loadContent)
 onMounted(loadContent)
 </script>
 
+<style>
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin-bottom: 1rem;
+}
 
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+</style>
+
+<style scoped>
+/* Ensure proper list indentation */
+:deep(.markdown-body ul),
+:deep(.markdown-body ol) {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+:deep(.markdown-body li) {
+  margin-bottom: 0.5rem;
+}
+
+/* Improve readability on mobile by ensuring container padding */
+.reader-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Make headers pop a bit more */
+:deep(.markdown-body h2) {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--v-border-color), 0.2);
+  padding-bottom: 0.5rem;
+}
+
+:deep(.markdown-body h3) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+</style>

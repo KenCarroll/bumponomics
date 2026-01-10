@@ -6,7 +6,7 @@
 
 ### **Part I: The Premise - Problems as Usage**
 
-#### **Chapter 1: The Glue of Society**
+#### **Chapter 1.1: The Glue of Society**
 *   **The Core Thesis**: Rejecting the idea that problems are errors. Proposing that problems are the fundamental "social glue" that binds partnerships, families, tribes, businesses, and nations.
 *   **The Problem Paradox**: Why we hate problems yet cannot exist without them.
 *   **Problems & Challenges**: Key difference between problems & challenges.
@@ -17,7 +17,7 @@
   **Critical Problems (RIP)**: We're history!.
 *   **Progress = People + Problems**: The algebra of agency.
 
-#### **Chapter 2: The Problems with Problems**
+#### **Chapter 1.2: The Problems with Problems**
 
 
 *   **Complex DynamicEnvironments**: Volatility, Uncertainty, Complexity, Ambiguity.
@@ -46,7 +46,7 @@ Feedback (learnings)
 
 
 
-#### **Chapter 3: The B.U.M.P.S. Philosophy**
+#### **Chapter 1.3: The B.U.M.P.S. Philosophy**
 *   **BUMPStrategy**: The BUMPS mission and strategy. Using BUMPS thinking to develop BUMPS thinking (problem-solving problem-solving).
 *   **The BUMPS Mission**: The BUMPS mission and strategy. Using BUMPS thinking to develop BUMPS thinking (problem-solving problem-solving).    
 *   **The BUMPS Mix**: The ingredients of BUMPS thinking.    
@@ -96,7 +96,7 @@ Feedback (learnings)
 
 ### **Part II: The Taxonomy of the xUMPS**
 
-#### **Chapter 4: BUMPS, HUMPS, and LUMPS**
+#### **Chapter 2.1: BUMPS, HUMPS, and LUMPS**
 *   **BUMPS (Big Untamed Meaningful Problematic Situations)**:
     *   The "Macro" level. Societal, strategic, and existential challenges.
 *   **HUMPS ([Human/Huge?] Untamed Meaningful Problematic Situations)**:
@@ -107,12 +107,12 @@ Feedback (learnings)
 
 ### **Part III: The Ecology of Problems**
 
-#### **Chapter 5: Bumpspaces (The Environment)**
+#### **Chapter 3.1: Bumpspaces (The Environment)**
 *   **Defining Bumpspaces**: The context in which problems emerge and live.
 *   **Boundaries and collision zones**: Where complex systems meet to create problems.
 *   **The Physics of Bumpspaces**: Rules, constraints, and environmental forces.
 
-#### **Chapter 6: Bumpscapes (The Territory)**
+#### **Chapter 3.2: Bumpscapes (The Territory)**
 *   **The Problem System Network**: Visualizing the invisible web of interconnected problems.
 *   **Substrates and Strata**:
     *   *Substrates*: The underlying problem foundation.
@@ -121,14 +121,14 @@ Feedback (learnings)
 
 
 
-#### **Chapter 7: Bumpivores (The Actors)**
+#### **Chapter 3.3: Bumpivores (The Actors)**
 *   **Who Eats Problems?**: Organizations and individuals as consumers of problems.
 *   **Metabolism**: How "Bumpivores" convert problem energy into progress (or waste).
 *   **Feeding Habits**: 
     *   Healthy consumption (Value Creation).
     *   Toxic consumption (Bureaucracy/Synthetic Problems).
 
-#### **Chapter 8: Bumponomics (The Economy)**
+#### **Chapter 3.4: Bumponomics (The Economy)**
 *   **The Economics of Transformation**: Value is derived from the successful transformation of problems.
 *   **Input vs. Output**: Measuring the efficiency of problem transformation (PTO Cycle).
 *   **Asset or Liability?**: When a problem is an asset (driving innovation) vs. a liability (draining resources).
@@ -137,7 +137,7 @@ Feedback (learnings)
 ### **Part IV: The BUMPS Transformation System (BTS)**
 Framework (Enabler) for transforming problems into progress online and offline (use it in everyday life in all situations)
 
-#### **Chapter 9: The PTO Framework**
+#### **Chapter 4.1: The PTO Framework**
 *   **P**roblems (Discovery): Sensing and formulating the recipe.
 *   **T**ransformations (Action): The 6 Strategies (Absolve, Resolve, Dissolve, Solve, Evolve, Exploit).
 *   **O**utcomes (Feedback): OOSAWID ("Outcomes Of a System Are What It Does").
@@ -147,14 +147,14 @@ Framework (Enabler) for transforming problems into progress online and offline (
 *   **Proof-of-Outcomes**: Creating better problems to enable the next PTO cycle. Negative Progress. Positive Progress. Game Over! Progress Traps. Fitness Traps. Function Traps. Future Traps.  Hindsight, blindsight, insight, hindsight, foresight, oversight, near-sight, far-sight, 
 *   **Taming Framework**: Variation of the Stacey Framework, Cynefin, others. Tamable, Untamable, Untamed, Tasks, Transformations, (Unpredictable, ??, ??)
 
-#### **Chapter 10: Strategy as BUMPSurfing**
+#### **Chapter 4.2: Strategy as BUMPSurfing**
 *   **Navigating the Bumpscape**: Steering rules for dynamic environments.
 *   **The 3Ds of Viability**: Disadvantage, Dysfunction, Demise.
 *   **Adaptive Response Systems**: From Conflict (Hawk) to Collaboration (Generous Tit-for-Tat).
 
 ### **Part V: BUMPS.App (Practical Application)**
 
-#### **Chapter 11: The BUMPS Platform**
+#### **Chapter 5.1: The BUMPS Platform**
 *   **HI + AI**: How Human Intelligence + Artificial Intelligence (BUMPS.app) brings the BTS to life.
 *   **Practical Application**: Operationalizing the thinking for real-world impact.
 *   **Tools**: Using the app to map and transform problems.
@@ -170,7 +170,7 @@ Yin-Yang. Problems & Solutions. Good & Bad. Ups & Downs. Problems need transform
 
 ### **Part VI: Our Future is Problem Transforming**
 
-#### **Chapter 12: A Problem Transforming World**
+#### **Chapter 6.1: A Problem Transforming World**
 People form partnerships (e.g. businesses) to solve problems. These partnerships produce products. Products change the landscape (planet). The changing landscape creates new problems. Problems move people. This cycle repeats…until something changes
 
 ### Problem Transforming Politics ###
@@ -192,7 +192,7 @@ Currency for Action (Intrinsic Motivation)
 *   **BUMPS Transforming Organizations (BTO)**: The competitive advantage of the future.
 *   **A New Hope**: Why embracing problems is the key to progress.
 
-#### **Chapter 13: The Future of BUMPS**
+#### **Chapter 6.2: The Future of BUMPS**
 *   **Call for Action**: This paper presents a foundational argument for viewing all human systems as inherent problem-solving entities. We believe this perspective offers significant implications for understanding, designing, and transforming systems across all domains. We invite critical feedback and collaboration from the Systems Thinking community to further refine and validate this thesis. Our aim is to foster a deeper understanding of the problem-driven nature of human systems, ultimately leading to more effective and sustainable solutions for the "Big Untamed Meaningful Problematic Situations" we collectively face.
 .
 *   **The Future of BUMPS**: The future of BUMPS.
