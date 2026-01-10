@@ -15,34 +15,36 @@
             <div class="mx-auto text-center">
               <h3>{{ user.displayName }}</h3>
               <p class="text-caption mt-1">{{ user.email }}</p>
+
+              <!-- Progress Bar -->
+              <div class="mt-4 mb-2 w-100">
+                <div class="d-flex justify-space-between text-caption mb-1">
+                  <span class="font-weight-bold">Book Progress</span>
+                  <span>{{ progressPercentage }}%</span>
+                </div>
+                <v-progress-linear :model-value="progressPercentage" color="success" height="6"
+                  rounded></v-progress-linear>
+                <div class="text-caption text-medium-emphasis mt-1 text-right" style="font-size: 0.7rem;">
+                  {{ progressCount }} completed
+                </div>
+              </div>
+
               <v-divider class="my-3"></v-divider>
-              
+
               <!-- Subscription Status -->
-              <v-btn
-                v-if="!isSubscribed"
-                rounded
-                variant="tonal"
-                color="primary"
-                class="mb-3 w-100"
-                :loading="subLoading"
-                @click.stop="handleSubscribe"
-              >
+              <v-btn v-if="!isSubscribed" rounded variant="tonal" color="primary" class="mb-3 w-100"
+                :loading="subLoading" @click.stop="handleSubscribe">
                 <v-icon start icon="mdi-email-plus-outline"></v-icon>
                 Subscribe
               </v-btn>
-              
+
               <div v-else class="mb-3">
-                 <v-btn
-                  rounded
-                  variant="text"
-                  color="success"
-                  class="w-100 mb-1"
-                  prepend-icon="mdi-check-circle"
-                  readonly
-                >
+                <v-btn rounded variant="text" color="success" class="w-100 mb-1" prepend-icon="mdi-check-circle"
+                  readonly>
                   Subscribed
                 </v-btn>
-                <div class="text-caption text-medium-emphasis text-decoration-underline cursor-pointer" @click.stop="handleUnsubscribe">
+                <div class="text-caption text-medium-emphasis text-decoration-underline cursor-pointer"
+                  @click.stop="handleUnsubscribe">
                   Unsubscribe
                 </div>
               </div>
@@ -57,16 +59,10 @@
     </template>
 
     <template v-else>
-      <v-btn 
-        color="primary" 
-        variant="tonal" 
-        prepend-icon="mdi-google"
-        :loading="loading"
-        @click="signInWithGoogle"
-      >
+      <v-btn color="primary" variant="tonal" prepend-icon="mdi-google" :loading="loading" @click="signInWithGoogle">
         Login
       </v-btn>
-      
+
       <div v-if="error" class="text-caption text-error ml-2">
         {{ error }}
       </div>
@@ -78,9 +74,11 @@
 import { ref, watch, onMounted } from 'vue'
 import { useAuth } from '@/composables/useAuth'
 import { useNewsletter } from '@/composables/useNewsletter'
+import { useProgress } from '@/composables/useProgress'
 
 const { user, loading, error, signInWithGoogle, signOut } = useAuth()
 const { subscribe, unsubscribe, checkSubscriptionStatus, isSubscribed, loading: subLoading } = useNewsletter()
+const { progressPercentage, progressCount } = useProgress()
 
 const handleSubscribe = async () => {
   if (user.value?.email) {

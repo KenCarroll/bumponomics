@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    // --- User Profiles (Page Completion / Progress) ---
+    // Users can only read and write their own document.
+    match /users/{userId} {
+      allow read, write: if isSignedIn() && isOwner(userId);
+    }
+
+    // --- Site Reviews ---
+    // Public read access.
+    // Authenticated users can create reviews.
+    match /site_reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      // Future-proofing: Only allow update/delete if the user owns the review
+      // (This assumes you eventually save 'uid' or 'userId' on the review doc)
+      allow update, delete: if isSignedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    // --- Newsletter Subscribers ---
+    // Anyone can subscribe (create).
+    // Read/List is restricted: 
+    // 1. Authenticated users can read/delete entries matching their email.
+    // 2. Anonymous users cannot read (this prevents scraping).
+    // Note: This means anonymous users usually cannot "check for duplicates" 
+    // client-side before subscribing, but the create will succeed.
+    match /subscribers/{subscriberId} {
+      allow create: if true;
+      allow read, delete: if isSignedIn() && resource.data.email == request.auth.token.email;
+    }
+
+    // --- Mail Extension ---
+    // Used to trigger emails (e.g. Welcome email).
+    // Create-only access for everyone (needed for public newsletter subscription).
+    // No read access.
+    match /mail/{mailId} {
+      allow create: if true;
+      allow read: if false;
+    }
+  }
+}

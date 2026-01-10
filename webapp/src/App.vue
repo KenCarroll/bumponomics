@@ -3,9 +3,9 @@
     <v-app-bar flat border="b">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title class="font-weight-light">Bumponomics</v-app-bar-title>
-      
+
       <v-spacer></v-spacer>
-      
+
       <!-- Search Toggle -->
       <v-btn icon class="mr-2" @click="searchOpen = true">
         <v-icon>mdi-magnify</v-icon>
@@ -13,71 +13,47 @@
       </v-btn>
 
       <!-- AI Chat Toggle -->
-      <v-btn 
-        v-if="user" 
-        icon 
-        :color="rightDrawerOpen && rightTab === 'chat' ? 'primary' : undefined"
-        class="mr-2" 
-        @click="toggleRightDrawer('chat')"
-      >
+      <v-btn v-if="user" icon :color="rightDrawerOpen && rightTab === 'chat' ? 'primary' : undefined" class="mr-2"
+        @click="toggleRightDrawer('chat')">
         <v-icon>mdi-robot</v-icon>
         <v-tooltip activator="parent" location="bottom">Ask AI</v-tooltip>
       </v-btn>
 
-        <!-- Reviews Toggle -->
-        <v-btn 
-          icon 
-          class="mr-2" 
-          :color="rightDrawerOpen && rightTab === 'reviews' ? 'primary' : undefined"
-          @click="toggleRightDrawer('reviews')"
-        >
-          <v-icon>mdi-star-box-outline</v-icon>
-          <v-tooltip activator="parent" location="bottom">Read Reviews</v-tooltip>
-        </v-btn>
+      <!-- Reviews Toggle -->
+      <v-btn icon class="mr-2" :color="rightDrawerOpen && rightTab === 'reviews' ? 'primary' : undefined"
+        @click="toggleRightDrawer('reviews')">
+        <v-icon>mdi-star-box-outline</v-icon>
+        <v-tooltip activator="parent" location="bottom">Read Reviews</v-tooltip>
+      </v-btn>
 
       <!-- Comments Toggle -->
-      <v-btn 
-        icon 
-        class="mr-2" 
-        :color="rightDrawerOpen && rightTab === 'comments' ? 'primary' : undefined"
-        @click="toggleRightDrawer('comments')"
-      >
+      <v-btn icon class="mr-2" :color="rightDrawerOpen && rightTab === 'comments' ? 'primary' : undefined"
+        @click="toggleRightDrawer('comments')">
         <v-icon>mdi-comment-text-outline</v-icon>
         <v-tooltip activator="parent" location="bottom">Comments</v-tooltip>
       </v-btn>
-      
+
 
 
       <login-button class="mr-4" />
     </v-app-bar>
 
-    <v-navigation-drawer 
-      v-model="drawer" 
-      :temporary="!isDocked"
-      :permanent="isDocked"
-      width="300"
-      style="padding-bottom: 52px;"
-    >
+    <v-navigation-drawer v-model="drawer" :temporary="!isDocked" :permanent="isDocked" width="300"
+      style="padding-bottom: 52px;">
       <div class="pa-4 text-center">
         <h2 class="text-h5 font-weight-bold text-primary">BUMPONOMICS</h2>
         <div class="text-caption mt-1">Problem Transforming Economics</div>
       </div>
       <v-divider class="mb-2"></v-divider>
-      
+
       <app-drawer :items="contentItems" is-root />
 
       <template v-slot:append>
         <v-divider></v-divider>
         <div class="px-4 pb-4 pt-4">
-          <v-switch
-            v-model="isDocked"
-            color="success"
-            label="Dock Menu"
-            hide-details
-            density="compact"
-            class="mb-2"
-          ></v-switch>
-          
+          <v-switch v-model="isDocked" color="success" label="Dock Menu" hide-details density="compact"
+            class="mb-2"></v-switch>
+
           <v-divider class="mb-3"></v-divider>
 
           <div class="text-caption text-medium-emphasis">
@@ -89,10 +65,7 @@
     </v-navigation-drawer>
 
     <!-- Right Sidebar (Unified Chat & Comments) -->
-    <right-sidebar 
-      v-model="rightDrawerOpen" 
-      v-model:active-tab="rightTab"
-    />
+    <right-sidebar v-model="rightDrawerOpen" v-model:active-tab="rightTab" />
 
     <!-- Main Content Area with Background fix -->
     <v-main class="bg-background">
@@ -101,14 +74,27 @@
 
     <!-- Bottom App Bar -->
     <v-footer app border="t" height="50" class="d-flex align-center" style="z-index: 2000;">
-      <div class="text-body-2 text-medium-emphasis text-truncate" style="max-width: 70%;">
+      <div class="text-body-2 text-medium-emphasis text-truncate" style="max-width: 40%;">
         <v-icon size="small" class="mr-2">mdi-book-open-page-variant</v-icon>
         {{ currentPageTitle }}
       </div>
-      
+
+      <!-- Page Completion Toggle -->
+      <div v-if="user && route.params.path" class="d-flex align-center ml-2 border-s pl-2 py-1"
+        style="border-color: rgba(var(--v-border-color), var(--v-border-opacity)) !important;">
+        <v-btn :color="isPageCompleted(decodeURIComponent(route.params.path)) ? 'success' : undefined"
+          :variant="isPageCompleted(decodeURIComponent(route.params.path)) ? 'flat' : 'text'" density="compact"
+          class="px-2 text-capitalize" size="small" rounded
+          @click="togglePageCompletion(decodeURIComponent(route.params.path))">
+          <v-icon start size="small">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'mdi-check-circle' :
+            'mdi-check-circle-outline' }}</v-icon>
+          {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Complete' }}
+        </v-btn>
+      </div>
+
       <v-spacer></v-spacer>
-      
-    <!-- Theme Toggle (Moved to Bottom) -->
+
+      <!-- Theme Toggle (Moved to Bottom) -->
       <v-btn icon density="compact" variant="text" @click="toggleTheme">
         <v-icon size="small">{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
         <v-tooltip activator="parent" location="top">{{ isDark ? 'Light Mode' : 'Dark Mode' }}</v-tooltip>
@@ -130,6 +116,7 @@ import SearchDialog from '@/components/SearchDialog.vue'
 import contentItems from '@/content.json'
 import { useAuth } from '@/composables/useAuth'
 import { usePreferences } from '@/composables/usePreferences'
+import { useProgress } from '@/composables/useProgress'
 
 const route = useRoute()
 const drawer = ref(true)
@@ -143,6 +130,9 @@ const rightTab = ref('chat') // 'chat' or 'comments'
 const { user } = useAuth()
 // ... existing logic ...
 const { isDark, toggleTheme } = usePreferences()
+
+// Progress Logic
+const { togglePageCompletion, isPageCompleted, setTotalPages } = useProgress()
 
 // Toggle Right Drawer and specific tab
 const toggleRightDrawer = (tab) => {
@@ -166,6 +156,9 @@ const flatten = (nodes) => {
   return flat
 }
 const allNodes = flatten(contentItems)
+// Initialize total pages count
+const totalFilesCount = allNodes.filter(n => n.type === 'file').length
+setTotalPages(totalFilesCount)
 
 const currentPageTitle = computed(() => {
   if (!route.params.path) return 'Home'
