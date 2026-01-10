@@ -57,8 +57,11 @@
       <template v-slot:append>
         <v-divider></v-divider>
         <div class="px-4 pb-4 pt-4">
-          <v-switch v-model="isDocked" color="success" label="Dock Menu" hide-details density="compact"
-            class="mb-2"></v-switch>
+          <v-switch :model-value="isDark" @update:model-value="toggleTheme" color="primary"
+            :label="isDark ? 'Dark Mode' : 'Light Mode'" hide-details density="compact" class="mb-2" inset></v-switch>
+
+          <v-switch v-model="isDocked" color="success" label="Dock Menu" hide-details density="compact" class="mb-2"
+            inset></v-switch>
 
           <v-divider class="mb-3"></v-divider>
 
@@ -99,12 +102,6 @@
           {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete' }}
         </v-btn>
       </div>
-
-      <!-- Theme Toggle (Moved to Bottom) -->
-      <v-btn icon density="compact" variant="text" @click="toggleTheme">
-        <v-icon size="small">{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
-        <v-tooltip activator="parent" location="top">{{ isDark ? 'Light Mode' : 'Dark Mode' }}</v-tooltip>
-      </v-btn>
     </v-footer>
 
     <!-- Global Search Dialog -->
