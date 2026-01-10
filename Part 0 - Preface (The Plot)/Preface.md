@@ -68,7 +68,19 @@ Do you know…
 9. Do you have a problem-solving network? 
 10. Are you problem-solving your problem solving? 
 
+## BUMPONOMICS - Three Act Play
 
+https://www.studiobinder.com/blog/screenplay-structure-examples/
+
+The most well-known screenplay tool is the three act structure screenplay. Most other structures accept this tool in some shape or form. It’s much less a structure than a basic storytelling principle. Here is the general idea behind this structure, including the main story beats and average page counts.
+
+The average page count for a movie script is between 90 and 120 pages. The reason for this is because the average movie’s runtime is between an hour-and-a-half and two hours. As we will cover in more detail below, one page = one minute of screen time (on average).
+
+- Act One sets up the plot, establishes characters, establishes home. 
+
+- Act Two we are thrust into new circumstances. Perhaps a new city, a new mission, a new love interest, etc.
+
+- Act Three is where we face the villain one last time, confess our love, go all or nothing, and either fail or succeed. 
 
 
 

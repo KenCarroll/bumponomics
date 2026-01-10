@@ -20,8 +20,24 @@
       </div>
       <v-divider class="mb-8"></v-divider>
 
-      <!-- Rendered Content -->
-      <div v-html="renderedContent"></div>
+      <!-- Rendered Content (or Login Barrier) -->
+      <template v-if="showContent">
+        <div v-html="renderedContent"></div>
+      </template>
+
+      <div v-else class="text-center py-10 my-10 bg-surface-variant rounded-lg">
+        <v-icon size="64" color="primary" class="mb-4">mdi-lock</v-icon>
+        <h2 class="text-h4 font-weight-bold mb-2">Members Only Content</h2>
+        <p class="text-body-1 mb-6 text-medium-emphasis" style="max-width: 500px; margin: 0 auto;">
+          This chapter is part of the full BUMPS Book experience. <br>
+          Join our community of problem solvers to continue reading for free.
+        </p>
+
+        <v-btn color="primary" size="large" prepend-icon="mdi-google" :loading="authLoading" @click="signInWithGoogle"
+          elevation="4">
+          Sign in with Google
+        </v-btn>
+      </div>
     </div>
   </v-container>
 </template>
@@ -32,10 +48,12 @@ import { useRoute } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import contentTree from '@/content.json'
 import { useIcons } from '@/composables/useIcons'
+import { useAuth } from '@/composables/useAuth'
 import YouTubeEmbed from '@/utils/markdownItVideo'
 
 const route = useRoute()
 const { getIcon } = useIcons()
+const { user, signInWithGoogle, loading: authLoading } = useAuth()
 
 const md = new MarkdownIt({
   html: true,
@@ -83,6 +101,23 @@ const loadContent = () => {
   }
   loading.value = false
 }
+
+const isRestricted = computed(() => {
+  if (!currentFile.value) return false
+  const path = currentFile.value.path
+  // RESTRICTION RULE:
+  // Public: "Part 0" (Preface) and "Part 1" (The Premise)
+  // Restricted: Everything else
+  const isPart0 = path.startsWith('Part 0')
+  const isPart1 = path.startsWith('Part 1')
+
+  return !(isPart0 || isPart1)
+})
+
+const showContent = computed(() => {
+  if (!isRestricted.value) return true
+  return !!user.value
+})
 
 const renderedContent = computed(() => {
   return md.render(markdownSource.value)

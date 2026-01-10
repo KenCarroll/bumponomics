@@ -72,6 +72,26 @@ export function useProgress() {
     }
   }
 
+  const updateAllProgress = async (newCompletedPaths) => {
+    if (!user.value) return 
+    const uid = user.value.uid
+    const userRef = doc(db, 'users', uid)
+    
+    loading.value = true
+    try {
+      completedPaths.value = newCompletedPaths
+      await updateDoc(userRef, {
+        completedPaths: newCompletedPaths
+      })
+    } catch (e) {
+      console.error("Error batch updating progress:", e)
+      error.value = e.message
+      await fetchProgress(uid) // Revert on error
+    } finally {
+      loading.value = false
+    }
+  }
+
   const isPageCompleted = (path) => {
     return completedPaths.value.includes(path)
   }
@@ -96,6 +116,7 @@ export function useProgress() {
     loading,
     error,
     togglePageCompletion,
+    updateAllProgress,
     isPageCompleted,
     setTotalPages,
     progressCount: computed(() => completedPaths.value.length),

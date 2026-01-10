@@ -44,6 +44,11 @@ function scanDirectory(dir, depth = 0) {
         });
       }
     } else if (item.isFile() && item.name.endsWith('.md')) {
+      // Ignore specific source/system files from the book content
+      if (['ABookOutline.md', 'README.md'].includes(item.name) || item.name.startsWith('All Systems Are Problem')) {
+         continue;
+      }
+
       // We want CONTENTS.md to be available in the JSON so ReaderView can read it.
       // But we might filter it out of the drawer list in the UI.
       // if (item.name === 'CONTENTS.md') continue;
@@ -55,7 +60,7 @@ function scanDirectory(dir, depth = 0) {
 
       result.push({
         type: 'file',
-        name: item.name,
+        name: item.name.replace('.md', ''), // Clean name for UI
         title: title,
         path: relativePath,
         // We could include full content here or fetch it lazily. 

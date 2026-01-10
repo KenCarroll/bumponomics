@@ -79,20 +79,20 @@
         {{ currentPageTitle }}
       </div>
 
-      <!-- Page Completion Toggle -->
-      <div v-if="user && route.params.path" class="d-flex align-center ml-2 border-s pl-2 py-1"
-        style="border-color: rgba(var(--v-border-color), var(--v-border-opacity)) !important;">
-        <v-btn :color="isPageCompleted(decodeURIComponent(route.params.path)) ? 'success' : undefined"
-          :variant="isPageCompleted(decodeURIComponent(route.params.path)) ? 'flat' : 'text'" density="compact"
-          class="px-2 text-capitalize" size="small" rounded
+      <v-spacer></v-spacer>
+
+      <!-- Page Completion Toggle (Fixed Position on Right) -->
+      <div v-if="user && route.params.path" class="d-flex align-center mr-2">
+        <v-btn :color="isPageCompleted(decodeURIComponent(route.params.path)) ? 'success' : 'primary'"
+          :variant="isPageCompleted(decodeURIComponent(route.params.path)) ? 'flat' : 'tonal'" density="compact"
+          class="px-4 text-capitalize" size="small" rounded
           @click="togglePageCompletion(decodeURIComponent(route.params.path))">
-          <v-icon start size="small">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'mdi-check-circle' :
-            'mdi-check-circle-outline' }}</v-icon>
-          {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Complete' }}
+          <v-icon start size="small">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'mdi-check-circle'
+            :
+            'mdi-checkbox-blank-circle-outline' }}</v-icon>
+          {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete' }}
         </v-btn>
       </div>
-
-      <v-spacer></v-spacer>
 
       <!-- Theme Toggle (Moved to Bottom) -->
       <v-btn icon density="compact" variant="text" @click="toggleTheme">

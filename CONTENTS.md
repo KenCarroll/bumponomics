@@ -1,4 +1,4 @@
-*Auto-generated on 10/01/2026, 12:39:48*
+*Auto-generated on 10/01/2026, 15:21:16*
 
 
 ## Part 0 - Preface
@@ -83,12 +83,19 @@
 
 ### 4.1 - The PTO Framework
 
-- [Transformation Strategies](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.1%20-%20The%20PTO%20Framework/4.2%20-%20Transformation%20Strategies.md)
 - [PTO Framework](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.1%20-%20The%20PTO%20Framework/PTO%20Framework.md)
 
 ### 4.2 - Strategy as BUMPSurfing
 
 - [Storming & Surfing](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2%20-%20Strategy%20as%20BUMPSurfing/Storming%20%26%20Surfing.md)
+- [Transformation Strategies](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2%20-%20Transformation%20Strategies.md)
+- [WHO'S R-ARSED](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.0%20-%20WHO's%20R-ARSED.md)
+- [Revolving (R)](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.1%20-%20Revolving.md)
+- [Absolving (A)](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.2%20-%20Absolving.md)
+- [Resolving (R)](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.3%20-%20Resolving.md)
+- [Solving (S)](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.4%20-%20Solving.md)
+- [Evolving (E)](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.5%20-%20Evolving.md)
+- [Dissolving (D)](Part%204%20-%20The%20BUMPS%20Transformation%20System/4.2.6%20-%20Dissolving.md)
 - [Problem Mix](Part%204%20-%20The%20BUMPS%20Transformation%20System/Problem%20Mix.md)
 
 ## Part 5 - BUMPS.App
@@ -99,6 +106,4 @@
 
 - [BUMPS Application](Part%205%20-%20BUMPS.App/5.1%20-%20The%20BUMPS%20Platform/BUMPSapp.md)
 - [Hi & Ai](Part%205%20-%20BUMPS.App/Hi%20%26%20Ai.md)
-- [BUMPS-BOOK: The BUMPS Transformation System](ABookOutline.md)
-- [**All Systems Are Problem Transforming: A Foundational Thesis for Understanding Human Organisations and Outputs**](All%20Systems%20Are%20Problem%20Transforming%20-%20Paper%20-%2027Oct2025.md)
-- [README #](README.md)
+- [CONTENTS](CONTENTS.md)
