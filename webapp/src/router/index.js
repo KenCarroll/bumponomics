@@ -43,6 +43,12 @@ const router = createRouter({
       name: 'progress',
       component: () => import('../views/ProgressView.vue'),
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/support',
+      name: 'support',
+      component: () => import('../views/SupportView.vue'),
+      meta: { requiresAuth: true }
     }
   ],
 })

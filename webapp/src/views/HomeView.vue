@@ -18,8 +18,8 @@
         <p class="text-h6 mb-10 text-medium-emphasis" style="line-height: 1.6; max-width: 700px; margin: 0 auto;">
           <!-- An atlas to navigate problems, reveal systems, and ask beautiful questions in a radically shifting world.
           Reject the idea that problems are errors. Embrace them as energy. -->
-          We live in a world of economic shocks, rapid technological shifts, and unpredictable disruptions.
-          If you want to survive, and thrive, you need to be able to perform in this new reality.
+          To survive & thrive you need to adapt to a world of economic shocks, rapid technological shifts, and
+          unpredictable disruptions.
 
         </p>
 
@@ -36,7 +36,7 @@
       <v-container>
         <v-row align="center">
           <v-col cols="12" class="text-center">
-            <h3 class="text-h4 font-weight-bold mb-4 text-primary">Problem Transforming Economics</h3>
+            <h3 class="text-h4 font-weight-bold mb-4 text-primary">Our Future is Problem Transforming</h3>
             <div style="max-width: 900px; margin: 0 auto;" class="text-left">
               <p class="text-body-1 mb-4">
                 We have entered a new economic reality where "business as usual" is a guaranteed path to failure. We are
@@ -47,7 +47,8 @@
                 <strong>BUMPONOMICS</strong> is being developed to address this new situation.
                 Based on the premise that People and Problems are the drivers of Progress (People & Problems =
                 Progress),
-                it advocates for a shift towards a more problem-based economy, with problems being 1st class citizens in
+                it advocates that individuals, organisations, and societies need to rapidly shift towards a
+                problem-centered culture, with problems being 1st class citizens in
                 our economic systems.
               </p>
               <p class="text-body-1 mb-4">
@@ -66,6 +67,11 @@
                 Organizations using the BUMPS Transformation Model. This platform is emerging at
                 <strong>www.bumps.app</strong>
               </p>
+              <p class="text-h4 mt-6 font-italic text-center">
+                If our current economic systems can’t solve our problems, let’s imagine ones that will.
+
+
+              </p>
             </div>
           </v-col>
         </v-row>
@@ -81,16 +87,16 @@
             <h3 class="text-h4 font-weight-bold mb-4 text-primary">What's in it for you?</h3>
             <p class="text-body-1 mb-2">In this book, you will learn:</p>
             <ul class="pa-4 text-body-1">
-              <li class="mb-2"><strong>The Shift</strong>: How to transition from a rigid business hierarchy to a fluid
-                Problem Transforming Organization.</li>
+              <li class="mb-2"><strong>The Shift</strong>: How to transition from rigid business hierarchies to fluid
+                Problem Transforming Organizations.</li>
               <li class="mb-2"><strong>The Mindset</strong>: How to become a Bumpivore—seeking out and consuming
-                problems to fuel growth.</li>
+                problems to fuel your development, secure your suvival, and enable you to thrive.</li>
               <li class="mb-2"><strong>The Engine</strong>: How to leverage the synthesis of Human Intelligence (HI) and
-                Artificial Intelligence (AI) to identify, organize around, and transform problems faster than ever
-                before.</li>
+                Artificial Intelligence (AI) to identify, organize around, and transform problems from obstacles to
+                success.</li>
             </ul>
             <p class="text-body-1 mt-4 font-italic">
-              You can't avoid BUMPS. But you can transform them!
+              Your Success is a function of your ability to transform your problems!
             </p>
           </v-col>
 
@@ -110,11 +116,49 @@
               <li class="mb-2"><strong>Future Thinkers</strong>: Anyone interested in the future of work and the
                 problem-transforming economy.</li>
             </ul>
-            <p class="text-body-1 mt-4 font-italic">
-              Join the movement! The Future of Work and the Economy is Problem Transforming!
+            <p class="text-body-1 mt-4 font-italic">The Future of Work is Problem Transforming!
             </p>
           </v-col>
         </v-row>
+      </v-container>
+    </section>
+
+    <!-- Detailed Content Section -->
+    <section class="content-section py-12 bg-background border-t"
+      v-if="(sponsors.partners && sponsors.partners.length) || (sponsors.patrons && sponsors.patrons.length)">
+      <v-container>
+        <div class="text-center mb-8">
+          <h3 class="text-h4 font-weight-bold text-primary mb-2">Our Community</h3>
+          <p class="text-body-1 text-medium-emphasis">Made possible by our Transformation Partners & Patrons</p>
+        </div>
+
+        <!-- Partners -->
+        <v-row justify="center" class="mb-8" v-if="sponsors.partners && sponsors.partners.length">
+          <v-col cols="12" class="d-flex justify-center flex-wrap gap-8">
+            <v-card v-for="partner in sponsors.partners" :key="partner.name" :href="partner.url" target="_blank"
+              class="pa-6 d-flex align-center justify-center bg-surface-variant" min-width="200" min-height="120" link
+              elevation="2">
+              <div class="text-center">
+                <v-icon :icon="partner.logo || 'mdi-domain'" size="40" class="mb-2 text-medium-emphasis"></v-icon>
+                <div class="font-weight-bold text-h6">{{ partner.name }}</div>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <!-- Patrons -->
+        <v-row justify="center" v-if="sponsors.patrons && sponsors.patrons.length">
+          <v-col cols="12" class="text-center">
+            <div class="d-flex justify-center flex-wrap gap-2">
+              <v-chip v-for="patron in sponsors.patrons" :key="patron.name" color="purple" variant="outlined"
+                class="font-weight-medium">
+                <v-icon start icon="mdi-star" size="small"></v-icon>
+                {{ patron.name }}
+              </v-chip>
+            </div>
+          </v-col>
+        </v-row>
+
       </v-container>
     </section>
 
@@ -127,6 +171,8 @@
     <section class="reviews-section py-4 bg-surface border-t">
       <home-newsletter />
     </section>
+
+
 
     <!-- Footer -->
     <v-footer class="bg-surface py-4 border-t d-flex flex-column">
@@ -148,6 +194,7 @@ import { useRouter } from 'vue-router'
 import contentItems from '@/content.json'
 import HomeReviews from '@/components/HomeReviews.vue'
 import HomeNewsletter from '@/components/HomeNewsletter.vue'
+import sponsors from '@/data/sponsors.json'
 
 const router = useRouter()
 

@@ -26,6 +26,12 @@
         <v-tooltip activator="parent" location="bottom">Read Reviews</v-tooltip>
       </v-btn>
 
+      <!-- Support Toggle -->
+      <v-btn v-if="user" icon class="mr-2" to="/support">
+        <v-icon color="pink">mdi-heart</v-icon>
+        <v-tooltip activator="parent" location="bottom">Support Mission</v-tooltip>
+      </v-btn>
+
       <!-- Comments Toggle -->
       <v-btn icon class="mr-2" :color="rightDrawerOpen && rightTab === 'comments' ? 'primary' : undefined"
         @click="toggleRightDrawer('comments')">
