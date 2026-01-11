@@ -1,5 +1,9 @@
 # Quotations
 
+“If there is no struggle, there is no progress” 
+- Frederick Douglass
+
+
 "The man who has no more problems to solve, is out of the game." 
 - Elbert Hubbard (1856 - 1915), American Writer and Philosopher
 

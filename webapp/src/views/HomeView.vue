@@ -12,14 +12,13 @@
         </h1>
         <h2 class="text-h6 text-md-h4 font-weight-bold mb-8 text-medium-emphasis">
           <!-- People & Problems = Progress -->
-          How to Organize, Act, and Thrive in a Bumpy World
+          How to Organize, Act, and Thrive in a Turbulent World
         </h2>
 
         <p class="text-h6 mb-10 text-medium-emphasis" style="line-height: 1.6; max-width: 700px; margin: 0 auto;">
           <!-- An atlas to navigate problems, reveal systems, and ask beautiful questions in a radically shifting world.
           Reject the idea that problems are errors. Embrace them as energy. -->
-          Bumponomics provides a playbook for how to adapt to a world of economic shocks, rapid technological shifts, and
-          unpredictable disruptions.
+          The playbook for adapting to a world of shocks, shifts, and disruptions.
 
         </p>
 
@@ -41,27 +40,42 @@
               <p class="text-body-1 mb-4">
                 We have entered a new economic reality where "business as usual" is a guaranteed path to failure. We are
                 often organized using rigid inflexible structures based on the assumption of stable, predictable
-                conditions. But today's world is defined by rapidly changing, complex, and messy disruptions.
+                conditions. But today's world is defined by rapidly changing, complex, and messy problematic
+                disruptions.
+                If our world is defined by problems shouldn't individuals, organisations, and societies be focused on
+                them as key drivers?
               </p>
               <p class="text-body-1 mb-4">
-                If our world is defined by problems then individuals, organisations, and societies need to rapidly shift towards a
-                problem-centered culture. With problems being 1st class citizens in an economic system that is tuned to the realities of our environment.
+                Yet current economic thinking generally treats problems as <strong>externalities</strong> to be managed.
+                Even the most advanced complexity theories describe <strong>how</strong> problems drive evolution, but
+                they don't provide a framework for <strong>intentionally organizing</strong> society around the
+                transformation of problems.
+                There is no explicit "Problem-Based Economics" currently in operation.
+                <strong>BUMPONOMICS</strong> is being developed to fill this unique void.
               </p>
               <p class="text-body-1 mb-4">
-                <strong>BUMPONOMICS</strong> is being developed to address this situation. It advocates for a 
-                <strong>Problem Transforming Economy</strong> as the foundation for <strong>Problem Transforming
+                <strong>Bumponomics</strong> sets course to form an economic system that is tuned to the realities of
+                our environment.
+                A <strong>Problem Transforming Economy</strong> with problems being 1st class citizens. An economic
+                system that emerges from <strong>Problem Transforming
                   Societies</strong> powered by <strong>Problem Transforming Organizations</strong>—fluid, adaptive
-                collectives that organize to address high energy opportunities we call <strong>BUMPS (Big Untransformed Meaningful
-                  Problematic Situations)</strong>. And re-organize as those problems shift and new problems emerge.
+                collectives that organize to address high energy opportunities we call <strong>BUMPS (Big Untransformed
+                  Meaningful
+                  Problematic Situations)</strong>. Organisations that are able to dissolve and re-organize as problems
+                shift and transform, and new problems emerge.
+                <strong>Crucially</strong> they excel at forming new problems to drive progress in a positive direction.
               </p>
               <p class="text-body-1">
-                Bumponomics is not just theory.<a href="https://www.bumps.app" target="_blank">The BUMPS.app</a> is a new digital platform for developing Problem Transforming
-                Organizations upon which a Problem Transforming Economy can emerge. <strong>The BUMPS.app</strong> enables Human Intelligence (HI) and Artificial Intelligence (AI) to be use in a blended way to identify, organize, and transform BUMPS from obstacles to stepping stones to success.
+                Bumponomics is not just theory. It's a language, a mindset, and a transformation tool. Bumponomics is
+                being codified in the <a href="https://www.bumps.app" target="_blank">BUMPS.app</a>.
+                The <strong>BUMPS.app</strong> is being built as a Co-Intelligence Engine. It combines Human
+                Intelligence (HI) and Artificial Intelligence (AI) to identify, organize, and transform BUMPS from
+                obstacles to stepping stones to success.
+                <strong>BUMPS.app</strong> network will connect Organizations to form Problem Transforming Networks to
+                tackle complex adaptive problems.
               </p>
               <p class="text-h4 mt-6 font-italic text-center">
-                If our current economic system can’t fix our problems, let’s build one that will.
-
-
+                If current economic systems can’t transform our problems, let’s build ones that will.
               </p>
             </div>
           </v-col>
@@ -80,7 +94,8 @@
             <ul class="pa-4 text-body-1">
               <li class="mb-2"><strong>The Shift</strong>: How to transition from rigid business hierarchies to fluid
                 Problem Transforming Organizations.</li>
-              <li class="mb-2"><strong>The Mindset</strong>: How to become a Bumpivore—seeking out and consuming
+              <li class="mb-2"><strong>The Mindset</strong>: How to become a Bumpivore—move from task based to problem
+                based thinking. Seeking out and consuming
                 problems to fuel your development, secure your suvival, and enable you to thrive.</li>
               <li class="mb-2"><strong>The Engine</strong>: How to leverage Human Intelligence (HI) and
                 Artificial Intelligence (AI) to identify, organize, and transform BUMPS from obstacles to
@@ -89,7 +104,7 @@
             <p class="text-body-1 mt-4 font-italic">
               Your Success is a function of your ability to transform your problems!
             </p>
-                <!-- <p class="text-body-1 mb-4">
+            <!-- <p class="text-body-1 mb-4">
                 <strong>Bumponomics</strong> provides a playbook for how to organize, act, and thrive in complex dynamic
                 environments using the synthesis of <strong>Human Intelligence (HI)</strong> supported by
                 <strong>Artificial Intelligence (AI)</strong>.
@@ -175,7 +190,7 @@
       <div class="d-flex flex-wrap justify-center gap-4 mb-4">
         <v-btn variant="text" size="small">Contact Us</v-btn>
         <v-btn variant="text" size="small">About the Author</v-btn>
-        <v-btn variant="text" size="small">License</v-btn>
+        <v-btn variant="text" size="small" to="/licence">Licence</v-btn>
       </div>
       <div class="text-caption text-medium-emphasis text-center">
         &copy; 2026 Bumponomics™. All Rights Reserved.<br>

@@ -49,6 +49,11 @@ const router = createRouter({
       name: 'support',
       component: () => import('../views/SupportView.vue'),
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/licence',
+      name: 'licence',
+      component: () => import('../views/LicenceView.vue')
     }
   ],
 })
