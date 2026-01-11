@@ -2,7 +2,9 @@
   <v-app>
     <v-app-bar flat border="b">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title class="font-weight-light">Bumponomics</v-app-bar-title>
+      <v-app-bar-title>
+        <strong style="font-weight: 900; letter-spacing: 0.5px; font-style: italic;">BUMPONOMICS</strong>
+      </v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -83,9 +85,37 @@
 
     <!-- Bottom App Bar -->
     <v-footer app border="t" height="50" class="d-flex align-center" style="z-index: 2000;">
-      <div class="text-body-2 text-medium-emphasis text-truncate" style="max-width: 40%;">
-        <v-icon size="small" class="mr-2">mdi-book-open-page-variant</v-icon>
-        {{ currentPageTitle }}
+      <div class="d-flex align-center" :style="mobile ? '' : 'max-width: 40%;'">
+        <v-btn icon variant="text" density="compact" v-if="mobile">
+          <v-icon size="small">mdi-book-open-page-variant</v-icon>
+          <v-tooltip activator="parent" location="top">{{ currentPageTitle }}</v-tooltip>
+        </v-btn>
+
+        <template v-else>
+          <v-icon size="small" class="mr-2">mdi-book-open-page-variant</v-icon>
+          <span class="text-body-2 text-medium-emphasis text-truncate">{{ currentPageTitle }}</span>
+        </template>
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <!-- Navigation Controls (Center) -->
+      <div class="d-flex align-center">
+        <v-btn icon density="compact" variant="text" :disabled="!prevPage" @click="navigateTo(prevPage?.path)">
+          <v-icon>mdi-chevron-left</v-icon>
+          <v-tooltip activator="parent" location="top" v-if="prevPage">Previous: {{ prevPage.title || prevPage.name
+          }}</v-tooltip>
+        </v-btn>
+
+        <span class="text-caption text-medium-emphasis mx-2" style="min-width: 60px; text-align: center;">
+          {{ currentIndex !== -1 ? `${currentIndex + 1} / ${totalFilesCount}` : '' }}
+        </span>
+
+        <v-btn icon density="compact" variant="text" :disabled="!nextPage" @click="navigateTo(nextPage?.path)">
+          <v-icon>mdi-chevron-right</v-icon>
+          <v-tooltip activator="parent" location="top" v-if="nextPage">Next: {{ nextPage.title || nextPage.name
+          }}</v-tooltip>
+        </v-btn>
       </div>
 
       <v-spacer></v-spacer>
@@ -94,12 +124,18 @@
       <div v-if="user && route.params.path" class="d-flex align-center mr-2">
         <v-btn :color="isPageCompleted(decodeURIComponent(route.params.path)) ? 'success' : 'primary'"
           :variant="isPageCompleted(decodeURIComponent(route.params.path)) ? 'flat' : 'tonal'" density="compact"
-          class="px-4 text-capitalize" size="small" rounded
+          :class="mobile ? '' : 'px-4 text-capitalize'" :icon="mobile"
           @click="togglePageCompletion(decodeURIComponent(route.params.path))">
-          <v-icon start size="small">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'mdi-check-circle'
-            :
+
+          <v-icon :start="!mobile">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'mdi-check-circle' :
             'mdi-checkbox-blank-circle-outline' }}</v-icon>
-          {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete' }}
+
+          <span v-if="!mobile">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete'
+          }}</span>
+
+          <v-tooltip v-if="mobile" activator="parent" location="top">
+            {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete' }}
+          </v-tooltip>
         </v-btn>
       </div>
     </v-footer>
@@ -137,6 +173,10 @@ const { isDark, toggleTheme } = usePreferences()
 // Progress Logic
 const { togglePageCompletion, isPageCompleted, setTotalPages } = useProgress()
 
+// Display Logic for Responsive Layout
+import { useDisplay } from 'vuetify'
+const { mobile } = useDisplay()
+
 // Toggle Right Drawer and specific tab
 const toggleRightDrawer = (tab) => {
   if (rightDrawerOpen.value && rightTab.value === tab) {
@@ -169,6 +209,32 @@ const currentPageTitle = computed(() => {
   const node = allNodes.find(n => n.path === path)
   return node ? (node.title || node.name) : 'Reading...'
 })
+
+// Navigation Logic
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const allFiles = allNodes.filter(n => n.type === 'file')
+
+const currentIndex = computed(() => {
+  if (!route.params.path) return -1
+  const path = decodeURIComponent(route.params.path)
+  return allFiles.findIndex(f => f.path === path)
+})
+
+const prevPage = computed(() => {
+  if (currentIndex.value > 0) return allFiles[currentIndex.value - 1]
+  return null
+})
+
+const nextPage = computed(() => {
+  if (currentIndex.value !== -1 && currentIndex.value < allFiles.length - 1) return allFiles[currentIndex.value + 1]
+  if (currentIndex.value === -1 && allFiles.length > 0) return allFiles[0] // Start from first page if on home
+  return null
+})
+
+const navigateTo = (path) => {
+  if (path) router.push({ name: 'read', params: { path: encodeURIComponent(path) } })
+}
 
 // Close drawer if user logs out (optional, mainly for chat protection)
 watch(user, (newUser) => {
