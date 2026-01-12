@@ -18,7 +18,7 @@ export function useFAQ() {
   // Keep track of the unsubscribe function to stop listening when component unmounts or page changes
   let unsubscribe = null
 
-  const fetchFAQs = (pagePath) => {
+  const fetchFAQs = (pagePath = null) => {
     // Clear previous state
     faqs.value = []
     loading.value = true
@@ -30,17 +30,22 @@ export function useFAQ() {
       unsubscribe = null
     }
 
-    if (!pagePath) {
-      loading.value = false
-      return
-    }
-
     try {
-      const q = query(
-        collection(db, 'faqs'),
-        where('pagePath', '==', pagePath),
-        orderBy('createdAt', 'desc')
-      )
+      let q;
+      if (pagePath) {
+        q = query(
+          collection(db, 'faqs'),
+          where('pagePath', '==', pagePath),
+          orderBy('createdAt', 'desc')
+        )
+      } else {
+        // Fetch all (global dashboard)
+        // May limit to recent 100
+        q = query(
+          collection(db, 'faqs'),
+          orderBy('createdAt', 'desc')
+        )
+      }
 
       // Real-time listener
       unsubscribe = onSnapshot(q, (snapshot) => {

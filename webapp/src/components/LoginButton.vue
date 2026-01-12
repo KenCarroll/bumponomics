@@ -54,8 +54,14 @@
                 </div>
               </div>
 
-              <v-btn rounded variant="text" @click="signOut">
-                <v-icon icon="mdi-logout"></v-icon>Logout
+              <v-btn rounded variant="text" to="/faqs" class="mb-1 w-100" color="primary">
+                <v-icon icon="mdi-forum-outline" start></v-icon>Q&A Dashboard
+              </v-btn>
+
+              <v-divider class="my-2"></v-divider>
+
+              <v-btn rounded variant="text" @click="signOut" class="w-100">
+                <v-icon icon="mdi-logout" start></v-icon>Logout
               </v-btn>
             </div>
           </v-card-text>

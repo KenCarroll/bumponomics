@@ -54,6 +54,12 @@ const router = createRouter({
       path: '/licence',
       name: 'licence',
       component: () => import('../views/LicenceView.vue')
+    },
+    {
+      path: '/faqs',
+      name: 'faqs',
+      component: () => import('../views/FAQDashboardView.vue'),
+      meta: { requiresAuth: true }
     }
   ],
 })
