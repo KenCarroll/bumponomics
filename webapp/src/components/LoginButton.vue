@@ -17,19 +17,22 @@
               <p class="text-caption mt-1">{{ user.email }}</p>
 
               <!-- Progress Bar -->
-              <div class="mt-4 mb-2 w-100 cursor-pointer v-hover-opacity" @click="router.push('/progress')" v-hover>
-                <div class="d-flex justify-space-between text-caption mb-1">
-                  <span class="font-weight-bold text-primary">Book Progress</span>
-                  <span>{{ progressPercentage }}%</span>
+              <v-hover v-slot="{ isHovering, props }">
+                <div class="mt-4 mb-2 w-100 cursor-pointer" v-bind="props" @click="router.push('/progress')"
+                  :style="{ opacity: isHovering ? 0.7 : 1, transition: 'opacity 0.2s' }">
+                  <div class="d-flex justify-space-between text-caption mb-1">
+                    <span class="font-weight-bold text-primary">Book Progress</span>
+                    <span>{{ progressPercentage }}%</span>
+                  </div>
+                  <v-progress-linear :model-value="progressPercentage" color="success" height="6"
+                    rounded></v-progress-linear>
+                  <div class="d-flex justify-space-between text-caption text-medium-emphasis mt-1"
+                    style="font-size: 0.7rem;">
+                    <span>{{ progressCount }} completed</span>
+                    <span class="text-primary text-decoration-underline">Manage</span>
+                  </div>
                 </div>
-                <v-progress-linear :model-value="progressPercentage" color="success" height="6"
-                  rounded></v-progress-linear>
-                <div class="d-flex justify-space-between text-caption text-medium-emphasis mt-1"
-                  style="font-size: 0.7rem;">
-                  <span>{{ progressCount }} completed</span>
-                  <span class="text-primary text-decoration-underline">Manage</span>
-                </div>
-              </div>
+              </v-hover>
 
               <v-divider class="my-3"></v-divider>
 

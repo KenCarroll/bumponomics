@@ -48,5 +48,15 @@ service cloud.firestore {
       allow create: if true;
       allow read: if false;
     }
+
+    // --- FAQs ---
+    // Public read access.
+    // Authenticated users can create questions.
+    // Users can only update/delete their own questions.
+    match /faqs/{faqId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
   }
 }

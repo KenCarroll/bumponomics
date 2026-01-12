@@ -1,10 +1,10 @@
 <template>
   <v-list density="compact" nav>
     <v-list-item v-if="isRoot" title="Home" value="home" to="/home" prepend-icon="mdi-home-outline"
-      active-color="primary"></v-list-item>
+      color="primary"></v-list-item>
 
     <v-list-item v-if="isRoot" title="Contents" value="contents" :to="{ name: 'read', params: { path: 'CONTENTS.md' } }"
-      prepend-icon="mdi-format-list-bulleted" active-color="primary"></v-list-item>
+      prepend-icon="mdi-format-list-bulleted" color="primary"></v-list-item>
 
     <template v-for="item in items" :key="item.path">
       <template v-if="item.name !== 'CONTENTS.md'">
@@ -21,7 +21,7 @@
         <!-- Markdown File Link -->
         <v-list-item v-else-if="item.type === 'file'" :title="item.title || item.name" :value="item.path"
           :to="{ name: 'read', params: { path: item.path } }" :prepend-icon="getIcon(item)"
-          active-color="primary"></v-list-item>
+          color="primary"></v-list-item>
       </template>
     </template>
   </v-list>

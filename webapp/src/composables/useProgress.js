@@ -10,6 +10,29 @@ const totalPages = ref(0) // Logic to set this needs access to content tree
 
 // Global user watcher to reset/fetch progress
 const { user } = useAuth()
+
+const fetchProgress = async (uid) => {
+  if (!uid) return
+  loading.value = true
+  try {
+    const userRef = doc(db, 'users', uid)
+    const userSnap = await getDoc(userRef)
+    
+    if (userSnap.exists()) {
+      completedPaths.value = userSnap.data().completedPaths || []
+    } else {
+      // Initialize user doc if it doesn't exist
+      await setDoc(userRef, { completedPaths: [] }, { merge: true })
+      completedPaths.value = []
+    }
+  } catch (e) {
+    console.error("Error fetching progress:", e)
+    error.value = e.message
+  } finally {
+    loading.value = false
+  }
+}
+
 watch(user, async (newUser) => {
   if (newUser) {
     await fetchProgress(newUser.uid)
@@ -19,28 +42,7 @@ watch(user, async (newUser) => {
 })
 
 export function useProgress() {
-  
-  const fetchProgress = async (uid) => {
-    if (!uid) return
-    loading.value = true
-    try {
-      const userRef = doc(db, 'users', uid)
-      const userSnap = await getDoc(userRef)
-      
-      if (userSnap.exists()) {
-        completedPaths.value = userSnap.data().completedPaths || []
-      } else {
-        // Initialize user doc if it doesn't exist
-        await setDoc(userRef, { completedPaths: [] }, { merge: true })
-        completedPaths.value = []
-      }
-    } catch (e) {
-      console.error("Error fetching progress:", e)
-      error.value = e.message
-    } finally {
-      loading.value = false
-    }
-  }
+
 
   const togglePageCompletion = async (path) => {
     if (!user.value) return 

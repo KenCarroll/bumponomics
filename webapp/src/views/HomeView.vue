@@ -35,7 +35,7 @@
       <v-container>
         <v-row align="center">
           <v-col cols="12" class="text-center">
-            <h3 class="text-h4 font-weight-bold mb-4 text-primary">Our Future is Problem Transforming</h3>
+            <h3 class="text-h4 font-weight-bold mb-4 text-primary">Progress is Problem Transforming</h3>
             <div style="max-width: 900px; margin: 0 auto;" class="text-left">
               <p class="text-body-1 mb-4">
                 We have entered a new economic reality where "business as usual" is a guaranteed path to failure. We are
@@ -63,8 +63,7 @@
                   Meaningful
                   Problematic Situations)</strong>. Organisations that are able to dissolve and re-organize as problems
                 shift and transform, and new problems emerge.
-                <strong>Crucially</strong> they excel at forming new problems to drive progress in a positive direction.
-              </p>
+                If done correctly, transformations create the conditions for the emergence of new problems! This is a <strong>recursive fractal process</strong> that repeats at micro, messo, and macro layers.          </p>
               <p class="text-body-1">
                 Bumponomics is not just theory. It's a language, a mindset, and a transformation tool. Bumponomics is
                 being codified in the <a href="https://www.bumps.app" target="_blank">BUMPS.app</a>.
@@ -101,8 +100,8 @@
                 Artificial Intelligence (AI) to identify, organize, and transform BUMPS from obstacles to
                 stepping stones to success.</li>
             </ul>
-            <p class="text-body-1 mt-4 font-italic">
-              Your Success is a function of your ability to transform your problems!
+            <p class="text-body-1 mt-0 font-italic">
+              <strong>Your</strong> success depends upon <strong>your</strong> ability to transform <strong>your</strong> problems!
             </p>
             <!-- <p class="text-body-1 mb-4">
                 <strong>Bumponomics</strong> provides a playbook for how to organize, act, and thrive in complex dynamic

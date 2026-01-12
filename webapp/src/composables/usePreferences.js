@@ -13,8 +13,14 @@ export function usePreferences() {
 
   // Apply theme
   const applyTheme = () => {
-    theme.global.name.value = isDark.value ? 'dark' : 'light'
-    localStorage.setItem('user_theme', isDark.value ? 'dark' : 'light')
+    const targetTheme = isDark.value ? 'dark' : 'light'
+    // Handle Vuetify 3 warning suggestion
+    if (theme.global) {
+      theme.global.name.value = targetTheme
+    } else {
+      // Fallback
+      theme.name.value = targetTheme
+    }
   }
 
   // Toggle function
