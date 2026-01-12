@@ -54,8 +54,20 @@
                 </div>
               </div>
 
-              <v-btn rounded variant="text" to="/faqs" class="mb-1 w-100" color="primary">
-                <v-icon icon="mdi-forum-outline" start></v-icon>Q&A Dashboard
+              <div class="mb-1 w-100">
+                <v-badge :content="unansweredCount" color="error" v-if="unansweredCount > 0" offset-x="10"
+                  offset-y="10">
+                  <v-btn rounded variant="text" to="/faqs" class="w-100" color="primary">
+                    <v-icon icon="mdi-forum-outline" start></v-icon>Q&A Dashboard
+                  </v-btn>
+                </v-badge>
+                <v-btn v-else rounded variant="text" to="/faqs" class="w-100" color="primary">
+                  <v-icon icon="mdi-forum-outline" start></v-icon>Q&A Dashboard
+                </v-btn>
+              </div>
+
+              <v-btn rounded variant="text" to="/people" class="mb-1 w-100" color="secondary">
+                <v-icon icon="mdi-account-group-outline" start></v-icon>Community
               </v-btn>
 
               <v-divider class="my-2"></v-divider>
@@ -87,11 +99,13 @@ import { useRouter } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
 import { useNewsletter } from '@/composables/useNewsletter'
 import { useProgress } from '@/composables/useProgress'
+import { useFAQ } from '@/composables/useFAQ'
 
 const router = useRouter()
 const { user, loading, error, signInWithGoogle, signOut } = useAuth()
 const { subscribe, unsubscribe, checkSubscriptionStatus, isSubscribed, loading: subLoading } = useNewsletter()
 const { progressPercentage, progressCount } = useProgress()
+const { unansweredCount, listenUnanswered } = useFAQ()
 
 const handleSubscribe = async () => {
   if (user.value?.email) {
@@ -112,6 +126,7 @@ const handleUnsubscribe = async () => {
 watch(user, async (newUser) => {
   if (newUser?.email) {
     await checkSubscriptionStatus(newUser.email)
+    listenUnanswered()
   } else {
     isSubscribed.value = false
   }

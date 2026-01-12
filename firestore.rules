@@ -12,9 +12,11 @@ service cloud.firestore {
     }
 
     // --- User Profiles (Page Completion / Progress) ---
-    // Users can only read and write their own document.
+    // Authenticated users can read all profiles (directory).
+    // Write access is still restricted to owner.
     match /users/{userId} {
-      allow read, write: if isSignedIn() && isOwner(userId);
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && isOwner(userId);
     }
 
     // --- Site Reviews ---

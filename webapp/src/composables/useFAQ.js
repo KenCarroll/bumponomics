@@ -114,13 +114,35 @@ export function useFAQ() {
     }
   }
 
+  // Notification Logic
+  const unansweredCount = ref(0)
+  let notificationUnsubscribe = null
+
+  const listenUnanswered = () => {
+    // Only set up one listener
+    if (notificationUnsubscribe) return
+
+    const q = query(
+      collection(db, 'faqs'),
+      where('answered', '==', false)
+    )
+
+    notificationUnsubscribe = onSnapshot(q, (snapshot) => {
+      unansweredCount.value = snapshot.size
+    }, (err) => {
+      console.error("Error listening for notifications:", err)
+    })
+  }
+
   return {
     faqs,
     loading,
     error,
+    unansweredCount,
     fetchFAQs,
     addQuestion,
     answerQuestion,
+    listenUnanswered,
     stopListening
   }
 }
