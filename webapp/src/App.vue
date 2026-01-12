@@ -84,7 +84,8 @@
     </v-main>
 
     <!-- Bottom App Bar -->
-    <v-footer app border="t" height="50" class="d-flex align-center" style="z-index: 2000;">
+    <v-footer v-if="route.name === 'read'" app border="t" height="50" class="d-flex align-center"
+      style="z-index: 2000;">
       <div class="d-flex align-center" :style="mobile ? '' : 'max-width: 40%;'">
         <v-btn icon variant="text" density="compact" v-if="mobile">
           <v-icon size="small">mdi-book-open-page-variant</v-icon>
@@ -104,7 +105,7 @@
         <v-btn icon density="compact" variant="text" :disabled="!prevPage" @click="navigateTo(prevPage?.path)">
           <v-icon>mdi-chevron-left</v-icon>
           <v-tooltip activator="parent" location="top" v-if="prevPage">Previous: {{ prevPage.title || prevPage.name
-          }}</v-tooltip>
+            }}</v-tooltip>
         </v-btn>
 
         <span class="text-caption text-medium-emphasis mx-2" style="min-width: 60px; text-align: center;">
@@ -114,7 +115,7 @@
         <v-btn icon density="compact" variant="text" :disabled="!nextPage" @click="navigateTo(nextPage?.path)">
           <v-icon>mdi-chevron-right</v-icon>
           <v-tooltip activator="parent" location="top" v-if="nextPage">Next: {{ nextPage.title || nextPage.name
-          }}</v-tooltip>
+            }}</v-tooltip>
         </v-btn>
       </div>
 
@@ -131,7 +132,7 @@
             'mdi-checkbox-blank-circle-outline' }}</v-icon>
 
           <span v-if="!mobile">{{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete'
-          }}</span>
+            }}</span>
 
           <v-tooltip v-if="mobile" activator="parent" location="top">
             {{ isPageCompleted(decodeURIComponent(route.params.path)) ? 'Completed' : 'Mark Complete' }}
