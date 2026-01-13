@@ -42,19 +42,9 @@
       </div>
     </v-container>
 
-    <!-- FAQ Drawer -->
-    <v-navigation-drawer v-model="faqDrawer" location="right" width="400" temporary elevation="4"
-      style="z-index: 3000;">
-      <page-faq v-if="currentFile" :page-path="currentFile.path" @login-requested="signInWithGoogle"
-        @close="faqDrawer = false" />
-    </v-navigation-drawer>
 
-    <!-- FAQ Toggle Button (FAB) -->
-    <v-btn icon="mdi-forum" color="primary" size="large" elevation="4" class="faq-fab" @click="faqDrawer = !faqDrawer"
-      v-if="currentFile && !error && !loading">
-      <v-icon>mdi-forum</v-icon>
-      <v-tooltip activator="parent" location="start">Q&A</v-tooltip>
-    </v-btn>
+
+
   </div>
 </template>
 
@@ -66,11 +56,13 @@ import contentTree from '@/content.json'
 import { useIcons } from '@/composables/useIcons'
 import { useAuth } from '@/composables/useAuth'
 import YouTubeEmbed from '@/utils/markdownItVideo'
-import PageFaq from '@/components/PageFAQ.vue'
+import { useLayout } from '@/composables/useLayout'
 
 const route = useRoute()
 const { getIcon } = useIcons()
 const { user, signInWithGoogle, loading: authLoading } = useAuth()
+const { rightDrawerOpen, toggleRightDrawer } = useLayout()
+
 
 const md = new MarkdownIt({
   html: true,
@@ -83,7 +75,6 @@ const loading = ref(false)
 const error = ref(false)
 const markdownSource = ref('')
 const currentFile = ref(null)
-const faqDrawer = ref(false)
 
 // Flatten tree to find content easily by path
 const flatten = (nodes) => {
@@ -99,7 +90,6 @@ const allFiles = flatten(contentTree)
 const loadContent = () => {
   loading.value = true
   error.value = false
-  faqDrawer.value = false // Close drawer on navigation
 
   // Clean the path param (decode URI component)
   const targetPath = route.params.path ? decodeURIComponent(route.params.path) : null

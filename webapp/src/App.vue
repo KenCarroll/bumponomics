@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar flat border="b">
+    <v-app-bar flat border="b" density="compact">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>
-        <strong style="font-weight: 900; letter-spacing: 0.5px; font-style: italic;">BUMPONOMICS</strong>
+        <strong style="font-weight: 900; letter-spacing: 0.5px; font-style: bold;">BUMPONOMICS</strong>
       </v-app-bar-title>
 
       <v-spacer></v-spacer>
@@ -33,15 +33,6 @@
         <v-icon color="pink">mdi-heart</v-icon>
         <v-tooltip activator="parent" location="bottom">Support Mission</v-tooltip>
       </v-btn>
-
-      <!-- Comments Toggle -->
-      <v-btn icon class="mr-2" :color="rightDrawerOpen && rightTab === 'comments' ? 'primary' : undefined"
-        @click="toggleRightDrawer('comments')">
-        <v-icon>mdi-comment-text-outline</v-icon>
-        <v-tooltip activator="parent" location="bottom">Comments</v-tooltip>
-      </v-btn>
-
-
 
       <login-button class="mr-4" />
     </v-app-bar>
@@ -123,6 +114,24 @@
 
       <!-- Page Completion Toggle (Fixed Position on Right) -->
       <div v-if="user && route.params.path" class="d-flex align-center mr-2">
+        <!-- Comment Counter -->
+        <v-btn icon density="compact" variant="text" class="mr-3" @click="toggleRightDrawer('comments')">
+          <v-badge :content="pageComments.length" color="secondary" bordered location="top right" v-if="pageComments.length > 0"
+            offset-x="-2" offset-y="-2">
+            <v-icon>mdi-comment-text-outline</v-icon>
+          </v-badge>
+          <v-icon v-else>mdi-comment-text-outline</v-icon>
+          <v-tooltip activator="parent" location="top">Comments</v-tooltip>
+        </v-btn>
+
+        <!-- Share Button -->
+        <v-btn icon density="compact" variant="text" class="mr-3" @click="sharePage">
+          <v-icon>mdi-share-variant-outline</v-icon>
+          <v-tooltip v-model="shareTooltip" activator="parent" location="top" :open-on-hover="!shareTooltip">
+            {{ shareTooltip ? 'Link Copied!' : 'Share Page' }}
+          </v-tooltip>
+        </v-btn>
+
         <v-btn :color="isPageCompleted(decodeURIComponent(route.params.path)) ? 'success' : 'primary'"
           :variant="isPageCompleted(decodeURIComponent(route.params.path)) ? 'flat' : 'tonal'" density="compact"
           :class="mobile ? '' : 'px-4 text-capitalize'" :icon="mobile"
@@ -158,14 +167,32 @@ import { useAuth } from '@/composables/useAuth'
 import { usePreferences } from '@/composables/usePreferences'
 import { useProgress } from '@/composables/useProgress'
 
+import { useLayout } from '@/composables/useLayout'
+import { useComments } from '@/composables/useComments'
+
 const route = useRoute()
 const drawer = ref(true)
 const isDocked = ref(false)
 const searchOpen = ref(false)
 
-// Unified Right Drawer State
-const rightDrawerOpen = ref(false)
-const rightTab = ref('chat') // 'chat' or 'comments'
+// Shared Layout State
+const { rightDrawerOpen, rightTab, toggleRightDrawer } = useLayout()
+
+// Comments Logic for Footer
+const { comments: pageComments, fetchComments: fetchPageComments } = useComments()
+
+// Watch route to fetch comments count
+watch(() => route.params.path, (newPath) => {
+  if (newPath) fetchPageComments(decodeURIComponent(newPath))
+}, { immediate: true })
+
+// Share Logic
+const shareTooltip = ref(false)
+const sharePage = () => {
+  navigator.clipboard.writeText(window.location.href)
+  shareTooltip.value = true
+  setTimeout(() => shareTooltip.value = false, 2000)
+}
 
 const { user } = useAuth()
 // ... existing logic ...
@@ -177,18 +204,6 @@ const { togglePageCompletion, isPageCompleted, setTotalPages } = useProgress()
 // Display Logic for Responsive Layout
 import { useDisplay } from 'vuetify'
 const { mobile } = useDisplay()
-
-// Toggle Right Drawer and specific tab
-const toggleRightDrawer = (tab) => {
-  if (rightDrawerOpen.value && rightTab.value === tab) {
-    // If open and on same tab, close it
-    rightDrawerOpen.value = false
-  } else {
-    // Otherwise open and switch tab
-    rightTab.value = tab
-    rightDrawerOpen.value = true
-  }
-}
 
 // Helper to find title from path
 const flatten = (nodes) => {

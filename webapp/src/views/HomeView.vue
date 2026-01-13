@@ -35,7 +35,7 @@
       <v-container>
         <v-row align="center">
           <v-col cols="12" class="text-center">
-            <h3 class="text-h4 font-weight-bold mb-4 text-primary">Progress is Problem Transforming</h3>
+            <h3 class="text-h4 font-weight-bold mb-4 text-primary">All Progress is Problem Transforming</h3>
             <div style="max-width: 900px; margin: 0 auto;" class="text-left">
               <p class="text-body-1 mb-4">
                 We have entered a new economic reality where "business as usual" is a guaranteed path to failure. We are
@@ -138,8 +138,8 @@
       v-if="(sponsors.partners && sponsors.partners.length) || (sponsors.patrons && sponsors.patrons.length)">
       <v-container>
         <div class="text-center mb-8">
-          <h3 class="text-h4 font-weight-bold text-primary mb-2">Our Community</h3>
-          <p class="text-body-1 text-medium-emphasis">Made possible by our Transformation Partners & Patrons</p>
+          <h3 class="text-h4 font-weight-bold text-primary mb-2">Supporters</h3>
+          <p class="text-body-1 text-medium-emphasis">Bumponomics is funded by our generous <router-link to="/support" class="text-primary text-decoration-none font-weight-bold">supporters & patrons</router-link></p>
         </div>
 
         <!-- Partners -->

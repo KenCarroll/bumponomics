@@ -43,7 +43,7 @@
                         <div class="d-flex align-center mb-1 text-primary">
                             <v-icon size="small" start>mdi-check-circle</v-icon>
                             <span class="text-caption font-weight-bold">Answered by {{ faq.answeredBy || 'Admin'
-                                }}</span>
+                            }}</span>
                         </div>
                         <p class="text-body-2">{{ faq.answer }}</p>
                     </div>
@@ -119,19 +119,15 @@
 
 <script setup>
 import { ref, watch, onMounted, onUnmounted, reactive } from 'vue'
+import { useRoute } from 'vue-router'
 import { useFAQ } from '@/composables/useFAQ'
 import { useAuth } from '@/composables/useAuth'
 
-const props = defineProps({
-    pagePath: {
-        type: String,
-        required: true
-    }
-})
+const route = useRoute()
+const { user } = useAuth()
 
 const emit = defineEmits(['login-requested', 'close'])
 
-const { user } = useAuth()
 const { faqs, loading, error, fetchFAQs, addQuestion, answerQuestion, stopListening } = useFAQ()
 
 const showForm = ref(false)
@@ -156,17 +152,20 @@ const formatDate = (timestamp) => {
 }
 
 const loadData = () => {
-    if (props.pagePath) {
-        fetchFAQs(props.pagePath)
-    }
+    const path = route.params.path || 'home'
+    console.log('FAQ fetching for:', path)
+    fetchFAQs(path) // No decode needed? Or check usage elsewhere. Typically route.params are decoded by now?
+    // Actually safe to use decodeURIComponent just in case
 }
 
 const submitQuestion = async () => {
     if (!newQuestion.value.trim()) return
 
+    const path = route.params.path || 'home'
+
     // Debug log
     console.log("Submitting question:", {
-        path: props.pagePath,
+        path: path,
         question: newQuestion.value,
         user: user.value?.uid
     })
@@ -175,7 +174,7 @@ const submitQuestion = async () => {
     try {
         if (!user.value) throw new Error("You must be logged in to post.")
 
-        await addQuestion(props.pagePath, newQuestion.value, user.value)
+        await addQuestion(path, newQuestion.value, user.value)
         newQuestion.value = ''
         showForm.value = false
 
@@ -207,7 +206,7 @@ const submitAnswer = async (faqId) => {
     }
 }
 
-watch(() => props.pagePath, () => {
+watch(() => route.params.path, () => {
     loadData()
     showForm.value = false
     newQuestion.value = ''

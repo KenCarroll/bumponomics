@@ -3,41 +3,24 @@
     <div class="mb-12">
       <div class="d-flex align-center justify-center position-relative">
         <h3 class="text-h5 font-weight-bold text-center">WHAT READERS ARE SAYING</h3>
-        
+
         <!-- Desktop Button: Absolute Right -->
-        <v-btn
-          v-if="user"
-          color="primary"
-          variant="text"
-          prepend-icon="mdi-pencil"
-          class="d-none d-md-flex position-absolute right-0"
-          @click="dialog = true"
-        >
+        <v-btn v-if="user" color="primary" variant="text" prepend-icon="mdi-pencil"
+          class="d-none d-md-flex position-absolute right-0" @click="dialog = true">
           Write a Review
         </v-btn>
       </div>
 
       <!-- Mobile Button: Centered Below -->
       <div v-if="user" class="d-flex d-md-none justify-center mt-4">
-        <v-btn
-          color="primary"
-          variant="text"
-          prepend-icon="mdi-pencil"
-          @click="dialog = true"
-        >
+        <v-btn color="primary" variant="text" prepend-icon="mdi-pencil" @click="dialog = true">
           Write a Review
         </v-btn>
       </div>
     </div>
 
     <!-- Error State -->
-    <v-alert
-      v-if="error"
-      type="error"
-      variant="tonal"
-      class="mb-6"
-      closable
-    >
+    <v-alert v-if="error" type="error" variant="tonal" class="mb-6" closable>
       {{ error }}
       <template v-slot:append>
         <v-btn size="small" variant="text" @click="fetchReviews()">Retry</v-btn>
@@ -53,26 +36,17 @@
 
     <!-- Content State -->
     <v-row v-else-if="reviews.length > 0">
-      <v-col 
-        v-for="review in reviews" 
-        :key="review.id" 
-        cols="12" 
-        md="4"
-      >
+      <v-col v-for="review in reviews" :key="review.id" cols="12" md="4">
         <v-card class="fill-height pa-4 d-flex flex-column" color="surface" elevation="0" border>
           <!-- Rating -->
           <div class="d-flex mb-4 text-primary">
-            <v-icon 
-              v-for="i in 5" 
-              :key="i" 
-              size="small" 
-              :icon="i <= review.rating ? 'mdi-star' : 'mdi-star-outline'"
-            ></v-icon>
+            <v-icon v-for="i in 5" :key="i" size="small"
+              :icon="i <= review.rating ? 'mdi-star' : 'mdi-star-outline'"></v-icon>
           </div>
-          
+
           <!-- Text -->
           <p class="text-body-2 font-italic mb-4 flex-grow-1">"{{ review.text }}"</p>
-          
+
           <!-- Author -->
           <div class="text-caption font-weight-bold d-flex justify-space-between align-center">
             <span>– {{ review.authorName || 'Anonymous' }}</span>
@@ -96,29 +70,14 @@
       <v-card>
         <v-card-title>Write a Review</v-card-title>
         <v-card-text>
-          <v-rating
-            v-model="newRating"
-            color="primary"
-            hover
-            class="mb-4"
-          ></v-rating>
-          
-          <v-textarea
-            v-model="newText"
-            label="Your thoughts..."
-            rows="3"
-            variant="outlined"
-          ></v-textarea>
+          <v-rating v-model="newRating" color="primary" hover class="mb-4"></v-rating>
+
+          <v-textarea v-model="newText" label="Your thoughts..." rows="3" variant="outlined"></v-textarea>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn variant="text" @click="dialog = false">Cancel</v-btn>
-          <v-btn 
-            color="primary" 
-            :loading="submitting" 
-            :disabled="!newText || newRating === 0"
-            @click="submitReview"
-          >
+          <v-btn color="primary" :loading="submitting" :disabled="!newText || newRating === 0" @click="submitReview">
             Post
           </v-btn>
         </v-card-actions>
@@ -132,7 +91,7 @@ import { ref, onMounted } from 'vue'
 import { useReviews } from '@/composables/useReviews'
 import { useAuth } from '@/composables/useAuth'
 
-const { reviews, loading, fetchReviews, addReview } = useReviews()
+const { reviews, loading, error, fetchReviews, addReview } = useReviews()
 const { user } = useAuth()
 
 const dialog = ref(false)
@@ -154,7 +113,7 @@ const formatDate = (date) => {
 
 const submitReview = async () => {
   if (!user.value) return
-  
+
   submitting.value = true
   const success = await addReview({
     rating: newRating.value,
@@ -162,7 +121,7 @@ const submitReview = async () => {
     authorName: user.value.displayName || 'Reader',
     authorId: user.value.uid
   })
-  
+
   if (success) {
     dialog.value = false
     newRating.value = 0

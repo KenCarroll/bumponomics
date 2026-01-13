@@ -1,16 +1,8 @@
 <template>
-  <v-navigation-drawer
-    v-model="isOpen"
-    location="right"
-    :width="drawerWidth"
-    class="right-sidebar"
-    style="padding-bottom: 52px;"
-  >
+  <v-navigation-drawer v-model="isOpen" location="right" :width="drawerWidth" class="right-sidebar"
+    style="padding-bottom: 52px;">
     <!-- Resize Handle -->
-    <div 
-      class="resize-handle" 
-      @mousedown="startResize"
-    ></div>
+    <div class="resize-handle" @mousedown="startResize"></div>
 
     <div class="d-flex flex-column h-100">
       <!-- Tabs Header -->
@@ -28,12 +20,13 @@
             <v-icon start size="small">mdi-comment-text-outline</v-icon>
             Comments
           </v-tab>
+
         </v-tabs>
       </div>
 
       <!-- Tab Content -->
       <v-window v-model="internalTab" class="flex-grow-1">
-        
+
         <!-- Chat Tab -->
         <v-window-item value="chat" class="h-100">
           <chat-panel @close="isOpen = false" />
@@ -53,6 +46,8 @@
           </div>
         </v-window-item>
 
+
+
       </v-window>
     </div>
   </v-navigation-drawer>
@@ -63,6 +58,7 @@ import { ref, watch, onUnmounted } from 'vue'
 import ChatPanel from './ChatPanel.vue'
 import CommentSidebar from './CommentSidebar.vue'
 import SiteReviewList from './SiteReviewList.vue'
+
 
 const props = defineProps({
   modelValue: Boolean,
@@ -124,6 +120,7 @@ onUnmounted(stopResize)
   background: transparent;
   z-index: 100;
 }
+
 .resize-handle:hover {
   background: rgba(var(--v-theme-primary), 0.5);
 }
