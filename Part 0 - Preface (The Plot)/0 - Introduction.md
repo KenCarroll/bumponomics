@@ -7,9 +7,42 @@ CONSTRAINTS OF BUMPONOMICS
  - Progress is a vector (Direction + Magnitude), not a destination
 - f() is a non-linear function
 - Planet represents the constraints of the planet
-- People represents the participants in the planet (Space)
+- People represents a subset of the participants in the planet (Space). If when using this formula, and feels better to include non-human, non individual entities, then include them and change people to 'participants' to widen the scope of the formula.
 - Problems the anomolies in the space that the participants experience
 
+
+## Understanding our Socitites
+We currently understand our societies by the artificts (solutions) that we have created. Products, Services, Outputs. Economics measures these things. 
+
+But I argue we are missing the essence of our societies. The problems substratum of our societies. The problems that we experience. The problems that we transform into progress. The problems that we accept. The problems that we ignore. The problems that we deny. 
+
+The problems that we accept are the problems that we transform into progress. 
+
+IF we can equip ourselves with language, visualisation, tools, and frameworks to understand the problems that we experience, we can transform them into progress. 
+
+This will really shift our understanding of our societies. 
+
+
+
+## Economy of Thinking
+The great economy
+of thinking is the cognative economy. BUMPONOMICS thinking helps you conserve energy and resources by not thinking about the same things over and over again. It helps you to focus on the most important things and to avoid getting stuck in the same patterns of thought. It helps you to avoid the trap of solutionism and to focus on the most important things. 
+
+## The Trap of Solutionism
+
+## Asking Different Questions
+Bumponomics asks different questions to most other fields. It asks:
+
+- What problems matter?
+- Who experiences them?
+- How effectively are transformed into progress?
+- How are we expanding our operating space for problem development to increase our opportunity to transform problems into progress? (affordability)
+
+## Moving the Needle
+Planet (Environment)
+People (Participants)
+Problems
+Progress (Outcomes) - what we either transform or accept that ulitmately impact the planet, people, and the potential for new problems that expand the affordance of the space
 
     
 ## The Fundamental Equation: 
