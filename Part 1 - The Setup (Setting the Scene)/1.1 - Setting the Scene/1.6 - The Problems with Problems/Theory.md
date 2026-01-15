@@ -1,3 +1,6 @@
+---
+id: e7bbe733-93c1-45c5-b7c2-2bc3ebdbfa74
+---
 # The Algebra of Agency: A Comprehensive Framework
 **Subject:** The BUMPS Theory of Organizational & Existential Dynamics
 **Date:** December 18, 2025

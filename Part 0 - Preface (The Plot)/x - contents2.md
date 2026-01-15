@@ -1,3 +1,6 @@
+---
+id: 70fc4a87-1bf6-4c8d-a0ab-cdb198300e41
+---
 # BOOK PROPOSAL
 
 **TITLE:** BUMPONOMICS

@@ -1,21 +1,22 @@
+---
+id: 1a6547bb-ffc7-429a-90de-405c1f5ac243
+---
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+# BUMPS Book Content
 
-### How do I get set up? ###
+This repository contains the source content for the "BUMPS-BOOK".
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Application
+The application to render this book is located in the `ABookWebApp` repository.
+
+## Structure
+- **Contents**: Markdown files organized by Part and Chapter.
+- **CONTENTS.md**: Auto-generated Table of Contents.
 
 ### Contribution guidelines ###
 

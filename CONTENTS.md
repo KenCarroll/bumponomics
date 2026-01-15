@@ -1,4 +1,7 @@
-*Auto-generated on 13/01/2026, 06:38:12*
+---
+id: 2cdef148-873c-4243-b1c8-1b5a2fc78586
+---
+*Auto-generated on 1/14/2026, 4:37:34 PM*
 
 
 ## Part 0 - Preface (The Plot)
@@ -61,6 +64,7 @@
 - [The Algebra of Agency: A Dynamic Systems Framework](Part%201%20-%20The%20Setup%20(Setting%20the%20Scene)/1.4%20-%20Progress%20%3D%20People%20%2B%20Problems.md)
 - [1.5 - The Problem Paradox](Part%201%20-%20The%20Setup%20(Setting%20the%20Scene)/1.5%20-%20The%20Problem%20Paradox.md)
 - [1.7 - Human Strategy](Part%201%20-%20The%20Setup%20(Setting%20the%20Scene)/1.7%20-%20Human%20Strategy.md)
+- [Reasoning (Trolleyology)](Part%201%20-%20The%20Setup%20(Setting%20the%20Scene)/1.x%20-%20Reasoning%20(Trolleyology).md)
 
 ## Part 2 - Journey & Confrontation
 ---
@@ -86,6 +90,7 @@
 - [Transformation Strategies](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.2%20-%20Transformations/2.3.2.1%20-%20Transformation%20Strategies.md)
 - [WHO'S R-ARSED](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.2%20-%20Transformations/2.3.2.2%20-%20WHO's%20R-ARSED.md)
 - [2.3.0 - PTO Introduction](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.0%20-%20PTO%20Introduction.md)
+- [Affordances](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.0.1%20-%20Affordances.md)
 - [2.3.1 - Problems](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.1%20-%20Problems.md)
 - [Outcomes](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.3%20-%20Outcomes.md)
 - [Cadences (Rhythms)](Part%202%20-%20Journey%20%26%20Confrontation/2.2%20-%20BUMPS%20Ecosystem/2.3%20-%20The%20PTO%20Process/2.3.4%20-%20PTO%20Cadences%20(rhythms).md)

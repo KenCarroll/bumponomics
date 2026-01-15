@@ -1,3 +1,6 @@
+---
+id: f233a53e-c85a-46bd-9c8a-d6e0d902feac
+---
 # Bumpscapes (The Territory)
 
 ## The Map is Not the Territory

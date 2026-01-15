@@ -1,3 +1,6 @@
+---
+id: 1b91ab7a-3078-4890-a232-e26160ee4469
+---
 # Problem Structuring
 
 ## Problem Solving

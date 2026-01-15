@@ -1,3 +1,6 @@
+---
+id: 24f152f8-b361-4899-8168-cc0deedbf0e9
+---
 # Cybernetics — Core Laws & Principles
 
 Cybernetics is the study of **control**, **communication**, and **regulation** in systems (mechanical, biological, cognitive, social).  

@@ -1,3 +1,6 @@
+---
+id: cd6e3625-537a-47cf-9df9-9f806fe43b6e
+---
 # Game Theory & Problems
 
 At its heart, Game Theory is the study of strategic interaction. It analyzes situations where the outcome for one person depends not just on their own actions, but on the actions of others.

@@ -1,3 +1,6 @@
+---
+id: 831dfaa3-5deb-43f1-8896-c4ed77a887e3
+---
 # Systems Thinking
 
 Connection to Systems Thinking and Complexity Science

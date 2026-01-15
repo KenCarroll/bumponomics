@@ -1,3 +1,6 @@
+---
+id: 656caf00-2d1c-4d04-97d3-2388aa9b2454
+---
 # Quotations
 
 “If there is no struggle, there is no progress” 

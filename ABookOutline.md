@@ -1,3 +1,6 @@
+---
+id: ff691d02-146a-4374-9c00-9e5438adf343
+---
 # BUMPS-BOOK: The BUMPS Transformation System
 ## An Outline for Understanding Problem-Centric Existence
 

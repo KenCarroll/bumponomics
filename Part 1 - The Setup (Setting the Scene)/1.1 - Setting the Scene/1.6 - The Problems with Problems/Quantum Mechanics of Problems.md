@@ -1,3 +1,6 @@
+---
+id: fcf78639-caf9-4483-afc0-04d03419c56c
+---
 # Quantum Mechanics & Problems
 
 When we grapple with the nature of problems—those jagged BUMPS in our landscape of existence—we often look to fields like psychology, sociology, or economics for explanation. But there is a stranger, more fundamental lens we can borrow: Quantum Mechanics.

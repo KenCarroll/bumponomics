@@ -1,3 +1,6 @@
+---
+id: ee6504de-e0aa-4373-ade4-c90634c7cd53
+---
 # Introduction
 
 CONSTRAINTS OF BUMPONOMICS
