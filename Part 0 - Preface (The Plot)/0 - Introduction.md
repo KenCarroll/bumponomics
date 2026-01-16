@@ -3,7 +3,21 @@ id: ee6504de-e0aa-4373-ade4-c90634c7cd53
 ---
 # Introduction
 
-CONSTRAINTS OF BUMPONOMICS
+## Takes a long time to grow a human being
+Organism lifespans vary wildly, from the "immortal" jellyfish that regenerates to ancient sponges living thousands of years (Glass sponges up to 15,000 years), long-lived mollusks like the Ocean Quahog (507+ years), and long-lived vertebrates such as the Greenland Shark (250-500 years) and Bowhead Whales (200+ years). Mammals generally live shorter lives. Elephants 60-70 yrs, while plants like Bristlecone Pines (4,857+ yrs) and clonal trees (Pando, 16,000+ yrs) hold records for longest plant life. There is even a instance of 'biologoical immortality' in the Turritopsis dohrnii jellyfish, which can revert to an earlier stage of its life cycle, effectively restarting its life. 
+
+Humans typically live for 70-80 years, but this is a relatively short lifespan compared to some other organisms. 
+
+## Key Assumptions
+
+Humans sense & perceive their world through a limited range of inputs. 
+Our Environment determines the range of problems we can experience and our options for addressing them. 
+Humans form problems based on their state of being and their perception of their environment. 
+
+
+
+
+## CONSTRAINTS OF BUMPONOMICS
  - Scope constrained to the formulae of BUMPONOMICS
 
  Progress = f(planet, people, problems) 

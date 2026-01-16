@@ -1,7 +1,4 @@
----
-id: 2cdef148-873c-4243-b1c8-1b5a2fc78586
----
-*Auto-generated on 1/14/2026, 4:37:34 PM*
+*Auto-generated on 1/15/2026, 1:49:24 PM*
 
 
 ## Part 0 - Preface (The Plot)
