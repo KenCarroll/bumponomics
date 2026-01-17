@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUMPS.app - Fleet Dashboard v3.1 (Icons)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', 'Segoe UI Emoji', Tahoma, Geneva, Verdana, sans-serif; background: #eef2f6; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 98%; max-width: 1250px; background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 5px; font-weight: 800; letter-spacing: -0.5px; }
+        p.subtitle { text-align: center; color: #7f8c8d; font-size: 1em; margin-bottom: 25px; }
+        
+        /* Controls */
+        .controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        button {
+            padding: 10px 18px; border: 1px solid #dcdcdc; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9em; transition: all 0.2s ease;
+            background: white; color: #555;
+        }
+        button:hover { background: #f8f9fa; border-color: #bbb; }
+        button.active { background: #2c3e50; color: white; border-color: #2c3e50; box-shadow: 0 4px 10px rgba(44, 62, 80, 0.2); }
+
+        .chart-wrapper { position: relative; height: 650px; width: 100%; }
+        
+        /* Legend */
+        .legend-box { display: flex; gap: 20px; justify-content: center; margin-top: 25px; font-size: 0.85em; color: #666; flex-wrap: wrap; background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #eee;}
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .stream-line { height: 3px; width: 25px; display: inline-block; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>BUMPS Fleet Dashboard v3.1</h1>
+        <p class="subtitle">Visualizing Parallel Streams with Vessel Icons</p>
+
+        <div class="controls">
+            <button onclick="updateChart('single')" id="btn-single" class="active">1. Standard Curve</button>
+            <button onclick="updateChart('split')" id="btn-split">2. The "Profit Trap" (Divergence)</button>
+            <button onclick="updateChart('alignment')" id="btn-alignment">3. Full Alignment</button>
+            <button onclick="updateChart('chaos')" id="btn-chaos">4. Strategic Drift</button>
+            <button onclick="updateChart('meta')" id="btn-meta">5. Metamorphosis (The Jump)</button>
+        </div>
+
+        <div class="chart-wrapper">
+            <canvas id="dstmChart"></canvas>
+        </div>
+
+        <div class="legend-box">
+            <div class="legend-item"><span style="font-size:16px;">●</span> Problem</div>
+            <div class="legend-item"><span style="font-size:16px;">◆</span> Transformation</div>
+            <div class="legend-item"><span style="font-size:16px;">■</span> Outcome</div>
+            
+            <div style="border-left: 1px solid #ccc; margin: 0 10px;"></div>
+            
+            <div class="legend-item">🚀 Product</div>
+            <div class="legend-item">🚣 People</div>
+            <div class="legend-item">⚓ Profit</div>
+            
+            <div style="border-left: 1px solid #ccc; margin: 0 10px;"></div>
+            
+             <div class="legend-item"><span class="stream-line" style="background:#999; border-bottom: 2px dotted #999; height:0;"></span>Ref. S-Curve</div>
+        </div>
+    </div>
+
+<script>
+    // --- 1. CONFIG ---
+    const colors = {
+        product: '#3498db', people: '#e67e22', profit: '#e74c3c',
+        zoneMeta: 'rgba(155, 89, 182, 0.15)',
+        zoneThrive: 'rgba(46, 204, 113, 0.08)',
+        zoneSurvive: 'rgba(52, 152, 219, 0.1)',
+        zoneDemise: 'rgba(192, 57, 43, 0.15)',
+        threshold: '#7f8c8d'
+    };
+
+    // Icons used for the streams
+    const icons = {
+        rocket: '🚀',
+        rowboat: '🚣',
+        anchor: '⚓'
+    };
+
+    const scenarios = {
+        single: {
+            curve: [{x:0.5, y:-3}, {x:1.5, y:4}, {x:2.5, y:12}, {x:3.5, y:14}], 
+            streams: [
+                {
+                    label: 'Product Vessel', color: colors.product, icon: icons.rocket,
+                    data: [
+                        { x: 0.8, y: -3, type: 'P', name: 'P1: Legacy UX' },
+                        { x: 1.2, y: -4, type: 'T', name: 'T1: Redesign' },
+                        { x: 1.8, y: 5, type: 'O', name: 'O1: Launch' },
+                        { x: 2.2, y: 4, type: 'T', name: 'T2: Fix' },
+                        { x: 2.8, y: 12, type: 'O', name: 'O2: Stability' }
+                    ]
+                }
+            ]
+        },
+        split: { // PROFIT TRAP
+            curve: [{x:0.5, y:5}, {x:1.5, y:12}, {x:2.5, y:16}, {x:3.5, y:17}], 
+            streams: [
+                {
+                    label: 'Product (Thriving)', color: colors.product, icon: icons.rocket,
+                    data: [{x:0.8,y:10,type:'P'}, {x:1.5,y:12,type:'T'}, {x:2.5,y:16,type:'O'}, {x:3.2,y:18,type:'T'}]
+                },
+                {
+                    label: 'People (Surviving)', color: colors.people, icon: icons.rowboat,
+                    data: [{x:0.8,y:2,type:'P'}, {x:1.5,y:3,type:'T'}, {x:2.2,y:1,type:'O'}, {x:2.8,y:0,type:'P'}]
+                },
+                {
+                    label: 'Profit (Demise)', color: colors.profit, icon: icons.anchor,
+                    data: [{x:0.8,y:5,type:'P'}, {x:1.5,y:2,type:'T'}, {x:2.2,y:-4,type:'O'}, {x:3.2,y:-10,type:'T'}]
+                }
+            ]
+        },
+        alignment: {
+            curve: [{x:0.5, y:2}, {x:1.5, y:6}, {x:2.5, y:10}, {x:3.5, y:12}],
+            streams: [
+                { label: 'Product', color: colors.product, icon: icons.rocket, data: [{x:0.8,y:5,type:'P'}, {x:1.5,y:8,type:'T'}, {x:2.5,y:12,type:'O'}] },
+                { label: 'People', color: colors.people, icon: icons.rocket, data: [{x:0.8,y:2,type:'P'}, {x:1.5,y:6,type:'T'}, {x:2.5,y:10,type:'O'}] },
+                { label: 'Profit', color: colors.profit, icon: icons.rocket, data: [{x:0.8,y:0,type:'P'}, {x:1.5,y:4,type:'T'}, {x:2.5,y:8,type:'O'}] }
+            ]
+        },
+        chaos: {
+            curve: [{x:0.5, y:8}, {x:1.5, y:8}, {x:2.5, y:8}, {x:3.5, y:8}], 
+            streams: [
+                { label: 'Product', color: colors.product, icon: icons.rowboat, data: [{x:0.8,y:10,type:'P'}, {x:1.8,y:12,type:'T'}, {x:2.8,y:11,type:'O'}] },
+                { label: 'People', color: colors.people, icon: icons.anchor, data: [{x:0.8,y:5,type:'P'}, {x:1.5,y:0,type:'T'}, {x:2.5,y:-3,type:'O'}] },
+                { label: 'Profit', color: colors.profit, icon: icons.rowboat, data: [{x:0.8,y:8,type:'P'}, {x:1.5,y:6,type:'T'}, {x:2.2,y:4,type:'O'}] }
+            ]
+        },
+        meta: { 
+            curve: [{x:0.5, y:12}, {x:1.5, y:4}, {x:2.5, y:-4}, {x:3.5, y:-8}], // Dying
+            curve2: [{x:0.5, y:-2}, {x:1.5, y:10}, {x:2.5, y:18}, {x:3.5, y:19}], // Rising
+            streams: [
+                { label: 'Legacy Product', color: colors.profit, icon: icons.anchor, data: [{x:0.8,y:12,type:'P'}, {x:1.5,y:6,type:'T'}, {x:2.5,y:-2,type:'O'}] },
+                { label: 'Innovation', color: colors.product, icon: icons.rocket, data: [{x:0.8,y:2,type:'P'}, {x:1.5,y:12,type:'T'}, {x:2.5,y:19,type:'O'}] }
+            ]
+        }
+    };
+
+    // --- 2. PLUGINS ---
+    
+    const backgroundZonesPlugin = {
+        id: 'backgroundZones',
+        beforeDraw: (chart) => {
+            const { ctx, chartArea, scales: { y } } = chart;
+            if (!chartArea || !y) return;
+            const { left, right, width } = chartArea;
+
+            const drawZone = (yStart, yEnd, color, label) => {
+                const yTop = y.getPixelForValue(yStart);
+                const yBottom = y.getPixelForValue(yEnd);
+                if (yTop === undefined || yBottom === undefined) return;
+                ctx.fillStyle = color;
+                ctx.fillRect(left, Math.min(yTop, yBottom), width, Math.abs(yBottom - yTop));
+                ctx.fillStyle = "rgba(0,0,0,0.5)";
+                ctx.font = "bold 13px 'Segoe UI', sans-serif";
+                ctx.textAlign = "right";
+                ctx.textBaseline = "middle";
+                ctx.fillText(label, right - 20, (yTop + yBottom) / 2);
+            };
+            
+            const drawThreshold = (val, label) => {
+                const yPos = y.getPixelForValue(val);
+                ctx.beginPath();
+                ctx.moveTo(left, yPos);
+                ctx.lineTo(right, yPos);
+                ctx.strokeStyle = "#555";
+                ctx.lineWidth = 1;
+                ctx.setLineDash([6, 4]);
+                ctx.stroke();
+                ctx.fillStyle = "#555";
+                ctx.font = "bold 10px Arial";
+                ctx.textAlign = "left";
+                ctx.fillText(label, left + 5, yPos - 5);
+            };
+
+            drawZone(20, 16, colors.zoneMeta, "METAMORPHOSIS");
+            drawZone(16, 10, colors.zoneThrive, "THRIVE");
+            drawZone(10, -2, colors.zoneSurvive, "SURVIVE (The Ocean)");
+            drawZone(-2, -10, colors.zoneDemise, "DEMISE");
+            drawThreshold(16, "METAMORPHOSIS THRESHOLD");
+            drawThreshold(10, "THRIVING THRESHOLD");
+            drawThreshold(-2, "SURVIVAL THRESHOLD");
+        }
+    };
+
+    const vectorArrowPlugin = {
+        id: 'vectorArrow',
+        afterDatasetsDraw: (chart) => {
+            const { ctx } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+                if(dataset.type === 'line') return;
+                const meta = chart.getDatasetMeta(i);
+                if (!meta || !meta.data) return;
+                const points = meta.data;
+                const data = dataset.data;
+
+                ctx.save();
+                ctx.lineWidth = 2.5;
+                ctx.strokeStyle = dataset.borderColor; 
+                ctx.fillStyle = dataset.borderColor;
+
+                for (let j = 0; j < points.length - 1; j++) {
+                    const start = points[j];
+                    const end = points[j+1];
+                    if (data[j+1].x < data[j].x) continue;
+                    if(start.x && end.x) {
+                        ctx.beginPath();
+                        ctx.moveTo(start.x, start.y);
+                        ctx.lineTo(end.x, end.y);
+                        ctx.stroke();
+                        const midX = (start.x + end.x) / 2;
+                        const midY = (start.y + end.y) / 2;
+                        const angle = Math.atan2(end.y - start.y, end.x - start.x);
+                        ctx.beginPath();
+                        ctx.translate(midX, midY);
+                        ctx.rotate(angle);
+                        ctx.moveTo(0, 0); ctx.lineTo(-7, -5); ctx.lineTo(-7, 5); ctx.closePath();
+                        ctx.fill();
+                        ctx.setTransform(1, 0, 0, 1, 0, 0);
+                    }
+                }
+                ctx.restore();
+            });
+        }
+    };
+
+    // NEW PLUGIN: Draws Emoji Icons at the end of streams
+    const vesselIconPlugin = {
+        id: 'vesselIcon',
+        afterDatasetsDraw: (chart) => {
+            const { ctx } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+                if(dataset.type === 'line' || !dataset.icon) return;
+
+                const meta = chart.getDatasetMeta(i);
+                if(!meta || !meta.data || meta.data.length === 0) return;
+
+                // Get the last point in the stream
+                const lastPointIndex = meta.data.length - 1;
+                const lastPointModel = meta.data[lastPointIndex];
+
+                if(lastPointModel && lastPointModel.x && lastPointModel.y) {
+                    ctx.save();
+                    ctx.font = '24px "Segoe UI Emoji"'; // Use Emoji font
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'bottom';
+                    // Draw icon slightly above the last point
+                    ctx.fillText(dataset.icon, lastPointModel.x, lastPointModel.y - 10);
+                    ctx.restore();
+                }
+            });
+        }
+    };
+
+    // --- 3. INIT ---
+    let myChart = null;
+
+    function initChart() {
+        const ctx = document.getElementById('dstmChart').getContext('2d');
+        myChart = new Chart(ctx, {
+            type: 'scatter',
+            data: { datasets: [] }, 
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        type: 'linear', min: 0.5, max: 3.5,
+                        title: { display: true, text: 'TIME HORIZON', font: {weight:'bold'} },
+                        ticks: { callback: v => v===1?"PAST":v===2?"PRESENT":v===3?"FUTURE":"" }
+                    },
+                    y: {
+                        min: -10, max: 20,
+                        title: { display: true, text: 'VITALITY', font: {weight:'bold'} },
+                        grid: { display: false }, ticks: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: c => c.dataset.label + ': ' + (c.raw.name || '')
+                        }
+                    }
+                }
+            },
+            plugins: [backgroundZonesPlugin, vectorArrowPlugin, vesselIconPlugin]
+        });
+        updateChart('single');
+    }
+
+    function updateChart(key) {
+        if (!myChart) return;
+        document.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-' + key).classList.add('active');
+
+        const rawData = scenarios[key];
+        let newDatasets = [];
+
+        // Add Reference S-Curve(s)
+        newDatasets.push({
+            type: 'line', label: 'Ref Curve', data: rawData.curve,
+            borderColor: 'rgba(100,100,100,0.4)', borderWidth: 3, borderDash: [5, 5], pointRadius: 0, tension: 0.4, order: 10
+        });
+        if (rawData.curve2) {
+             newDatasets.push({
+                type: 'line', label: 'New Curve', data: rawData.curve2,
+                borderColor: 'rgba(52, 152, 219, 0.4)', borderWidth: 3, borderDash: [2, 2], pointRadius: 0, tension: 0.4, order: 10
+            });
+        }
+
+        // Add Fleet Streams with Icon data
+        const streamDatasets = rawData.streams.map(stream => ({
+            type: 'scatter',
+            label: stream.label,
+            data: stream.data,
+            borderColor: stream.color,
+            backgroundColor: stream.color,
+            icon: stream.icon, // Pass the icon to the dataset
+            pointRadius: 8,
+            pointStyle: (ctx) => {
+                const t = ctx.raw?.type;
+                return t==='P'?'circle': t==='T'?'rectRot': 'rect';
+            },
+            order: 1
+        }));
+
+        myChart.data.datasets = [...newDatasets, ...streamDatasets];
+        myChart.update();
+    }
+
+    window.onload = initChart;
+
+</script>
+</body>
+</html>

@@ -14,6 +14,10 @@ Humans sense & perceive their world through a limited range of inputs.
 Our Environment determines the range of problems we can experience and our options for addressing them. 
 Humans form problems based on their state of being and their perception of their environment. 
 
+## ORGANISE in 3D (not 2D)
+Flocking/Swarming/Boids
+
+
 
 
 
