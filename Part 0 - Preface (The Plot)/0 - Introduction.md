@@ -3,6 +3,12 @@ id: ee6504de-e0aa-4373-ade4-c90634c7cd53
 ---
 # Introduction
 
+We are all working on different problems, but we are all working on the same problems. Making sense of reality to improve our relative positions within it. This positions are unique. No two people have the same relative position. Although they may share the same absolute position. Together we share & 'stitch' our perspectives to create a shared understanding of reality. 
+
+This is possible because of our variety of perspectives. Make possible by our diversity. This variety, and diversity, is a strength. Without it we would be unable to make sense of reality. And unable to make progress 
+
+A mindset of appreciation for variety and diversity is a key trait of a successful problem transformer. 
+
 ## Takes a long time to grow a human being
 Organism lifespans vary wildly, from the "immortal" jellyfish that regenerates to ancient sponges living thousands of years (Glass sponges up to 15,000 years), long-lived mollusks like the Ocean Quahog (507+ years), and long-lived vertebrates such as the Greenland Shark (250-500 years) and Bowhead Whales (200+ years). Mammals generally live shorter lives. Elephants 60-70 yrs, while plants like Bristlecone Pines (4,857+ yrs) and clonal trees (Pando, 16,000+ yrs) hold records for longest plant life. There is even a instance of 'biologoical immortality' in the Turritopsis dohrnii jellyfish, which can revert to an earlier stage of its life cycle, effectively restarting its life. 
 
