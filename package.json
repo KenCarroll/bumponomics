@@ -1,0 +1,23 @@
+{
+  "name": "@bumps/bumponomics",
+  "version": "1.0.0",
+  "description": "--- id: 1a6547bb-ffc7-429a-90de-405c1f5ac243 --- # README #",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KenCarroll/bumponomics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenCarroll/bumponomics/issues"
+  },
+  "homepage": "https://github.com/KenCarroll/bumponomics#readme",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
