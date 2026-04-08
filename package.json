@@ -1,9 +1,18 @@
 {
   "name": "@bumps/bumponomics",
   "version": "1.0.0",
-  "description": "--- id: 1a6547bb-ffc7-429a-90de-405c1f5ac243 --- # README #",
-  "main": "index.js",
+  "description": "Bumps Ontology and Book Content",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./content/*": "./content/*"
+  },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

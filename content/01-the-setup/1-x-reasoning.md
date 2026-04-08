@@ -1,0 +1,37 @@
+---
+id: 7bca70d5-949c-4ea6-9c43-4cd1ffe0cbe5
+title: ".x - Reasoning (Trolleyology)"
+description: ""
+order: 1
+status: draft
+---
+
+# Reasoning (Trolleyology)
+
+Trolleyology is the philosophical and psychological study of the "trolley problem," a thought experiment exploring moral dilemmas, particularly the conflict between utilitarianism (greatest good) and deontological ethics (moral duties) through scenarios like diverting a runaway trolley to kill one person instead of five. 
+
+## Relevance to Bumponomics: 
+
+Constraints as an enabler that leads to our interpreation of reality. e.g dogs can hear sounds we cannot. 
+
+Interfaces between systems create constraints that lead to our interpreation of reality. e.g dogs can hear sounds we cannot.
+
+Alicia Juarrenro
+
+## Possibility landscape(s)
+
+Living things constrained by context. Look at Cause & Effects radically differently.
+
+Probablistic causes. 
+Distributed Controls
+
+Merology (parts to wholes and wholes to parts).
+
+Paradigm shift (one funeral at a time).
+
+
+## Concept Theory
+
+Concept theory explores how we form mental representations (concepts) and how these relate to broader frameworks (theories) for understanding the world, with different views suggesting concepts are organized within theories (Theory-Theory), bundles of properties, or distinct mental categories used for reasoning, categorization, and explanation. In research, a conceptual framework maps out specific variables and relationships, while a theoretical framework grounds the study in established theories, providing a structure for defining and testing ideas
+
+in linguistics, the concept theory says quite clearly that there several layers around the concept itself - the name of the concept - the meaning of the concept - the verbalization of the concept (nominative, descriptive and then idiomatic) : claiming that context defines the concept in each and every instant and therefore the concept is an emerging property and its shot ofits evolution in this exact language in this exact culture - giving the rise of comparative concept analysis
