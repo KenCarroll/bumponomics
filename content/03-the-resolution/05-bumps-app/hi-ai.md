@@ -1,6 +1,6 @@
 ---
 id: fb0635f8-6612-4bea-a1c4-239e51136f33
-title: "Hi & Ai"
+title: "hi-ai"
 description: ""
 order: 0
 status: draft

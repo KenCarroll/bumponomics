@@ -1,6 +1,6 @@
 ---
 id: 908cfb77-410b-4095-adf0-e2a6a9b1426c
-title: "Missions v Problems"
+title: "missions-v-problems"
 description: ""
 order: 0
 status: draft

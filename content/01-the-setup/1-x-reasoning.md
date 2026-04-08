@@ -1,6 +1,6 @@
 ---
 id: 7bca70d5-949c-4ea6-9c43-4cd1ffe0cbe5
-title: ".x - Reasoning (Trolleyology)"
+title: "x-reasoning"
 description: ""
 order: 1
 status: draft

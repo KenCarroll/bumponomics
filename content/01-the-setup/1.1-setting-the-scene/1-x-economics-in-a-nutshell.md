@@ -1,6 +1,6 @@
 ---
 id: 4049de43-9037-4492-8f03-32f4d6b2b9e6
-title: ".x - Economics in a Nutshell"
+title: "x-economics-in-a-nutshell"
 description: ""
 order: 1
 status: draft

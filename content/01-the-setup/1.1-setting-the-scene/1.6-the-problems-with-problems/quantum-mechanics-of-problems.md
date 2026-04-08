@@ -1,6 +1,6 @@
 ---
 id: fcf78639-caf9-4483-afc0-04d03419c56c
-title: "Quantum Mechanics of Problems"
+title: "quantum-mechanics-of-problems"
 description: ""
 order: 0
 status: draft

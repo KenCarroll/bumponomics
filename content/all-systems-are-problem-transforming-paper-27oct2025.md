@@ -1,6 +1,6 @@
 ---
 id: 8bfd639b-37d4-40db-99b7-acc402882872
-title: "All Systems Are Problem Transforming - Paper - 27Oct2025"
+title: "all-systems-are-problem-transforming-paper-27oct2025"
 description: ""
 order: 0
 status: draft

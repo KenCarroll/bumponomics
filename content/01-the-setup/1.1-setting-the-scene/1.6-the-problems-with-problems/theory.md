@@ -1,6 +1,6 @@
 ---
 id: e7bbe733-93c1-45c5-b7c2-2bc3ebdbfa74
-title: "Theory"
+title: "theory"
 description: ""
 order: 0
 status: draft

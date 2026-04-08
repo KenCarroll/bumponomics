@@ -1,6 +1,6 @@
 ---
 id: cd6e3625-537a-47cf-9df9-9f806fe43b6e
-title: "Game Theory and Problems"
+title: "game-theory-and-problems"
 description: ""
 order: 0
 status: draft

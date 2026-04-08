@@ -1,6 +1,6 @@
 ---
 id: f233a53e-c85a-46bd-9c8a-d6e0d902feac
-title: "Bumpscapes (The Territory)"
+title: "bumpscapes"
 description: ""
 order: 0
 status: draft

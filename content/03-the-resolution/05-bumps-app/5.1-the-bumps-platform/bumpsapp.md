@@ -1,6 +1,6 @@
 ---
 id: edafeb7b-368b-42ad-8d33-8d76d73ec0cc
-title: "BUMPSapp"
+title: "bumpsapp"
 description: ""
 order: 0
 status: draft

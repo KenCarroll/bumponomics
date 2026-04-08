@@ -67,16 +67,19 @@ function processDirectory(dir, basePath = '') {
 
 function renderTree(nodes, depth = 0) {
     let md = '';
-    const indent = '  '.repeat(depth);
+    // Use heading level based on depth (max h6)
+    const hLevel = Math.min(depth + 2, 6);
+    const headingPrefix = '#'.repeat(hLevel);
+    
     for (const node of nodes) {
         if (node.type === 'directory') {
-            md += `\n${indent}### ${node.name.toUpperCase()}\n`;
+            md += `\n${headingPrefix} ${node.name.toUpperCase()}\n\n`;
             md += renderTree(node.children, depth + 1);
         } else {
             const badge = node.status === 'stub' ? ' `[STUB]`' : '';
-            // URL encode path for links
             const linkPath = node.path.split(path.sep).map(encodeURIComponent).join('/');
-            md += `${indent}- [${node.title}](${linkPath})${badge}\n`;
+            // No space indentation, just a regular bullet
+            md += `- [${node.title}](${linkPath})${badge}\n`;
         }
     }
     return md;

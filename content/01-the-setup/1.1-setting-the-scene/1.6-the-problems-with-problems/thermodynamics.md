@@ -1,6 +1,6 @@
 ---
 id: 7e6d341f-7ec8-471c-8eae-d74e45fe9c52
-title: "Thermodynamics"
+title: "thermodynamics"
 description: ""
 order: 0
 status: draft

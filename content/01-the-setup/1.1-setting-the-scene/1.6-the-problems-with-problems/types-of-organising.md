@@ -1,6 +1,6 @@
 ---
 id: 5a72f0a9-7cbc-4ace-940e-5a45a3fa710e
-title: "Types of organising"
+title: "types-of-organising"
 description: ""
 order: 0
 status: draft

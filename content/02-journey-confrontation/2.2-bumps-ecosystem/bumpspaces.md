@@ -1,6 +1,6 @@
 ---
 id: 49c8d3ac-4909-433a-978e-bb6cbdbdea8f
-title: "Bumpspaces (The Environment)"
+title: "bumpspaces"
 description: ""
 order: 0
 status: draft

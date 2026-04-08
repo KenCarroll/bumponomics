@@ -1,6 +1,6 @@
 ---
 id: 8a9e6eb4-fe44-4a3d-9449-0b7c5192c231
-title: "Poster-v1"
+title: "poster-v1"
 description: ""
 order: 0
 status: draft

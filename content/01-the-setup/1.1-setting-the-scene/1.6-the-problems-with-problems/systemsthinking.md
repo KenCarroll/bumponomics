@@ -1,6 +1,6 @@
 ---
 id: 831dfaa3-5deb-43f1-8896-c4ed77a887e3
-title: "SystemsThinking"
+title: "systemsthinking"
 description: ""
 order: 0
 status: draft
