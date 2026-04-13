@@ -1,0 +1,10 @@
+Title: BUMPS – A System for Systems Thinking
+Author: Ken C.
+Affiliation: BUMPCONDUCTOR BV / SCiO Member
+
+Abstract:
+Systems Thinking has long been recognised as powerful but difficult to teach, communicate, and scale. Its academic language, conceptual complexity, and fragmented toolset have limited wider adoption. BUMPS (Behaviour–Understanding–Mechanisms–Problems–Solutions) was developed to address these challenges by providing a lightweight meta‑language and visual interface for systemic inquiry.
+
+BUMPS reframes Systems Thinking as a response to problematic situations and integrates tools not traditionally considered part of ST but highly relevant in practice. It provides a simplified, domain‑agnostic method that acts as an organising layer across existing ST techniques. New terms and visualisations offer a more intuitive, accessible way to work with systemic situations at both micro and macro scales.
+
+The approach is being operationalised through an advanced web application designed to make systemic practice scalable and available to wider audiences, combining human insight with AI‑supported analysis. BUMPS aims to enable practitioners and non‑practitioners alike to engage with systems thinking more easily, consistently, and effectively.

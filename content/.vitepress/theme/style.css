@@ -1,0 +1,157 @@
+/* Custom VitePress Overrides for Bumponomics */
+
+
+
+/* Move the logo to the left of the text on desktop */
+@media (min-width: 960px) {
+  .VPHero .container > .main {
+    order: 2;
+  }
+  .VPHero .container > .image {
+    order: 1;
+  }
+}
+
+/* Elevate the bland feature boxes to a premium, exciting aesthetic */
+.VPFeature {
+  background: linear-gradient(145deg, rgba(var(--vp-c-bg-soft-rgb), 0.6), rgba(var(--vp-c-bg-mute-rgb), 0.8)) !important;
+  backdrop-filter: blur(10px); /* Subtle glassmorphism */
+  border-radius: 16px !important;
+  border: 1px solid var(--vp-c-gray-soft) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+/* Beautiful pop effect on hover */
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+/* Force navbar to be fully opaque so text doesn't bleed through the glassmorphism effect */
+.VPNavBar {
+  background-color: var(--vp-c-bg) !important;
+}
+
+/* Completely remove the top 'On this page' bar to streamline mobile reading */
+.VPLocalNav {
+  display: none !important;
+}
+
+/* Hide desktop right-hand outline as well to ensure consistency */
+.VPDocAside {
+  display: none !important;
+}
+
+
+/* Simplify the Previous/Next buttons by hiding the bulky label and adding chevrons */
+.VPDocFooter .desc {
+  display: none !important;
+}
+.VPDocFooter .prev .title::before {
+  content: "⟨";
+  font-size: 1.8em;
+  font-weight: 300;
+  vertical-align: middle;
+  padding-right: 12px;
+  color: var(--vp-c-brand);
+}
+.VPDocFooter .next .title::after {
+  content: "⟩";
+  font-size: 1.8em;
+  font-weight: 300;
+  vertical-align: middle;
+  padding-left: 12px;
+  color: var(--vp-c-brand);
+}
+
+/* Revert the broken sticky footer to standard document flow so it accurately stacks right below Last Updated */
+.VPDocFooter {
+  position: relative;
+  background: var(--vp-c-bg);
+  z-index: 40;
+  padding: 24px 0 !important;
+  margin-top: 0px !important; /* OBLITERATED gap beneath the text */
+  border-top: none !important; 
+}
+
+/* Force a clean 2-column grid for the phantom/pagination buttons */
+.VPDocFooter .prev-next {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px !important;
+  width: 100%;
+  border-top: none !important; 
+  margin-top: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .VPDocFooter .prev-next {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  .VPDocFooter .pager-link {
+    padding: 8px !important;
+  }
+  .VPDocFooter .title {
+    font-size: 12.5px !important;
+    line-height: 1.2 !important;
+  }
+  .VPDocFooter .prev .title::before,
+  .VPDocFooter .next .title::after {
+    font-size: 1.4em !important;
+  }
+  .VPDocFooter .prev .title::before { padding-right: 4px; }
+  .VPDocFooter .next .title::after { padding-left: 4px; }
+}
+
+/* Force exact grid columns based on child index, since there are exactly 2 .pager divs */
+.VPDocFooter .prev-next > .pager:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.VPDocFooter .prev-next > .pager:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* CSS Hack: Create phantom disabled buttons if the native buttons don't exist 
+   This prevents the grid from collapsing and throwing off the nested alignment */
+.VPDocFooter .prev-next > .pager:nth-of-type(1):not(:has(.prev)) {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.VPDocFooter .prev-next > .pager:nth-of-type(1):not(:has(.prev))::after {
+  content: "⟨\00A0\00A0Unavailable";
+  display: block;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 11px 16px 13px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.VPDocFooter .prev-next > .pager:nth-of-type(2):not(:has(.next)) {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.VPDocFooter .prev-next > .pager:nth-of-type(2):not(:has(.next))::after {
+  content: "Unavailable\00A0\00A0⟩";
+  display: block;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 11px 16px 13px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+}

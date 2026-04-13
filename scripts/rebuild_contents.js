@@ -86,7 +86,7 @@ function renderTree(nodes, depth = 0) {
 }
 
 const tree = processDirectory(contentDir);
-let outputMd = `# Master Contents Manifest\n*Auto-generated on ${new Date().toISOString()}*\n\n`;
+let outputMd = `# Table of Contents\n\n`;
 outputMd += renderTree(tree);
 
 fs.writeFileSync(outputFile, outputMd);

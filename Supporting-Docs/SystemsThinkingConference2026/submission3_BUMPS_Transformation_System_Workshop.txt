@@ -1,0 +1,10 @@
+Title: BUMPS Transformation System (BTS)
+Author: Ken C.
+Affiliation: BUMPCONDUCTOR BV / SCiO Member
+
+Abstract:
+This interactive workshop introduces participants to the BUMPS Transformation System (BTS), a practical method for transforming real‑life problematic situations. Participants will apply the BUMPS triple‑diamond PTO (Problem–Transformation–Outcome) model and explore extensions to Russell Ackoff’s problem strategies, an evolution of Donella Meadows’ intervention points, an alternative to the systems iceberg, and refinements of POSIWID framing.
+
+The workshop demonstrates how BTS integrates and simplifies established Systems Thinking approaches—including Critical Systems Heuristics (CSH), Soft Systems Methodology (SSM), and System Dynamics—into a unified, accessible workflow. Participants will work offline with facilitated exercises and real‑world scenarios.
+
+After the session, attendees will be able to continue developing their work through the companion online BUMPS platform, enabling ongoing use of the BTS method beyond the workshop environment.

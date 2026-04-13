@@ -1,0 +1,10 @@
+Title: All Systems are Problem Transforming
+Author: Ken C.
+Affiliation: BUMPCONDUCTOR BV / SCiO Member
+
+Abstract:
+This paper brings together theory and practice by proposing a foundational thesis that all human‑developed systems are, fundamentally, artefacts of problem transformation. It argues that every enduring human organisation, product, service, and social structure is a complex, iterated response to meaningful problematic situations. These systems are understood as emergent outputs—stable, adaptive architectures arising from historical efforts to manage and transform a networked substrate of problems.
+
+Problematic situations are defined as high‑energy phenomena emerging from the collision zones of interacting systems. This approach evolves Systems Thinking (ST) and Complexity Science (CS) by grounding them in the concept of the problem substrate. The paper proposes that a system’s true purpose, constraints, and architecture can only be understood by mapping the directed graph of interconnected problematic situations it was created to transform.
+
+A transdisciplinary meta‑framework is introduced to unify diverse ST approaches through a simplified logic and visual language. The thesis is currently being operationalised and prepared for large‑scale practical testing via an advanced web application that integrates Human and Artificial Intelligence.

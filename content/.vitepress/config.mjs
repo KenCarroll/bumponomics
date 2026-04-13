@@ -52,9 +52,18 @@ function getSidebar(dir, basePath = '') {
 }
 
 export default defineConfig({
-  title: "Bumponomics",
+  title: "BUMPONOMICS™",
   description: "The Playbook for Turbulent Worlds",
+  lastUpdated: true,
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+  markdown: {
+    math: true
+  },
   themeConfig: {
+    sidebarMenuLabel: 'Chapters',
+    logo: '/bumps-logo.svg',
     outline: 'deep',
     search: {
       provider: 'local'
@@ -63,10 +72,15 @@ export default defineConfig({
       prev: 'Previous Concept',
       next: 'Next Concept'
     },
-    sidebar: getSidebar(path.resolve(__dirname, '../')),
+    footer: {
+      message: 'This work is licensed under a CC BY-NC-ND 4.0 International License.',
+      copyright: '© 2026 Bumpconductor BV. BUMPONOMICS™ and BUMPS™ are official trademarks. Created by Ken Carroll.'
+    },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Manifest', link: '/contents' }
-    ]
+      { text: 'Table of Contents', link: '/contents' },
+      ...getSidebar(path.resolve(__dirname, '../'))
+    ],
+    sidebar: getSidebar(path.resolve(__dirname, '../'))
   }
 })
