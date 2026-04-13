@@ -45,8 +45,20 @@ function toggleTheme() {
         <div v-for="(group, idx) in theme.sidebar" :key="idx" class="drawer-group">
           <h3 v-if="group.text" class="group-title">{{ group.text }}</h3>
           <ul>
-            <li v-for="item in group.items" :key="item.link">
-              <a :href="item.link" @click="toggleDrawer">{{ item.text }}</a>
+            <li v-for="item in group.items" :key="item.text || item.link">
+              <template v-if="item.items && item.items.length">
+                 <details class="nested-details" :open="!item.collapsed">
+                   <summary class="nested-summary">
+                      {{ item.text }}
+                   </summary>
+                   <ul class="nested-ul">
+                     <li v-for="subitem in item.items" :key="subitem.link">
+                       <a :href="subitem.link" @click="toggleDrawer">{{ subitem.text }}</a>
+                     </li>
+                   </ul>
+                 </details>
+              </template>
+              <a v-else :href="item.link" @click="toggleDrawer">{{ item.text }}</a>
             </li>
           </ul>
         </div>
@@ -195,6 +207,38 @@ function toggleTheme() {
 }
 .drawer-content a:hover {
   color: var(--vp-c-brand);
+}
+
+.nested-summary {
+  color: var(--vp-c-text-2);
+  font-size: 15px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.nested-summary::-webkit-details-marker {
+  display: none;
+}
+.nested-summary:hover {
+  color: var(--vp-c-brand);
+}
+.nested-summary::before {
+  content: "▶";
+  font-size: 10px;
+  transition: transform 0.2s;
+  color: var(--vp-c-text-3);
+}
+details[open] .nested-summary::before {
+  transform: rotate(90deg);
+}
+.nested-ul {
+  padding-left: 16px !important;
+  margin-top: 4px !important;
+  border-left: 2px solid var(--vp-c-divider);
 }
 
 .drawer-footer {

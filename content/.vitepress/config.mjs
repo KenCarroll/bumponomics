@@ -24,18 +24,29 @@ function getSidebar(dir, basePath = '') {
     
     if (stat.isDirectory()) {
       let text = file.replace(/^\d+-/, '').replace(/-/g, ' ').toUpperCase()
+      const children = getSidebar(fullPath, `${basePath}/${file}`)
+      
+      if (file === "02-key-assumptions") {
+         text = `1.2 Key Assumptions (${children.length - 1})`
+      }
+
       items.push({
         text: text,
         collapsed: false,
-        items: getSidebar(fullPath, `${basePath}/${file}`)
+        items: children
       })
     } else if (file.endsWith('.md')) {
       const content = fs.readFileSync(fullPath, 'utf8')
       let title = file.replace('.md', '')
       let isStub = false
       
-      const titleMatch = content.match(/title:\s*["']?([^"'\n]+)["']?/)
-      if (titleMatch) title = titleMatch[1]
+      const h1Match = content.match(/^#\s+(.*)$/m)
+      if (h1Match) {
+         title = h1Match[1].trim()
+      } else {
+         const titleMatch = content.match(/title:\s*["']?([^"'\n]+)["']?/)
+         if (titleMatch) title = titleMatch[1]
+      }
         
       const statusMatch = content.match(/status:\s*([^\n]+)/)
       if (statusMatch && statusMatch[1].trim() === 'stub') {
@@ -56,7 +67,7 @@ export default defineConfig({
   description: "The Playbook for Turbulent Worlds",
   lastUpdated: true,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/bumps-logo.svg', type: 'image/svg+xml' }]
   ],
   markdown: {
     math: true
@@ -79,7 +90,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Table of Contents', link: '/contents' },
-      ...getSidebar(path.resolve(__dirname, '../'))
+      { text: 'Connect', link: '/connect' }
     ],
     sidebar: getSidebar(path.resolve(__dirname, '../'))
   }
