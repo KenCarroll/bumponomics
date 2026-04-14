@@ -2,11 +2,11 @@
 id: 5a3c2837-f323-4685-b05c-d4af40562822
 title: "the-infinite-game"
 description: ""
-order: 4
+order: 2
 status: draft
 ---
 
-# 2.2.3 The Infinite Game
+# 2.4.2 The Infinite Game
 
 At its heart, Game Theory is the study of strategic interaction. It analyzes situations where the outcome for one person depends not just on their own actions, but on the actions of others.
 

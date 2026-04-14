@@ -2,10 +2,10 @@
 id: idealized-three-part-process
 title: "The Three-Part Process"
 description: "The execution stages of Idealized Design"
-order: 5
+order: 9
 status: draft
 ---
-# 2.1.4 The Three-Part Process
+# 2.1.9 The Three-Part Process
 
 The idealized design process has three distinct, sequential parts:
 
