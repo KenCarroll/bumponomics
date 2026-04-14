@@ -2,11 +2,11 @@
 id: 21c07ac0-a665-4863-b36f-d37e5d874eb2
 title: "the-target-outcomes"
 description: ""
-order: 5
+order: 2
 status: draft
 ---
 
-# 2.1 The Target Outcomes
+# 2.2.1 The Target Outcomes
 
 The core proposition of this book is to define and operationalize a new economic system whose primary function is to **identify, prioritize, and transform meaningful problems.**
 

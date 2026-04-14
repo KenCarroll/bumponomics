@@ -1,4 +1,4 @@
-# 2.4 The DSTM Horizon (The Output Layer)
+# 2.4.1 The DSTM Horizon
 
 To understand why a new framework is necessary, we must confront the current state of strategic planning. 
 

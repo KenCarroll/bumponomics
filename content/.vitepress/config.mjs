@@ -28,6 +28,16 @@ function getSidebar(dir, basePath = '') {
       
       if (file === "02-key-assumptions") {
          text = `1.2 Key Assumptions (${children.length - 1})`
+      } else if (file === "05-the-ten-megatrends") {
+         text = `1.5 Ten Megatrends (${children.length - 1})`
+      } else if (file === "01-idealized-design") {
+         text = `2.1 Idealized Design (${children.length - 1})`
+      } else if (file === "02-mission-statement") {
+         text = `2.2 Mission Statement (${children.length - 1})`
+      } else if (file === "03-specification") {
+         text = `2.3 Specification (${children.length - 1})`
+      } else if (file === "04-design-of-organisation") {
+         text = `2.4 Design of Organisation (${children.length - 1})`
       }
 
       items.push({

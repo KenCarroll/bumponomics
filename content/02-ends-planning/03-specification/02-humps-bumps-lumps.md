@@ -1,4 +1,4 @@
-# 2.3 HUMPS, BUMPS, LUMPS (The Input Layer)
+# 2.3.2 HUMPS, BUMPS, LUMPS
 
 Problems are emergent properties of complex systems. They are not something that can always be perfectly predicted or planned for, as they emerge naturally from the friction between people and their environment. The trick is to identify them, classify them, and transform them into progress. 
 

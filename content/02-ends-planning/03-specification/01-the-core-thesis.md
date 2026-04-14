@@ -2,11 +2,11 @@
 id: 5f3217b9-4bb5-47c0-9726-590731333629
 title: "The Core Thesis"
 description: "The fundamental algebra of agency and the blindspot of modern economics."
-order: 1
+order: 2
 status: draft
 ---
 
-# 2.2 The Core Thesis
+# 2.3.1 The Core Thesis
 
 Traditional management theory, and indeed the entirety of global economics, treats "problems" as errors to be eliminated. The Bumponomics core thesis argues the exact opposite: **Problems are the organizing principle of human existence.** We do not organize to avoid friction; we organize *because* of it. 
 
