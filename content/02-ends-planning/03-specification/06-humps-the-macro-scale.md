@@ -8,7 +8,7 @@ status: draft
 
 # 2.3.6 HUMPS: The Macro Scale
 
-Problems are emergent properties of complex systems. They are not something that can always be perfectly predicted or planned for, as they emerge naturally from the friction between people and their environment. The trick is to identify them, classify them, and transform them into progress. 
+Problems are emergent properties of complex systems. They are not something that can always be perfectly predicted or planned for, as they emerge naturally from the tension between people and their environment. The trick is to identify them, classify them, and transform them into progress. 
 
 In traditional command & control systems, "problems" are often artificial constructs used to justify bureaucracy. True problems, however, are deeply real. They are felt and actively detectable by the people who experience them. 
 

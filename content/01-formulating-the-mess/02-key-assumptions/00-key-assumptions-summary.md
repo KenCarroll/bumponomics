@@ -6,7 +6,7 @@ These fundamental observations of how we interact with our environment are what 
 
 1. **Environmental Determinism:** Our behaviors and options are fundamentally defined by our environment.
 2. **Agency Distribution:** Our environment contains two distinct classifications: *things* (which operate without known agency) and *organisms* (which possess agency).
-3. **The Genesis of Problems:** When organisms cannot meet their inherent needs, we define these frictions and gaps as *problems*.
+3. **The Genesis of Problems:** When organisms cannot meet their inherent needs, we define these pressures and gaps as *problems*.
 4. **Consequences:** Problems are not neutral; they have direct consequences for an organism's *State-of-Being* (its wellbeing and viability).
 5. **The Lifecycle of Being:** States of being can be mapped to a typical 'lifecycle,' which includes distinct states and transitions such as creation, surviving, thriving, declining, cessation, and sometimes metamorphosing.
 6. **The S-Curve Dynamic:** These lifecycles and transitions mathematically execute as S-curve type behaviors over time.

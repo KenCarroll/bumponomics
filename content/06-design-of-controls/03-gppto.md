@@ -1,4 +1,4 @@
-# 6.4 GPPTO (Gross Positive Problem Transformation Outcomes)
+# 6.1.3 GPPTO (Gross Positive Problem Transformation Outcomes)
 > **The Measure of Efficacy**
 
 Not all solutions are good. Many transformations create immediate negative displacement. For example, burning coal "solves" the localized energy problem but creates the global climate HUMP.

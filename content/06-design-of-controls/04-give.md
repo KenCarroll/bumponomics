@@ -1,4 +1,4 @@
-# 6.5 GIVE (Gross Increased Variety of Environment)
+# 6.1.4 GIVE (Gross Increased Variety of Environment)
 > **The Measure of Evolution**
 
 This is the ultimate test of the BUMPS ecosystem. 

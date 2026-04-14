@@ -1,4 +1,4 @@
-# 6.2 VoE (Variety of Environment)
+# 6.1.1 VoE (Variety of Environment)
 > **The Viable Environment Model**
 
 Variety of Environment (VoE) serves as our foundational metric. This is a direct counter to Stafford Beer's classic *Viable System Model* (VSM). Rather than narrowing our focus internally to ensure the survival of a "Visible System," Bumponomics intentionally scales out to target the creation of a **Viable Environment Model**.

@@ -18,7 +18,7 @@ By measuring the **GPO** (Gross Positive Outcomes) of political policies rather 
 Traditional economics is obsessed with efficiency and optimization. But optimization is often the enemy of evolution. By ruthlessly optimizing supply chains, modern businesses strip away all redundancy, leaving the ecosystem brittle and fundamentally unprepared to survive a new HUMP (such as a global pandemic).
 
 Bumponomics radically alters the definition of value creation. 
-All business *is* problem transforming. A company's true asset is not its product, but its capability to transform its customers' friction. Products and services have no inherent capacity to evolve; they inevitably succumb to the DSTM curve (survive, thrive, demise). 
+All business *is* problem transforming. A company's true asset is not its product, but its capability to transform its customers' pressures. Products and services have no inherent capacity to evolve; they inevitably succumb to the DSTM curve (survive, thrive, demise). 
 
 By adopting the PTO engine, businesses stop acting like static factories and start acting like evolutionary biology organisms ("Bumpivores"). They proactively engineer **Metamorphosis** before their current S-Curve plateaus, ensuring they are always absorbing new, high-quality problems to fuel their growth.
 
@@ -27,7 +27,7 @@ By adopting the PTO engine, businesses stop acting like static factories and sta
 Culturally, we have been conditioned to view problems as failures. We hide our BUMPS out of shame. We sweep the "elephant in the room" under the rug until it becomes a catastrophic HUMP.
 
 Bumponomics destroys the stigma of the problem. 
-If problems are acknowledged as the fundamental "social glue" that binds human partnerships together—because we *must* unite to survive the friction of the environment—then our societal perspective flips. We no longer strive for an impossible, problem-free utopia. We accept that an existence without friction is an existence without learning, action, or growth. 
+If problems are acknowledged as the fundamental "social glue" that binds human partnerships together—because we *must* unite to survive the pressures of the environment—then our societal perspective flips. We no longer strive for an impossible, problem-free utopia. We accept that an existence without tension is an existence without learning, action, or growth. 
 
 We embrace the reality that progress merely transforms old problems into new, hopefully better, problems. 
 

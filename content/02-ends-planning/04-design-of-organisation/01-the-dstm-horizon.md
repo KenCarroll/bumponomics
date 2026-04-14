@@ -22,10 +22,10 @@ The **DSTM Framework** is a strategic physics engine. It maps the Organizational
 
 ### 1. Zone 1: Demise (The Entropy Pit)
 * **The Physics:** Energy In > Energy Out. The system consumes itself.
-* **The Reality:** This is the drop-off. You are reacting to existential threats. The fundamental system is breaking down, and friction is accelerating faster than it can be resolved. 
+* **The Reality:** This is the drop-off. You are reacting to existential threats. The fundamental system is breaking down, and pressure is accelerating faster than it can be resolved. 
 * **The Strategic Requirement:** You must radically *Dissolve* or forcibly cut your losses (*Absolve*).
 
-### 2. Zone 2: Survive (The Friction Trap)
+### 2. Zone 2: Survive (The Pressure Trap)
 * **The Physics:** Energy In ≈ Energy Out. Equilibrium.
 * **The Reality:** This is the bottom (Birth) and the top (Plateau) of the S-Curve. 
     * **Early Survival:** The "Hustle." You are a startup fighting to validate a hypothesis. 

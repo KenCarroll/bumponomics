@@ -8,9 +8,9 @@ In Ackoff's framework, you do not solve complex problems by looking backward at 
 
 To effectively communicate this, the physical architecture of this book has been explicitly engineered to mirror the six phases of Ackoff's Interactive Planning:
 
-1. **Formulating the Mess (The Baseline Reality):** Defining the systemic traps, megatrends, and the underlying physics of our current failing paradigms.
-2. **Ends Planning (The Idealized Design):** Establishing the core thesis and foundational assumptions of Bumponomics, and targeting the DSTM Metamorphosis horizon.
-3. **Means Planning (The Architecture):** Designing the mechanical framework, the transformation strategies, and the PTO cycle required to engage with friction.
+1. **Formulating the Mess (The Problems):** Defining the systemic traps, megatrends, and the underlying physics of our current baseline anomalies. This defines the **P** in the PTO engine.
+2. **Ends Planning (The Outcomes):** Establishing the Idealized Design. Rather than planning forward from a problem, cybernetics demands we engineer our target reality first. This defines the **O** in the PTO engine.
+3. **Means Planning (The Transformations):** Calculating the exact strategic levers (The Master Architecture) required to bridge the gap between the baseline Mess and the Idealized Design. This defines the **T** in the PTO engine.
 4. **Resource Planning (The Agency):** Mapping the human agency and cultivating the Problem Transforming Organizations (PTOs) needed to fuel the engine.
 5. **Design of Implementation (The Platform):** Operationalizing the philosophy into the tangible, workflow-driven BUMPS ecosystem.
 6. **Design of Controls (The Metrics):** Abandoning the GDP transaction fallacy to measure progress through pure evolutionary metrics: VoE, GMP, GPPTO, GIVE, and our State-of-Being (SOB).

@@ -37,6 +37,21 @@ A stepping stone to national media and excellent for rapid, punchy segments.
 
 ## 6. Next Steps & Action Items
 - [ ] Draft the "One-Sheet" for the media kit.
-- [ ] Compile a list of 5–10 suggested interview questions.
+- [x] Compile a list of 5–10 suggested interview questions.
 - [ ] Identify and list the top 20 target podcasts.
 - [ ] Draft the standard email pitch template.
+
+---
+
+## 7. Media Artifacts
+
+### Suggested Interview Questions
+*These questions are designed as "trap doors." They sound like standard interview questions but are explicitly engineered to let you deliver the high-impact Bumponomics worldview.*
+
+1. **The Biological Hook:** "Most business frameworks treat organizational friction as a mechanical bug that needs fixing. You argue that problems are actually biological pressures that we must *metabolize*. Why is the mechanical mindset destroying modern organizations?"
+2. **The Endless Task List:** "You claim that managing noise doesn't stop the noise, and that most 'productivity hacks' are useless. What is the fundamental difference between 'managing tasks' and 'transforming problems'?"
+3. **The S-Curve Dynamic:** "You say that every organization is on an evolutionary life cycle, and if they aren't actively seeking out new pressures, they will hit the 'Demise' stage. How does a company know when it's about to hit that wall?"
+4. **The Agency Diagnosis:** "In the book, you differentiate between environments that act as 'Builders' versus those that act as 'Bureaucrats'. How can a frontline employee or a mid-level manager instantly diagnose which environment they are stuck in?"
+5. **The BUMP:** "The framework revolves around Micro, Meso, and Macro problems (LUMPS, BUMPS, and HUMPS). Can you walk us through what a BUMP actually looks like in a real-world scenario?"
+6. **The Infinite Game:** "A core premise of your work is that we don't organize to *avoid* problems; we organize *because* of them. How does shifting to this 'Infinite Game' mindset change our day-to-day stress levels?"
+7. **The Future:** "If an organization successfully adopts the 'Problem-Transforming' playbook today, what does their capability look like five years from now compared to their direct competitors?"

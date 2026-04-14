@@ -15,7 +15,7 @@ Developed in the 1970s, the VSM models the organizational structure of any viabl
 
 Bumponomics scales this assertion outward. We assert that a true Viable Economic Model (VEM) must function organically as a **Viable Environment Model**. 
 
-If traditional economics models an extractive factory—digging up natural resources to generate transaction volume (GDP)—the VEM models a closed-loop ecology. In a Problem-Transforming Economy, organizations cease to be external prospectors exploiting the environment. Instead, they act as embedded "Bumpivores," ingesting the friction in their environment and transforming it into fuel. 
+If traditional economics models an extractive factory—digging up natural resources to generate transaction volume (GDP)—the VEM models a closed-loop ecology. In a Problem-Transforming Economy, organizations cease to be external prospectors exploiting the environment. Instead, they act as embedded "Bumpivores," ingesting the pressures in their environment and transforming it into fuel. 
 
 The goal shifts from accumulating static currency capital to expanding the capability of the environment itself (what Bumponomics measures as **GIVE**—Gross Increased Variety of Environment). 
 

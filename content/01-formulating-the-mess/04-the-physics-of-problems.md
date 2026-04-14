@@ -10,7 +10,7 @@ status: draft
 
 When we grapple with the nature of problems, we typically look to psychology, sociology, or economics for an explanation. But these disciplines are insufficient for mapping the extreme turbulence of a modern environment. To truly understand Bumponomics, we must borrow from the hardest sciences. 
 
-Problems are not static rocks waiting to be moved. They are dynamic, energetic phenomena governed by distinct physical laws. By examining problems through the lenses of **Thermodynamics**, **Quantum Mechanics**, and **Cybernetics**, we reveal the hidden mechanics of how human friction is formed, perceived, and ultimately transformed.
+Problems are not static rocks waiting to be moved. They are dynamic, energetic phenomena governed by distinct physical laws. By examining problems through the lenses of **Thermodynamics**, **Quantum Mechanics**, and **Cybernetics**, we reveal the hidden mechanics of how human environmental pressure is formed, perceived, and ultimately transformed.
 
 ## 1. Thermodynamics: The Energy of a BUMP
 
@@ -22,7 +22,7 @@ This concentration of focus creates a **BUMP**: a localized spike of high potent
 The First Law of Thermodynamics states that energy cannot be created or destroyed, only transformed. The energy constituting a BUMP is drawn from the ecosystem—from the time, money, worry, and labor of the people involved. Antagonists, who often profit from the status quo, intuitively understand this. A unresolved problem is a store of energy that commands budgets and attention. They act as containment fields, adding energy to the system to keep the BUMP locally potent for their own advantage.
 
 **Entropy and Exergy**
-The Second Law introduces **Entropy**: the universal tendency for systems to move toward equilibrium. Nature abhors a BUMP. Solvers align with this universal drive. They feel the friction and strive to overcome it, releasing the pent-up tension. 
+The Second Law introduces **Entropy**: the universal tendency for systems to move toward equilibrium. Nature abhors a BUMP. Solvers align with this universal drive. They feel the pressure and strive to overcome it, releasing the pent-up tension. 
 
 The work of change is fueled by **Exergy** (the portion of energy available to do useful work). When Solvers succeed, the BUMP is not just destroyed; its energy is transformed to propel society forward. However, the energy released from flattening one BUMP inevitably flows across the landscape, pools elsewhere, and forms a new problem. This is the perpetual thermodynamic cycle of progress.
 

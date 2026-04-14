@@ -8,57 +8,59 @@ layout: home
 
 hero:
   name: "BUMPONOMICS"
-  text: ""
-  tagline: "A Radical New Economic Theory Based on Problem Transformation."
+  text: "The Economics of Progress"
+  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment."
   image:
     src: /bumps-logo.svg
     alt: BUMPS Logo
   actions:
     - theme: brand
       text: The 1-Page Summary
-      link: /the-1-page-summary
+      link: /10-loose-sections/the-1-page-summary
     - theme: alt
       text: Start Reading the Book
-      link: /00-preface/0-introduction
-    - theme: alt
-      text: View the Contents
-      link: /contents
+      link: /00-preface/03-the-point-of-no-return
+features:
+  - title: '<span style="display:inline-flex; align-items:center; gap:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="var(--vp-c-brand)" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg> Micro</span>'
+    details: "<strong>For Individuals:</strong><br><br>Transform daily pressures into forward momentum. Master the cognitive tools required to elevate your personal trajectory from mere survival into active thriving."
+  - title: '<span style="display:inline-flex; align-items:center; gap:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="var(--vp-c-brand)" d="M18,15H16V17H18M18,11H16V13H18M20,19H12V17H14V15H12V13H14V11H12V9H14V7H12V5H14V3H20V19M10,19H2V3H10V19M8,5H4V7H8V5M8,9H4V11H8V9M8,13H4V15H8V13M8,17H4V19H8V17Z" /></svg> Meso</span>'
+    details: "<strong>For Organizations:</strong><br><br>Align human agency to metabolize enterprise pressures. Convert complex organizational problems into the kinetic fuel required to power a progressive future."
+  - title: '<span style="display:inline-flex; align-items:center; gap:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="var(--vp-c-brand)" d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.43 4,16.05 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> Macro</span>'
+    details: "<strong>For Societies:</strong><br><br>Evolve environments capable of metabolizing chaos. Catalyze the macroeconomic and political transformations required to propel humanity toward profound Metamorphosis."
 ---
 
 <br>
 
 <div style="font-size: 1.15rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
 
-## ⚡ Economics needs Evolving
+## 🚀 Why Invest Your Time Here?
 
-For the past century, traditional economics has been obsessed with measuring transaction volume—commonly known as Gross Domestic Product (GDP). Under this mathematical system, cleaning up a catastrophic oil spill is treated as "growth" simply because money was spent. 
+From the earliest civilizations to the digital frontier, humanity’s greatest strength has never been avoiding turbulence—it has been our ability to harness it. We have always thrived by taking the raw pressures of an unstable world and forging them into profound evolutionary leaps.
 
-Traditional economics is an extractive, **Problem-Solving Economy**. It treats the environment as an infinite resource to be hastily consumed to meet supply and demand. It assumes that problems are errors or glitches that must be quickly swept under the rug.
+We are standing on the verge of unprecedented possibility. The future belongs not to those who merely manage tasks or attempt to shield themselves from complexity, but to those who learn to metabolize it. Imagine an ecosystem where structural problems do not cause burnout, but instead provide the exact kinetic energy required to propel us forward. The potential of human agency, once properly aligned, is limitless.
 
-Bumponomics introduces a radically different premise. 
+Bumponomics is the playbook for realizing that future. It provides a unified field theory for navigating accelerating pressures. It proves that **Problems are not errors to be avoided; they are the raw fuel of progress.** If you know how to metabolize them, problems become the exact magnetic forces that drive us to organize, adapt, and forge an entirely new reality.
 
-## 🧲 What All Economic Theories are Missing!
+## 🧰 The Playbook You Receive
 
-A review of all economic theories shows that they are missing the most important element: Problems are what drive progress. Think about it! If there are no problems there are no "jobs to be done", there is no action, no narrative, no competition, no innovation, and no business. 
+By entering the BUMPS ecosystem, you are not just reading a theoretical critique of capitalism. You are being armed with a physical, strategic playbook:
 
-If this claim is true, it raises a monumental question: **Why do none of our current or emerging economic models use problems as the basic building blocks for human organization and development?**
+1. **A New Language:** You will learn a simple, practical vocabulary that cuts through drama and confusion. Instead of blaming people when things go wrong, you will learn how to clearly identify exactly what is broken and how to move forward.
+2. **A Strategy Engine:** You will master the *PTO Process* (Problems $\rightarrow$ Transformations $\rightarrow$ Outcomes). It is a recursive action loop that can be deployed seamlessly across the micro, meso, and macro scales of any environment. 
+3. **A New Game:** You will learn how to play an entirely new game of human interaction. By executing new structural plays, you will discover how to cultivate high-energy, evolutionary environments capable of producing radically new outcomes.
 
-This is exactly what Bumponomics is doing. We are building an economic theory that proposes using problems as the fundamental atomic unit for human organization. This new way of thinking requires new cognative tools and a new language. 
+## 🌐 The Fractal Connection
 
-**BUMPS** represent our *Big Untransformed Meaningful Problematic Situations*. They are everywhere because they define our state-of-being, and they demand our energy and focus. Problems act like a magnetic force that attracts humans to organize for mutual benefit—driving us to cooperate at the micro, meso, and macro levels. 
+Bumponomics is uniquely designed to scale. Rather than relying on disconnected theories for different scopes of conflict, it offers a singular, recursive framework. 
 
-## ⚙️ The Engine of Progress
-
-Bumponomics is not just an empty theory. It is a practical system that can be used to solve problems at all levels. How do we transition to this new paradigm? We use the Bumponomics system itself as the transformation engine. We have even built a software platform to help us do this. 
-
-By shifting to a **Problem-Transforming Economy**, we move from extractive economics to enrichment economics. Rather than relying on top-down decrees, this profound transformation is achieved through a dynamic series of intentional *micro* and *meso* movements—solving local and organizational problems—that organically aggregate to produce the desired *macro* outcomes.
+The execution of a micro-action to resolve a daily operational breakdown uses the exact same biological engine as the execution of a macro-action to resolve a generational societal crisis. It seamlessly connects the dots across all magnitudes.
 
 </div>
 
 <br><br>
 
-<h3 align="center" style="margin-bottom: 2rem;">Ready to explore an evolution of capitalism into a profoundly more powerful system that enriches rather than exploits?</h3>
+<h3 align="center" style="margin-bottom: 2rem;">Ready to abandon the noise and start transforming the future?</h3>
 
 <p align="center">
-  <a href="/the-1-page-summary" style="display:inline-block; padding:12px 24px; background:var(--vp-c-brand); color:white; border-radius:8px; font-weight:bold; text-decoration:none;">Read The 1-Page Summary &rarr;</a>
+  <a href="/00-preface/03-the-point-of-no-return" style="display:inline-block; padding:12px 24px; background:var(--vp-c-brand); color:white; border-radius:8px; font-weight:bold; text-decoration:none;">Enter The Ecosystem &rarr;</a>
 </p>

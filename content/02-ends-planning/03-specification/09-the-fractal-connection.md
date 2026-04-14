@@ -16,10 +16,15 @@ A catastrophic supply chain collapse that forces a local restaurant to close mig
 
 The classification scales to the observer. 
 
+### Artificial Boundaries
+Ultimately, there is absolutely no biological or physical difference between a HUMP, a BUMP, and a LUMP. 
+
+They are entirely artificial terms designed to convey the scale of a concern in a friendly, approachable narrative. Because they are structurally identical, **they are all tackled exactly the same way.** The execution of a micro-LUMP leverages the exact same recursive PTO Engine as the execution of a macro-HUMP.
+
 ### The Law of Clotting
 Because these problems are fractal, they actively bleed into one another across the boundaries of scale.
 
-If a team ignores fifty operational **LUMPS** (such as ignoring customer emails or bypassing unit tests), those tiny frictions will eventually clot together to form a structural **BUMP** (a collapsed customer service department). 
+If a team ignores fifty operational **LUMPS** (such as ignoring customer emails or bypassing unit tests), those tiny pressures will eventually clot together to form a structural **BUMP** (a collapsed customer service department). 
 
 Conversely, if thousands of independent organizations worldwide fail to resolve their internal **BUMPS** (such as failing to secure customer data), it aggregates into an unavoidable, industry-wide **HUMP** (a systemic collapse of digital trust, resulting in massive, sweeping governmental regulation).
 

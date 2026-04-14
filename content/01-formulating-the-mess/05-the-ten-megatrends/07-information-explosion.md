@@ -8,7 +8,7 @@ status: draft
 # 1.5.7 Information Explosion
 
 ### Situation
-We have moved from a world of information scarcity to one of overwhelming abundance. The "Information Explosion," driven by the internet, mobile devices, and the Internet of Things (IoT), means we create more data in a single day than human civilization did in centuries. We are drowning in exabytes of content, yet starving for wisdom. The friction of creating and distributing information has dropped to near zero, democratizing voice but destroying filters.
+We have moved from a world of information scarcity to one of overwhelming abundance. The "Information Explosion," driven by the internet, mobile devices, and the Internet of Things (IoT), means we create more data in a single day than human civilization did in centuries. We are drowning in exabytes of content, yet starving for wisdom. The barrier of creating and distributing information has dropped to near zero, democratizing voice but destroying filters.
 
 ### Problems
 *   **The Signal-to-Noise Crisis:** Valid, useful information is buried under an avalanche of spam, fake news, algorithmic engagement bait, and triviality. Finding truth requires an archaeological dig.

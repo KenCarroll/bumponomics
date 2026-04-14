@@ -1,10 +1,24 @@
-# 3.2 The PTO Process
+# 3.1.2 The PTO Process
 
 The PTO Framework is the core systemic engine of Bumponomics. It is a sophisticated mental model that blends Systems Thinking, Design Thinking, and Cybernetics. It describes a self-reinforcing loop of action that results in continuous progress. 
 
 Progress can be positive (+) or negative (-) depending upon the formulation of the problem, the intent of the participants, and the systemic consequences of the outcomes. The PTO framework provides a structure—a Cognitive Architecture—to organize how we intervene in complex systems. 
 
 The framework is a generative, **triple-diamond methodology**. While the classic design "Double Diamond" asks you to Discover and Deliver, the PTO framework adds a crucial third phase for the systemic aftermath. It acknowledges that progress is not a linear path to an "end state," but a continuous loop where today's outcomes inevitably seed tomorrow's problems.
+
+---
+
+## The Cybernetic Mapping (Ackoff vs. PTO)
+
+Before exploring the physical execution phases of the engine, it is crucial to recognize that the **PTO Process** is literally the operationalization of Russell Ackoff's Interactive Planning. 
+
+The first three phases of Ackoff's macro planning model align perfectly with the micro execution model of the BUMPS engine. Remarkably, Idealized Design *reverses* chronological execution:
+
+1. **Formulation of the Mess = Problems (P):** You must baseline the raw, messy reality. This is the **Problem**.
+2. **Ends Planning = Outcomes (O):** You do not execute a solution yet. You engineer the Idealized Design of the future state. This is the target **Outcome**.
+3. **Means Planning = Transformations (T):** Only when the Problem and the target Outcome are locked do you select the strategy required to bridge the gap. This is the **Transformation**.
+
+Because this mapping is infinitely recursive, you can run the PTO Process to solve a micro-LUMP in an afternoon, or you can run it to resolve a macro-HUMP over a decade.
 
 ---
 
@@ -60,7 +74,7 @@ The PTO Process does not operate on a fixed calendar like traditional quarterly 
 
 * **HUMPS (Macro - Decades):** Transforming massive, systemic issues like Climate Change. The cadence is slow, steady, and generational.
 * **BUMPS (Meso - Years):** Transforming structural constraints like AI Safety or Corporate Obsolescence. The cadence is fast and dynamic.
-* **LUMPS (Micro - Months/Days):** Transforming operational friction like Vaccine Safety distribution bugs or process failures. The cadence is extremely fast and often chaotic.
+* **LUMPS (Micro - Months/Days):** Transforming operational pressures like Vaccine Safety distribution bugs or process failures. The cadence is extremely fast and often chaotic.
 
 ### The OODA Loop Inside the Diamond
 Within each phase of the PTO diamond, agents are constantly running macro and micro OODA Loops (*Observe, Orient, Decide, Act*). This ensures that as the cadence rhythm plays out, the actors remain responsive to the shifting environment. 

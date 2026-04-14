@@ -1,4 +1,4 @@
-# 6.6 State-of-Being (SOB)
+# 6.1.5 State-of-Being (SOB)
 *(Participants: Demise, Survive, Thrive)*
 
 Finally, we must visualize the human impact. Measuring GDP or even VoE/GMP/GPPTO is useless if the actual Participants are burning out. 

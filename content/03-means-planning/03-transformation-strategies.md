@@ -1,4 +1,4 @@
-# 3.3 Transformation Strategies (R-ARSED)
+# 3.1.3 Transformation Strategies (R-ARSED)
 
 When a BUMP enters the PTO engine, you must consciously select a Transformation strategy. These strategies represent the application of *Agency*. 
 
@@ -82,6 +82,6 @@ This introduces the critical dimension of political empathy and structural power
 * **W - Weaponizing:** Who actively uses this problem as a tool for leverage, budget negotiation, or control?
 * **H - Hindering:** Who actively blocks genuine solutions because their authority is tied to the manual, broken procedure?
 * **O - Orchestrating:** Who is the puppet master ensuring the problem's survival conditions remain perfectly aligned?
-* **S - Struggling:** Who is actually paying the price? Who is bearing the human, financial, and emotional load of this friction?
+* **S - Struggling:** Who is actually paying the price? Who is bearing the human, financial, and emotional load of this pressure?
 
 By mapping the **WHO** against the **R-ARSED** transformations, you immediately expose whether an organization lacks the competence to Solve a problem, or whether a bad actor is quietly Revolving it.

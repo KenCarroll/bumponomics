@@ -24,7 +24,7 @@ The original trademarked acronym for BUMPS was *"Big Unsolved Meaningful Problem
 ### The Cognitive Action Space
 BUMPS provide a framework for navigating complex situations by dividing the problem space into four explicit cognitive actions:
 1. **Visualizing** the terrain
-2. **Analyzing** the structural friction
+2. **Analyzing** the structural pressures
 3. **Synthesizing** a unified strategy
 4. **Communicating** the required transformation
 

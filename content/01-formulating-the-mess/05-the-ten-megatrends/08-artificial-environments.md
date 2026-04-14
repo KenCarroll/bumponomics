@@ -18,7 +18,7 @@ Humans have migrated from the biosphere to the "Technosphere"—a constructed re
 
 ### Implications
 *   **Self-Domestication:** Just as we domesticated wolves into dogs, we are domesticating ourselves—becoming softer, more docile, and less physically robust than our ancestors.
-*   **Chronic Disease Epidemic:** The "diseases of civilization" (diabetes, obesity, depression) are largely symptoms of the friction between our Stone Age bodies and our Space Age environments.
+*   **Chronic Disease Epidemic:** The "diseases of civilization" (diabetes, obesity, depression) are largely symptoms of the tension between our Stone Age bodies and our Space Age environments.
 *   **Psychological Detachment:** "Nature Deficit Disorder" is real. Separated from the rhythms of the living world, we increasingly treat the planet not as a home, but as a resource depot or a waste dump.
 *   **Accelerated Evolution:** We are no longer evolving solely through natural selection. We are forcing our own evolution (or devolution) through exposure to the synthetic pressures of the world we built.
 

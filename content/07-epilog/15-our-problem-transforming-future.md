@@ -2,7 +2,7 @@
 
 The laws of thermodynamics mandate that nothing is static. Every system is in motion, converting energy from one state to another. In human systems, this motion is the cycle of problem transformation.
 
-People form partnerships—from marriages to multinational corporations—to survive friction. These partnerships inevitably produce products, policies, and actions. These actions fundamentally change the landscape of the planet. And a changed landscape immediately breeds new problems. The new problems then agitate new people, moving them to form new partnerships. 
+People form partnerships—from marriages to multinational corporations—to survive environmental pressures. These partnerships inevitably produce products, policies, and actions. These actions fundamentally change the landscape of the planet. And a changed landscape immediately breeds new problems. The new problems then agitate new people, moving them to form new partnerships. 
 
 This cycle repeats endlessly. It has driven us from the cave to the cosmos. 
 
@@ -18,9 +18,9 @@ A BUMPSHOT is a massive, coordinated assault on a historically intractable HUMP 
 
 ## The Call to Action: The Bumpivore
 
-The organizations and societies of the future will not compete on the sleekness of their products. They will compete on their metabolic capacity to ingest and transform friction. 
+The organizations and societies of the future will not compete on the sleekness of their products. They will compete on their metabolic capacity to ingest and transform environmental pressures. 
 
-We must build **Problem-Transforming Organizations (PTOs)**. We need leaders who actively seek out the friction zones and view them not as liabilities, but as the raw, unrefined energy required to force a Metamorphosis. 
+We must build **Problem-Transforming Organizations (PTOs)**. We need leaders who actively seek out the pressure zones and view them not as liabilities, but as the raw, unrefined energy required to force a Metamorphosis. 
 
 We must all become **Bumpivores.** 
 

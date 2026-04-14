@@ -72,7 +72,7 @@ This document outlines the spectrum of adaptive responses, integrated with **Com
 
 * **The Survival Logic:** To thrive, I must eliminate the rival to secure the resource.
 * **Complexity & Boids Mechanics:**
-    * **Collision (Anti-Flocking):** Vectors are opposed. The system is in a state of **High Entropy**, where energy is expended on friction (fighting) rather than forward motion.
+    * **Collision (Anti-Flocking):** Vectors are opposed. The system is in a state of **High Entropy**, where energy is expended on resistance (fighting) rather than forward motion.
     * **The "Hawk" Attractor:** The system settles into an aggressive equilibrium.
 
 ### Winning Strategy: All-Defect (Hawk)
@@ -94,7 +94,7 @@ In a true zero-sum environment, altruism is fatal. The winning strategy is immed
 
 ### Winning Strategy: Win-Stay, Lose-Shift (WSLS / Pavlov)
 This is a pragmatic, adaptive strategy.
-* **The Mechanic:** If my current action (staying in my silo) yields a positive result (Win), I keep doing it (Stay). If I encounter friction or resource loss (Lose), I change my behavior (Shift).
+* **The Mechanic:** If my current action (staying in my silo) yields a positive result (Win), I keep doing it (Stay). If I encounter resistance or resource loss (Lose), I change my behavior (Shift).
 * **Application:** This allows organizations to maintain silos as long as they work, but automatically triggers a shift (to fighting or cooperating) the moment the silo stops delivering value. It removes emotional attachment to the "turf."
 
 > **Summary:** Organizing *despite* the other.
@@ -131,7 +131,7 @@ This is the "Gateway to Trust."
 In complex systems, "noise" (misunderstandings, lost emails, delays) looks like defection. Standard TFT fails here because it creates a death spiral of endless retaliation over a simple mistake.
 * **The Mechanic:** The strategy uses a **memory of past interactions** to adjust its response. It calculates the *probability* that a bad move was intentional vs. accidental.
 * **Why it Wins:** It acts as a filter. If a generally reliable partner misses a deadline, Adaptive TFT assumes it was "noise" and continues to coordinate, preventing system collapse.
-* **Application:** Essential for complex projects with high operational friction.
+* **Application:** Essential for complex projects with high operational pressure.
 
 > **Summary:** Organizing *in sync with* the other.
 
@@ -164,5 +164,5 @@ The organization must upgrade its "Operating System" (Strategy) as the complexit
 | **Conflict** | Scarcity | **Hawk** | Decisive action secures survival in zero-sum games. |
 | **Coexist** | Crowding | **Win-Stay, Lose-Shift** | Pragmatic efficiency; stick to what works, change if it breaks. |
 | **Cooperate**| Fragmentation | **Tit for Tat** | Reciprocity builds initial trust; prevents exploitation. |
-| **Coordinate** | Interdependence | **Adaptive TFT** | Filters out "noise" to maintain alignment during friction. |
+| **Coordinate** | Interdependence | **Adaptive TFT** | Filters out "noise" to maintain alignment during conflict. |
 | **Collaborate**| Systemic Complexity| **Generous TFT** | Absorbs shocks and mistakes to preserve the Superorganism. |

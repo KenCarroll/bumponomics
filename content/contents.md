@@ -3,6 +3,7 @@
 ## 00: PREFACE
 - [0.1 The Origin of BUMPS](00-preface/01-the-origin-of-bumps.md)
 - [0.2 The Process](00-preface/02-the-process.md)
+- [0.3 The Point of No Return](00-preface/03-the-point-of-no-return.md)
 
 ## 01: FORMULATING THE MESS 
 - [1.1 The Mess](01-formulating-the-mess/01-the-mess.md)
@@ -61,29 +62,36 @@
   - [2.4.2 The Infinite Game](02-ends-planning/04-design-of-organisation/02-the-infinite-game.md)
 
 ## 03: MEANS PLANNING
-- [3.1 The Master Architecture](03-means-planning/01-the-master-architecture.md)
-- [3.2 The PTO Process](03-means-planning/02-the-pto-process.md)
-- [3.3 Transformation Strategies](03-means-planning/03-transformation-strategies.md)
+- [3.1 Means Planning Setup](03-means-planning/00-means-planning-summary.md)
+  - [3.1.1 Strategic Orientation (The North Star)](03-means-planning/01-strategic-orientation.md)
+  - [3.1.2 The PTO Process](03-means-planning/02-the-pto-process.md)
+  - [3.1.3 Transformation Strategies (R-ARSED)](03-means-planning/03-transformation-strategies.md)
 
 ## 04: RESOURCE PLANNING
-- [4.1 Algebra of Agency](04-resource-planning/01-algebra-of-agency.md)
-- [4.2 The Impact of Bumponomics](04-resource-planning/02-the-impact-of-bumponomics.md)
+- [4.1 The Archetypes of Agency](04-resource-planning/01-the-archetypes-of-agency.md)
 
 ## 05: DESIGN OF IMPLEMENTATION
-- [5.1 The BUMPS Platform](05-design-of-implementation/01-the-bumps-platform.md)
+- [5.1 Design of Implementation Setup](05-design-of-implementation/00-design-of-implementation-summary.md)
+  - [5.1.1 The Directed Graph](05-design-of-implementation/01-the-directed-graph.md)
+  - [5.1.2 The Software Application](05-design-of-implementation/02-the-software-application.md)
+  - [5.1.3 Co-Intelligence (HI + AI)](05-design-of-implementation/03-co-intelligence.md)
+  - [5.1.4 The Progress Programming Language (PPL)](05-design-of-implementation/04-the-progress-programming-language.md)
 
 ## 06: DESIGN OF CONTROLS
-- [6.1 Measuring Progress (Beyond GDP)](06-design-of-controls/01-measuring-progress.md)
-- [6.2 VoE (Variety of Environment)](06-design-of-controls/02-voe.md)
-- [6.3 GMP (Gross Meaningful Problems)](06-design-of-controls/03-gmp.md)
-- [6.4 GPPTO (Gross Positive Problem Transformation Outcomes)](06-design-of-controls/04-gppto.md)
-- [6.5 GIVE (Gross Increased Variety of Environment)](06-design-of-controls/05-give.md)
-- [6.6 State-of-Being (SOB)](06-design-of-controls/06-sob.md)
+- [6.1 Design of Controls Setup](06-design-of-controls/00-design-of-controls-summary.md)
+  - [6.1.1 VoE (Variety of Environment)](06-design-of-controls/01-voe.md)
+  - [6.1.2 GMP (Gross Meaningful Problems)](06-design-of-controls/02-gmp.md)
+  - [6.1.3 GPPTO (Gross Positive Problem Transformation Outcomes)](06-design-of-controls/03-gppto.md)
+  - [6.1.4 GIVE (Gross Increased Variety of Environment)](06-design-of-controls/04-give.md)
+  - [6.1.5 State-of-Being (SOB)](06-design-of-controls/05-sob.md)
 
 ## 07: EPILOG
-- [Epilogue: Our Problem-Transforming Future](07-epilog/15-our-problem-transforming-future.md)
+- [7.1 The Impact of Bumponomics](07-epilog/01-the-impact-of-bumponomics.md)
+- [7.2 Our Problem Transforming Future](07-epilog/15-our-problem-transforming-future.md)
+- [7.3 Media Test](07-epilog/16-media-test.md)
 
 ## 08: APPENDIX
+- [PTO vs Idealized Design](08-appendix/pto-vs-idealized-design.md)
 - [The Viable Economic Model (VEM)](08-appendix/the-viable-economic-model-vem.md)
 - [Bumponomics Conference Submission Draft](08-appendix/bumponomics-conference-submission-draft.md)
 - [Bumponomics: The Economics of Problem Transformation](08-appendix/bumponomics-the-economics-of-problem-transformation.md)

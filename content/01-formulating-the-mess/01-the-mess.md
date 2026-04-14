@@ -26,6 +26,6 @@ If we want to formulate the mess accurately, Bumponomics dictates that we must a
 - What problems *actually* matter?
 - Who experiences them?
 - How effectively are they transformed into progress?
-- How are we expanding our operating space to increase our *affordance* (opportunity) to transform friction into progress?
+- How are we expanding our operating space to increase our *affordance* (opportunity) to transform pressure into progress?
 
 **The Manifesto is simple:** We do not simply need better solutions; we need to confront the Mess, and find Better Problems.

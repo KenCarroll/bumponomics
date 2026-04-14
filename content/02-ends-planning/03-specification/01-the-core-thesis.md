@@ -8,7 +8,7 @@ status: draft
 
 # 2.3.1 The Core Thesis
 
-Traditional management theory, and indeed the entirety of global economics, treats "problems" as errors to be eliminated. The Bumponomics core thesis argues the exact opposite: **Problems are the organizing principle of human existence.** We do not organize to avoid friction; we organize *because* of it. 
+Traditional management theory, and indeed the entirety of global economics, treats "problems" as errors to be eliminated. The Bumponomics core thesis argues the exact opposite: **Problems are the organizing principle of human existence.** We do not organize to avoid pressure; we organize *because* of it.
 
 To understand why this paradigm shift is necessary—and why the current operating systems of the world are failing us—we must first expose the blindspot at the heart of modern economics.
 
@@ -43,7 +43,7 @@ We must stop treating problems as annoyances and start treating them as fuel.
 
 ## The Algebra of Agency
 
-By treating concepts like "Participants," "Problems," and "Progress" as algebraic variables, we can mathematically model organizational health, toxicity, and innovation. We replace the static *Homo Economicus* with a dynamic system driven by friction.
+By treating concepts like "Participants," "Problems," and "Progress" as algebraic variables, we can mathematically model organizational health, toxicity, and innovation. We replace the static *Homo Economicus* with a dynamic system driven by pressure.
 
 ### The Systemic Function & The Base Truth
 
@@ -53,7 +53,7 @@ $$Progress = f(Place, People, Problems)$$
 
 *   **Place (The Context):** The container or environment in which participants exist.
 *   **People (The Agents):** All life forms with agency and purpose (not just humans) experiencing and interpreting the tension.
-*   **Problems (The Fuel):** The high-energy collisions and frictions that drive action.
+*   **Problems (The Fuel):** The high-energy collisions and pressures that drive action.
 
 *(Note: Progress is a vector. It can be positive, negative, or neutral based on the outcomes of how we transform these problems within the place).*
 
@@ -65,7 +65,7 @@ $$Participants + Problems = Progress$$
 From this Base Truth, we derive the structural states of organization by rearranging the variables:
 
 * **The Bureaucrat (Stagnation):** $Problems = Participants - Progress$
-  * *Insight:* Idleness is not neutral. When agents are not making progress, they don't sit still—they manufacture internal friction (politics, busywork, red tape) to fill the void.
+  * *Insight:* Idleness is not neutral. When agents are not making progress, they don't sit still—they manufacture internal pressure (politics, busywork, red tape) to fill the void.
 * **The Cynic (Dehumanization):** $Participants = Problems - Progress$
   * *Insight:* The toxic belief that the system would work perfectly if it weren't for "actor error." This leads to rigid authoritarianism or excessive automation.
 * **The Innovator (Constraint Theory):** $Progress = Problems - Participants$
@@ -88,9 +88,9 @@ $$\text{Who (Humans)} + \text{How (Organize \& Act)} = \text{Why (Survive \& Thr
 
 This algebra maps directly onto a **Performance Graph** (Y-Axis: Quality of Life, X-Axis: Complexity of Environment/Problems).
 
-1.  **The Collapse Zone (Below the Floor):** Where $Participants < Problems$. The friction destroys the system.
-2.  **The Resilience Floor (The "Survive" Baseline):** Where $Participants = Problems$. The ability to absorb the shock of friction without breaking. This is maintenance and stability.
-3.  **The Thrive Threshold (The Ceiling Breaker):** Where $Participants + Transformation > Problems$. The exact moment we stop merely "surviving" the friction and start using it to gain altitude.
+1.  **The Collapse Zone (Below the Floor):** Where $Participants < Problems$. The pressure destroys the system.
+2.  **The Resilience Floor (The "Survive" Baseline):** Where $Participants = Problems$. The ability to absorb the shock of pressure without breaking. This is maintenance and stability.
+3.  **The Thrive Threshold (The Ceiling Breaker):** Where $Participants + Transformation > Problems$. The exact moment we stop merely "surviving" the pressure and start using it to gain altitude.
 
 ## The Viable Economic Model (VEM)
 
