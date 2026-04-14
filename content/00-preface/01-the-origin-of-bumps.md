@@ -6,7 +6,7 @@ order: 1
 status: draft
 ---
 
-# The Origin of BUMPS
+# 0.1 The Origin of BUMPS
 
 There is a moment—a "Red Pill" decision point—where you must choose how to perceive reality. Once you take the pill and open the door to this way of thinking, there is no going back. But driving towards that perceived "truth" every day, despite the bumps in the way, takes an enormous amount of energy. It is high risk.
 

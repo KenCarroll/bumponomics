@@ -16,14 +16,22 @@ function getSidebar(dir, basePath = '') {
   files.sort((a, b) => a.localeCompare(b, undefined, {numeric: true}))
 
   for (const file of files) {
-    // Skip hidden files, the root index, and the raw contents manifest
-    if (file.startsWith('.') || file === 'index.md' || file === 'contents.md') continue;
+    // Skip static assets and raw manifests to ensure a clean structural menu
+    const skipList = [
+      'index.md', 'contents.md', 'public', 'images', 'connect.md'
+    ];
+    if (file.startsWith('.') || skipList.includes(file)) continue;
     
     const fullPath = path.join(dir, file)
     const stat = fs.statSync(fullPath)
     
     if (stat.isDirectory()) {
-      let text = file.replace(/^\d+-/, '').replace(/-/g, ' ').toUpperCase()
+      const dirMatch = file.match(/^(\d+)-(.+)$/);
+      let text = file.replace(/-/g, ' ').toUpperCase();
+      
+      if (dirMatch) {
+         text = `${dirMatch[1]}: ${dirMatch[2].replace(/-/g, ' ').toUpperCase()}`;
+      }
       const children = getSidebar(fullPath, `${basePath}/${file}`)
       
       if (file === "02-key-assumptions") {

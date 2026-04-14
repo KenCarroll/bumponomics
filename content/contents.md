@@ -1,9 +1,8 @@
 # Table of Contents
 
-## 00-PREFACE
-- [0-introduction](00-preface/0-introduction.md)
-- [01-the-origin-of-bumps](00-preface/01-the-origin-of-bumps.md)
-- [02-quotations](00-preface/02-quotations.md)
+## 00: PREFACE
+- [0.1 The Origin of BUMPS](00-preface/01-the-origin-of-bumps.md)
+- [0.2 The Process](00-preface/02-the-process.md)
 
 ## 01: FORMULATING THE MESS 
 - [1.1 The Mess](01-formulating-the-mess/01-the-mess.md)
@@ -69,8 +68,24 @@
 - [6.6 State-of-Being (SOB)](06-design-of-controls/06-sob.md)
 
 ## 07: EPILOG
-- [15-our-problem-transforming-future](04-epilog/15-our-problem-transforming-future.md)
-- [all-systems-are-problem-transforming-paper-27oct2025](all-systems-are-problem-transforming-paper-27oct2025.md)
+- [Epilogue: Our Problem-Transforming Future](07-epilog/15-our-problem-transforming-future.md)
+
+## 08: APPENDIX
+- [The Viable Economic Model (VEM)](08-appendix/the-viable-economic-model-vem.md)
+- [Bumponomics Conference Submission Draft](08-appendix/bumponomics-conference-submission-draft.md)
+- [Bumponomics: The Economics of Problem Transformation](08-appendix/bumponomics-the-economics-of-problem-transformation.md)
+
+## 09: FUNDAMENTALS
+- [Bumponomics in a Nutshell](09-fundamentals/bumponomics-in-a-nutshell.md)
+
+## 10: LOOSE SECTIONS
+- [The 1-Page Summary](10-loose-sections/the-1-page-summary.md)
+- [Book Outline](10-loose-sections/abookoutline.md)
+- [Paper: All Systems are Problem Transforming](10-loose-sections/all-systems-are-problem-transforming-paper-27oct2025.md)
+- [Quotations](10-loose-sections/quotations.md)
+
+## 11: TODO LIST
+- [Project Backlog](11-todo-list/01-project-tasks.md)
 
 ## CONNECT
 - [Connect & Subscribe](connect.md)

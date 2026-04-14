@@ -42,9 +42,9 @@ function toggleTheme() {
       
       <div class="drawer-content">
         <!-- Render Sidebar Contents -->
-        <div v-for="(group, idx) in theme.sidebar" :key="idx" class="drawer-group">
-          <h3 v-if="group.text" class="group-title">{{ group.text }}</h3>
-          <ul>
+        <details v-for="(group, idx) in theme.sidebar" :key="idx" class="drawer-group" :open="false">
+          <summary v-if="group.text" class="drawer-main-summary">{{ group.text }}</summary>
+          <ul class="drawer-main-ul">
             <li v-for="item in group.items" :key="item.text || item.link">
               <template v-if="item.items && item.items.length">
                  <details class="nested-details" :open="!item.collapsed">
@@ -61,7 +61,7 @@ function toggleTheme() {
               <a v-else :href="item.link" @click="toggleDrawer">{{ item.text }}</a>
             </li>
           </ul>
-        </div>
+        </details>
       </div>
       
       <!-- Bottom Appearance Switcher -->
@@ -181,13 +181,40 @@ function toggleTheme() {
 .drawer-group {
   margin-bottom: 24px;
 }
-.group-title {
+.drawer-main-summary {
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin-bottom: 8px;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  transition: color 0.2s;
+}
+.drawer-main-summary::-webkit-details-marker {
+  display: none;
+}
+.drawer-main-summary:hover {
+  color: var(--vp-c-brand);
+}
+.drawer-main-summary::before {
+  content: "▶";
+  font-size: 10px;
+  transition: transform 0.2s;
+  color: var(--vp-c-text-3);
+}
+details[open] > .drawer-main-summary::before {
+  transform: rotate(90deg);
+}
+.drawer-main-ul {
+  padding-left: 12px;
+  border-left: 2px solid var(--vp-c-divider);
+  padding-top: 8px;
+  margin-bottom: 16px;
 }
 .drawer-content ul {
   list-style: none;

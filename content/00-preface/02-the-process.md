@@ -1,4 +1,4 @@
-# Introduction to Bumponomics
+# 0.2 The Process
 
 If we are to effectively communicate the profound nature of a "Problem Transforming System," the book itself must be structured as one.
 
