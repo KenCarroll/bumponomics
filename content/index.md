@@ -102,4 +102,18 @@ The execution of the bumponomics PTO patterns for micro-actions uses the exact s
   background: transparent !important;
   border-color: transparent !important;
 }
+
+/* On mobile, ensure the Table of Contents link sits underneath the main button */
+@media (max-width: 639px) {
+  .VPHero .actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  /* Optional: Reset top margin if VitePress tries to space them awkwardly */
+  .VPHero .actions .action {
+    margin: 0 !important;
+  }
+}
 </style>
