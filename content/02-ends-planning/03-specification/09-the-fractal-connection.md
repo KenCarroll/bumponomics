@@ -6,9 +6,11 @@ order: 9
 status: draft
 ---
 
-# 2.3.9 The Fractal Connection
+# 2.3.9 Fractal Structure (Scale)
 
-These layers—HUMPS, BUMPS, and LUMPS—do not exist in crystalline isolation. They are deeply, structurally fractal. 
+These layers—HUMPS, BUMPS, and LUMPS—do not exist in crystalline isolation. They are deeply, structurally **fractal**. 
+
+In systems theory, something is fractal when it looks the same no matter how far you zoom in or zoom out. In Bumponomics, the *anatomy of a problem* is fractal. Resolving a micro-tension (an argument between two employees) looks structurally identical to resolving a macro-tension (a trade dispute between two nations). 
 
 **Whether a specific problematic situation is classified as a HUMP, a BUMP, or a LUMP is dependent solely upon perspective.**
 
@@ -19,7 +21,7 @@ The classification scales to the observer.
 ### Artificial Boundaries
 Ultimately, there is absolutely no biological or physical difference between a HUMP, a BUMP, and a LUMP. 
 
-They are entirely artificial terms designed to convey the scale of a concern in a friendly, approachable narrative. Because they are structurally identical, **they are all tackled exactly the same way.** The execution of a micro-LUMP leverages the exact same recursive PTO Engine as the execution of a macro-HUMP.
+They are entirely artificial terms designed to convey the scale of a concern in a friendly, approachable narrative. Because they are structurally identical, **they are all tackled exactly the same way.** The execution of a micro-LUMP leverages the exact same mechanical logic as the execution of a macro-HUMP.
 
 ### The Law of Clotting
 Because these problems are fractal, they actively bleed into one another across the boundaries of scale.
