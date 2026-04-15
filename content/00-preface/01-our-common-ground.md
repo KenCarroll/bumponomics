@@ -20,7 +20,7 @@ We probably have options. Things can be different if we make different choices. 
 
 We can start by borrowing a core principle from the Socratic method of design: before we attempt to build solutions or take action, we must relentlessly question our foundations. We cannot make better choices if we are operating on inherited, unexamined assumptions. 
 
-To uncover the mechanics of how we operate, and to find our common ground, we must question our own architecture:
+To uncover the mechanics of how we operate, and to find our common ground, we must question our own narratives:
 
 1. **Our Narratives and Points of View (POVs):** How do we perceive our environment? Whose reality do our narratives actually describe? 
 2. **Our Beliefs and Actions:** When faced with systemic friction, what hidden beliefs drive us? What is our immediate, reflexive reaction when we experience pain?
