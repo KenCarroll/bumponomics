@@ -1,3 +1,10 @@
+---
+title: "The Process"
+description: "The structural methodology and interactive planning timeline of the book."
+order: 3
+status: draft
+---
+
 # 0.3 The Process
 
 If we are to effectively communicate the profound nature of a "Problem Transforming System," the book itself must be structured as one.

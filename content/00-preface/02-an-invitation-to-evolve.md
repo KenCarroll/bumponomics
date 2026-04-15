@@ -1,11 +1,11 @@
 ---
 title: "An Invitation to Evolve"
 description: "The philosophical premise of progress and the advantage of evolutionary pressure."
-order: 4
+order: 2
 status: draft
 ---
 
-# An Invitation to Evolve
+# 0.2 An Invitation to Evolve
 
 If you have made it this far, you have likely experienced a fundamental shift in perspective. The world around you may not seem quite the same anymore. 
 

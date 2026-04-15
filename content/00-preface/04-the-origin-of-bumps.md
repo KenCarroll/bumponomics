@@ -1,12 +1,12 @@
 ---
 id: 1ffe63b0-f13a-43ee-8ba3-4a7c71d6cd93
-title: "the-catalyst"
-description: ""
-order: 2
+title: "The Origin of BUMPS"
+description: "The historical catalyst and personal reality behind the framework."
+order: 4
 status: draft
 ---
 
-# 0.2 The Origin of BUMPS
+# 0.4 The Origin of BUMPS
 
 There is a moment—a "Red Pill" decision point—where you must choose how to perceive reality. Once you take the pill and open the door to this way of thinking, there is no going back. But driving towards that perceived "truth" every day, despite the bumps in the way, takes an enormous amount of energy. It is high risk.
 
