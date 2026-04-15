@@ -1,9 +1,10 @@
 # Table of Contents
 
 ## 00: PREFACE
-- [0.1 The Origin of BUMPS](00-preface/01-the-origin-of-bumps.md)
-- [0.2 The Process](00-preface/02-the-process.md)
-- [0.3 The Point of No Return](00-preface/03-the-point-of-no-return.md)
+- [0.1 Our Common Ground](00-preface/01-our-common-ground.md)
+- [0.2 The Origin of BUMPS](00-preface/02-the-origin-of-bumps.md)
+- [0.3 The Process](00-preface/03-the-process.md)
+- [0.4 The Point of No Return](00-preface/04-the-point-of-no-return.md)
 
 ## 01: FORMULATING THE MESS 
 - [1.1 The Mess](01-formulating-the-mess/01-the-mess.md)
