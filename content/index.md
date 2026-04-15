@@ -105,6 +105,16 @@ The execution of the bumponomics PTO patterns for micro-actions uses the exact s
 
 /* On mobile, ensure the Table of Contents link sits underneath the main button */
 @media (max-width: 639px) {
+  /* Increase BUMPONOMICS size relative to The Economics of Progress */
+  .VPHero .name {
+    font-size: 46px !important;
+    line-height: 1.1 !important;
+  }
+  .VPHero .text {
+    font-size: 26px !important;
+  }
+
+  /* Make the action buttons stack vertically */
   .VPHero .actions {
     display: flex !important;
     flex-direction: column !important;
