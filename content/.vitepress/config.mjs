@@ -97,6 +97,13 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
+    lastUpdated: {
+      text: 'Last Updated',
+      formatOptions: {
+        dateStyle: 'long',
+        timeStyle: 'short'
+      }
+    },
     docFooter: {
       prev: 'Previous Concept',
       next: 'Next Concept'

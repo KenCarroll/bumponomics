@@ -3,6 +3,9 @@ title: "Our Common Ground"
 description: "Establishing a shared understanding of environmental turbulence and examining the foundational assumptions driving our behaviour."
 order: 1
 status: draft
+prev:
+  text: 'Home'
+  link: '/'
 ---
 
 # 0.1 Our Common Ground
