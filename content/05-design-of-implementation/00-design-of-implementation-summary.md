@@ -5,7 +5,7 @@ description: "Mapping the operational software requirement to Ackoff's 5th phase
 order: 0
 status: draft
 ---
-# 5.1 Design of Implementation Setup
+# 5: Design of Implementation
 
 The fifth stage of Russell Ackoff's Interactive Planning is **Design of Implementation**. 
 

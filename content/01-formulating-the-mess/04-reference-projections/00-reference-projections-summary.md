@@ -6,7 +6,7 @@ order: 9
 status: draft
 ---
 
-# 1.4 Reference Projections: The Cost of Inaction
+# 1.3 Reference Projections: The Cost of Inaction
 
 **Reference Projections** answer a critical question: *What happens if we keep doing exactly what we are doing, and the environment continues on its expected trajectory?*
 

@@ -155,3 +155,28 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+/* =========================================================
+   SIDEBAR HIGHLIGHTING
+   Make it unmistakably obvious where the user is currently!
+   ========================================================= */
+
+/* Make the active file stand out with a thick left-border and loud text */
+.VPSidebarItem.is-active > .item {
+  border-left: 4px solid var(--vp-c-brand) !important;
+  background-color: var(--vp-c-brand-soft) !important;
+  padding-left: 12px !important;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+}
+
+.VPSidebarItem.is-active > .item .text {
+  font-weight: 800 !important;
+  color: var(--vp-c-brand) !important;
+}
+
+/* For nested folder links, ensure the exact active file is colored strongly */
+.VPLink.link.is-active .text {
+  color: var(--vp-c-brand) !important;
+  font-weight: 800 !important;
+}

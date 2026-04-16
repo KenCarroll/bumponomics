@@ -6,7 +6,7 @@ order: 1
 status: draft
 ---
 
-# 3.1 Means Planning Setup
+# 3: Means Planning
 
 The third stage of Ackoff's Idealized Design is **Means Planning**. While Ends Planning (Phase 2) strictly defines the specifications and target outcomes of the new environment, Means Planning is the selection of the *practices, programs, and policies used to actually get there*.
 

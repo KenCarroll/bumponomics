@@ -6,7 +6,7 @@ order: 0
 status: draft
 ---
 
-# 6.1 Design of Controls Setup
+# 6: Design of Controls
 
 The final phase of Ackoff's Interactive Planning is **Design of Controls**. 
 

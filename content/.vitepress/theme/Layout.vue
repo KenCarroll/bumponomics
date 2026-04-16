@@ -1,13 +1,27 @@
 <script setup>
-import { ref } from 'vue'
-import { useData } from 'vitepress'
+import { ref, computed } from 'vue'
+import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 const { Layout } = DefaultTheme
 const { theme, isDark } = useData()
+const route = useRoute()
 const isDrawerOpen = ref(false)
 
 function toggleDrawer() {
   isDrawerOpen.value = !isDrawerOpen.value
+}
+
+function isActive(link) {
+  if (!link) return false
+  // Normalize VitePress paths for comparison
+  const currentPath = route.path.replace(/\.html$/, '').replace(/\/$/, '')
+  const linkPath = link.replace(/\.html$/, '').replace(/\/$/, '')
+  return currentPath === linkPath
+}
+
+function hasActiveChild(items) {
+  if (!items) return false
+  return items.some(i => isActive(i.link) || hasActiveChild(i.items))
 }
 
 function toggleTheme() {
@@ -42,23 +56,35 @@ function toggleTheme() {
       
       <div class="drawer-content">
         <!-- Render Sidebar Contents -->
-        <details v-for="(group, idx) in theme.sidebar" :key="idx" class="drawer-group" :open="false">
-          <summary v-if="group.text" class="drawer-main-summary">{{ group.text }}</summary>
+        <details v-for="(group, idx) in theme.sidebar" :key="idx" class="drawer-group" :open="hasActiveChild(group.items) || isActive(group.link)">
+          <summary v-if="group.text" class="drawer-main-summary" :class="{ 'has-active-child': hasActiveChild(group.items), 'is-active': isActive(group.link) }">
+            <template v-if="group.link">
+               <a :href="group.link" @click="toggleDrawer" class="group-link-header">{{ group.text }}</a>
+            </template>
+            <template v-else>
+               {{ group.text }}
+            </template>
+          </summary>
           <ul class="drawer-main-ul">
             <li v-for="item in group.items" :key="item.text || item.link">
               <template v-if="item.items && item.items.length">
-                 <details class="nested-details" :open="!item.collapsed">
-                   <summary class="nested-summary">
-                      {{ item.text }}
+                 <details class="nested-details" :open="!item.collapsed || hasActiveChild(item.items) || isActive(item.link)">
+                   <summary class="nested-summary" :class="{ 'has-active-child': hasActiveChild(item.items), 'is-active': isActive(item.link) }">
+                      <template v-if="item.link">
+                         <a :href="item.link" @click="toggleDrawer" class="group-link-header">{{ item.text }}</a>
+                      </template>
+                      <template v-else>
+                         {{ item.text }}
+                      </template>
                    </summary>
                    <ul class="nested-ul">
                      <li v-for="subitem in item.items" :key="subitem.link">
-                       <a :href="subitem.link" @click="toggleDrawer">{{ subitem.text }}</a>
+                       <a :href="subitem.link" :class="{ 'is-active': isActive(subitem.link) }" @click="toggleDrawer">{{ subitem.text }}</a>
                      </li>
                    </ul>
                  </details>
               </template>
-              <a v-else :href="item.link" @click="toggleDrawer">{{ item.text }}</a>
+              <a v-else :href="item.link" :class="{ 'is-active': isActive(item.link) }" @click="toggleDrawer">{{ item.text }}</a>
             </li>
           </ul>
         </details>
@@ -289,5 +315,51 @@ details[open] .nested-summary::before {
 .theme-toggle:hover {
   background: var(--vp-c-bg-alt);
   border-color: var(--vp-c-brand);
+}
+
+/* ====================================
+   ROUTER ACTIVE HIGHLIGHTING (DRAWER)
+   ==================================== */
+   
+/* Active file link highlight */
+.drawer-content a.is-active {
+  color: var(--vp-c-brand) !important;
+  font-weight: 800 !important;
+  background-color: var(--vp-c-brand-soft);
+  padding: 6px 12px !important;
+  margin-left: -16px;
+  border-left: 4px solid var(--vp-c-brand);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Make parent folders light up slightly to indicate active location */
+.drawer-main-summary.has-active-child,
+.nested-summary.has-active-child {
+  color: var(--vp-c-text-1) !important;
+  font-weight: 800 !important;
+}
+.drawer-main-summary.has-active-child::before,
+.nested-summary.has-active-child::before {
+  color: var(--vp-c-brand) !important;
+}
+
+/* Treat active folders exactly like active files */
+.drawer-main-summary.is-active,
+.nested-summary.is-active {
+  color: var(--vp-c-brand) !important;
+  font-weight: 800 !important;
+  background-color: var(--vp-c-brand-soft);
+  padding: 6px 12px 6px 4px !important;
+  margin-left: -4px;
+  border-left: 4px solid var(--vp-c-brand);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Remove default link styling from the router-aware headers so they fit inside flexbox */
+.group-link-header {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: block;
+  flex: 1;
 }
 </style>

@@ -6,7 +6,7 @@ order: 8
 status: draft
 ---
 
-# 1.3 Obstruction Analysis: Identifying Frictions to Progress
+# 1.2 Obstruction Analysis: Identifying Frictions to Progress
 
 Once we understand the map of the problems, we conduct an **Obstruction Analysis**. Ackoff defined this as identifying the characteristics and properties of the organization that obstruct its progress. 
 
@@ -20,3 +20,5 @@ Obstructions rarely manifest as intentional self-sabotage; they are usually the 
 - **Misaligned Agency:** When the People who possess the authority to allocate resources are structurally divorced from the People who are fundamentally experiencing the pressure of the problems.
 
 By isolating these obstructions, we reveal exactly why the organization is failing to leverage the natural thermodynamic engine of its environment.
+
+At every one of these levels, we will observe a consistent, fatal flaw: the system is designed to perceive, manipulate, and optimize for **artifacts** (money, output, GDP) while remaining structurally blind to **problems** (dissonance, friction, systemic exhaustion).

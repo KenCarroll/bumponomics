@@ -6,7 +6,7 @@ order: 10
 status: draft
 ---
 
-# 1.5 Reference Scenario: The Inevitable Collapse
+# 1.4 Reference Scenario: The Inevitable Collapse
 
 The culmination of Formulating the Mess is the **Reference Scenario**. This is a synthetic description—combining the learnings from (a) Systems Analysis, (b) Obstruction Analysis, and (c) Reference Projections—to illustrate how and why the organization will ultimately destroy or completely destabilize itself if its current assumptions hold true.
 
