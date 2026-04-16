@@ -7,7 +7,7 @@ status: active
 
 # The Viable Economic Model (VEM)
 
-The theoretical foundation of Bumponomics owes a massive debt to the field of management cybernetics, and specifically to Stafford Beer's **Viable System Model (VSM)**.
+The theoretical foundation of Bumponomics owes a massive debt to the field of management cybernetics, and specifically to [Stafford Beer's](https://en.wikipedia.org/wiki/Stafford_Beer) **Viable System Model (VSM)**.
 
 Developed in the 1970s, the VSM models the organizational structure of any viable, autonomous system capable of surviving in a changing environment. Beer's central premise was that organizations are not just machines; they are complex biological systems striving to maintain equilibrium. 
 

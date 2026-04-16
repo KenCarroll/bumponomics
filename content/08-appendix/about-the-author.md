@@ -1,20 +1,14 @@
 ---
-id: 1ffe63b0-f13a-43ee-8ba3-4a7c71d6cd93
-title: "The Origin of BUMPS"
+title: "About the Author: The Origin of BUMPS"
 description: "The historical catalyst and personal reality behind the framework."
-order: 4
 status: draft
 ---
 
-# 0.4 The Origin of BUMPS
-
-There is a moment—a "Red Pill" decision point—where you must choose how to perceive reality. Once you take the pill and open the door to this way of thinking, there is no going back. But driving towards that perceived "truth" every day, despite the bumps in the way, takes an enormous amount of energy. It is high risk.
-
-Why take that risk? Why bear the financial, personal, social, and spiritual costs of obsession?
+# About the Author: The Origin of BUMPS
 
 Your position in your environment—your reality, your history, your psychology—determines the exact nature of the problems you perceive. And it determines your specific position in the overarching *Fitness Landscape*.
 
-This book, and the entire Bumponomics framework, is the result of that obsession. It is born from an environmental drive to take action, to move towards a new set of outcomes, and to stop optimizing for solutions when we should be optimizing for problems.
+This book, and the entire Bumponomics framework, is the result of an obsession. It is born from an environmental drive to take action, to move towards a new set of outcomes, and to stop optimizing for solutions when we should be optimizing for problems.
 
 Life does not optimize for equilibrium; it optimizes for adaptation. My understanding of this began long before I had the language for it.
 

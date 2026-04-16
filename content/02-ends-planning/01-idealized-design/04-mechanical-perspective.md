@@ -7,7 +7,7 @@ status: draft
 ---
 # 2.1.4 Mechanical Perspective
 
-To deepen our constraints beyond Ackoff, we adopt **Michael C. Jackson's Critical Systems Thinking** starting with the **Mechanical Perspective**. 
+To deepen our constraints beyond Ackoff, we adopt **[Michael C. Jackson's](https://en.wikipedia.org/wiki/Mike_Jackson_(systems_scientist)) Critical Systems Thinking** starting with the **Mechanical Perspective**. 
 
 Think of this as applying a strict engineering mindset to the entire civilization. From this lens, we abstract away emotion and look strictly at the tangible, structural realities of the human environment. We examine concrete infrastructure: the physics of our global power grids, the limitations of raw material extraction (like rare earth metals for clean energy), the fragility of global supply chains, and the algorithmic mechanics of our stock markets.
 

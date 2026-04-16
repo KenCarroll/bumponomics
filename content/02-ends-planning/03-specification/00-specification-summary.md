@@ -9,7 +9,7 @@ status: draft
 
 The second stage of Ackoff's Idealized Design is the **Specification of Properties**. Once the mission is established, we must define the precise theoretical characteristics, laws, and semantic inputs the system requires to function.
 
-To do this rigorously, Bumponomics utilizes **Werner Ulrich’s Critical Systems Heuristics (CSH)**. 
+To do this rigorously, Bumponomics utilizes **[Werner Ulrich’s](https://wulrich.com/csh.html) Critical Systems Heuristics (CSH)**. 
 
 CSH dictates that it is mathematically impossible to consider every aspect of a complex situation; therefore, every system design inevitably *includes* some elements while *excluding* others. CSH forces us to make these "boundary judgments" explicit by asking 12 questions structured across four domains (in the normative "Ought" mode). 
 
