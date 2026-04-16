@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withPwa } from '@vite-pwa/vitepress'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -82,7 +83,7 @@ function getSidebar(dir, basePath = '') {
   return items
 }
 
-export default defineConfig({
+export default withPwa(defineConfig({
   title: "BUMPONOMICS™",
   description: "The Playbook for Turbulent Worlds",
   lastUpdated: true,
@@ -120,5 +121,28 @@ export default defineConfig({
       { text: 'Connect', link: '/connect' }
     ],
     sidebar: getSidebar(path.resolve(__dirname, '../'))
+  },
+  pwa: {
+    outDir: '.vitepress/dist',
+    registerType: 'autoUpdate',
+    includeAssets: ['bumps-logo.svg'],
+    manifest: {
+      name: 'BUMPONOMICS™',
+      short_name: 'Bumponomics',
+      description: 'The Economics of Progress',
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      display: 'standalone',
+      icons: [
+        {
+          src: 'bumps-logo.svg',
+          sizes: 'any',
+          type: 'image/svg+xml'
+        }
+      ]
+    },
+    workbox: {
+      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}']
+    }
   }
-})
+}))
