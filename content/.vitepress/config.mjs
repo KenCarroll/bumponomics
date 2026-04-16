@@ -28,25 +28,20 @@ function getSidebar(dir, basePath = '') {
     if (stat.isDirectory()) {
       const dirMatch = file.match(/^(\d+)-(.+)$/);
       let text = file.replace(/-/g, ' ').toUpperCase();
-      
       if (dirMatch) {
          text = `${dirMatch[1]}: ${dirMatch[2].replace(/-/g, ' ').toUpperCase()}`;
       }
-      const children = getSidebar(fullPath, `${basePath}/${file}`)
-      
-      if (file === "02-key-assumptions") {
-         text = `1.2 Key Assumptions (${children.length - 1})`
-      } else if (file === "05-the-ten-megatrends") {
-         text = `1.5 Ten Megatrends (${children.length - 1})`
-      } else if (file === "01-idealized-design") {
-         text = `2.1 Idealized Design (${children.length - 1})`
-      } else if (file === "02-mission-statement") {
-         text = `2.2 Mission Statement (${children.length - 1})`
-      } else if (file === "03-specification") {
-         text = `2.3 Specification (${children.length - 1})`
-      } else if (file === "04-design-of-organisation") {
-         text = `2.4 Design of Organisation (${children.length - 1})`
+
+      // Automatically search for a '00-xx-summary' file. If found, pull the parent folder title directly from its H1 heading!
+      const dirFiles = fs.readdirSync(fullPath);
+      const summaryFile = dirFiles.find(f => f.startsWith('00-') && f.endsWith('.md'));
+      if (summaryFile) {
+         const summaryContent = fs.readFileSync(path.join(fullPath, summaryFile), 'utf8');
+         const h1Match = summaryContent.match(/^#\s+(.*)$/m);
+         if (h1Match) text = h1Match[1].trim();
       }
+
+      const children = getSidebar(fullPath, `${basePath}/${file}`)
 
       items.push({
         text: text,
