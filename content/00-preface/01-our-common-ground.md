@@ -12,7 +12,7 @@ prev:
 
 Before we dive into dense economic models, technological shifts, and systemic breakdowns, we must establish exactly where we currently stand. 
 
-If we are going to navigate turbulence effectively, we cannot begin by defending the very belief systems that got us lost in the first place. Therefore, we borrow a foundational approach from **applied Socratic reasoning** to set our baseline. 
+If we are going to navigate turbulence effectively, we cannot begin by defending the very belief systems that got us lost in the first place. Therefore, we borrow a foundational approach from [applied Socratic reasoning](https://en.wikipedia.org/wiki/Socratic_method) to set our baseline. 
 
 The Socratic method teaches us that before we can build a shared reality, we must first recognize that our minds are currently trapped by three long-established cognitive illusions. 
 

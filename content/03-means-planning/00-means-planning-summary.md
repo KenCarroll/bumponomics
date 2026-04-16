@@ -26,9 +26,9 @@ The strategic goal of Means Planning is not to command a set of static solutions
 
 This is the principle of **Autopoiesis**—a term coined by Humberto Maturana and Francisco Varela in the 1970s. It literally means "self-creation" and refers to a system capable of reproducing and maintaining itself by creating its own constituent parts.
 
-A properly constructed BUMPS architecture is an autopoietic engine. It does not wait to be saved by external solutions; it organically survives and thrives by continuously metabolizing the raw pressure of its environment. 
+A properly constructed BUMPS ecosystem is an autopoietic engine. It does not wait to be saved by external solutions; it organically survives and thrives by continuously metabolizing the raw pressure of its environment. 
 
-The following chapters detail the three layers of the BUMPS Autopoietic Means: The Mathematical Architecture, The Physical PTO Engine, and The Strategic R-ARSED Levers.
+The following chapters detail the three layers of the BUMPS Autopoietic Means: The Mathematical Foundation, The Physical PTO Engine, and The Strategic R-ARSED Levers.
 
 ---
 

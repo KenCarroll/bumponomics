@@ -12,8 +12,8 @@ At the atomic layer of our current system, the operational rules govern the imme
 
 ## The Mechanics of the Micro Level
 
-In the dominant economic architecture, individuals and firms operate on localized optimization:
+In the dominant economic system, individuals and firms operate on localized optimization:
 - **Individuals** act as consumers and laborers, engaging in transactions to maximize their personal utility, secure resources, and navigate daily survival.
-- **Firms** are structured entities legally and operationally designed to organize labor and capital. Their primary mechanical goal, as dictated by fiduciary architecture, is profit maximization and the generation of shareholder value.
+- **Firms** are structured entities legally and operationally designed to organize labor and capital. Their primary mechanical goal, as dictated by fiduciary structure, is profit maximization and the generation of shareholder value.
 
 At this level, the system communicates almost entirely through the language of pricing. Prices, wages, and direct costs function as the primary signals that tell actors where to allocate their physical and cognitive energy within the immediate environment.

@@ -10,7 +10,7 @@ status: draft
 
 Our first step of Formulating the Mess is to understand how our current systems operates. We can do this using analysis Analysis is the process of breaking something down to better understand it.
 
-In this section we will use analysis to understand how our human world operates. The dominant economic architecture that governs our world and is actively generating the mess we find ourselves in is capitalism. But it is not the only economic system in the world, and it is not the only one that has ever existed. 
+In this section we will use analysis to understand how our human world operates. The dominant economic system that governs our world and is actively generating the mess we find ourselves in is capitalism. But it is not the only economic system in the world, and it is not the only one that has ever existed. 
 
 To understand why this system systematically fails to transform environmental pressure into progress, we must dissect it across four concentric layers:
 1. **The Micro Level**: The atomic level of individuals and firms.

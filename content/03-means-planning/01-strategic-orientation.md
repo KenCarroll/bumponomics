@@ -27,7 +27,7 @@ When these three forces optimally intersect, they ignite **The PTO Cycle**, whic
 
 ---
 
-## The Architecture Layers
+## The Strategic Layers
 
 To understand how the Ecosystem operates, we must break it down into its constituent layers. In the following chapters, we will explore each of these layers in deep detail. 
 
@@ -47,7 +47,7 @@ Finally, the system must gauge the effectiveness of the transformations. Because
 
 ## The BUMPS.app Workflow (User Journey)
 
-When applying the Master Architecture dynamically through the BUMPS interface, the cognitive process translates into 5 physical software steps:
+When applying the Master Framework dynamically through the BUMPS interface, the cognitive process translates into 5 physical software steps:
 
 1.  **Scan:** Users input a raw list of operational and strategic "Issues."
 2.  **Triage:** Users drag issues into their respective ecosystem buckets: **LUMPS** (Fix now), **BUMPS** (Plan now), **HUMPS** (Watch now).
@@ -60,13 +60,13 @@ When applying the Master Architecture dynamically through the BUMPS interface, t
 
 ## The Strategic Value Proposition
 
-Why construct this entire Master Architecture? 
+Why construct this entire Master Framework? 
 
 **For Executive Consulting (Diagnostics)**
 * *"Show me your LUMPS and BUMPS."* Using the framework rapidly diagnoses if a company is currently drowning in operational noise (LUMPS) or willfully ignoring profound structural rot (BUMPS trapped in Demise).
 
 **For Innovation (Growth)**
-* *"Map your path to Metamorphosis."* It provides a mathematical roadmap for escaping the "Success Trap" (the hubris of Zone 3) and consciously engineering the next S-Curve jump before the current one collapses.
+* *"Map your path to Metamorphosis."* It provides a mathematical roadmap for escaping the "Success Trap" (the hubris of Zone 3) and consciously catalyzing the next S-Curve jump before the current one collapses.
 
 **For The Software Engine (BUMPS.app)**
 * It is effectively the **"Fitbit for Strategy."** It tracks the underlying *vitality* and *kinetic movement* of an organization, vastly outperforming the lag of static financial results.

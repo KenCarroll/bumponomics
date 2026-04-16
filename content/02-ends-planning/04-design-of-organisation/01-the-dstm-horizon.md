@@ -94,7 +94,7 @@ Identify the applied Transformations. Are you *Revolving* problems (spinning in 
 
 ## DSTM vs. The Three Horizons
 
-To fully grasp its utility, compare the DSTM Framework to McKinsey’s classic *Three Horizons (3H)* model:
+To fully grasp its utility, compare the DSTM Framework to [McKinsey’s classic *Three Horizons (3H)* model](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/enduring-ideas-the-three-horizons-of-growth):
 
 | Feature | Three Horizons (3H) | The DSTM Framework |
 | :--- | :--- | :--- |

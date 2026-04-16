@@ -23,9 +23,9 @@ We are living through the "Intelligence Explosion." Artificial Intelligence has 
 *   **The Crisis of Purpose:** If machines can do our work better, faster, and cheaper, humans will face a collective existential crisis regarding their value and role in the world.
 
 ### Needs (The Transformation)
-*   **From Solvers to Architects:** We need to pivot education and training from "how to solve" to "what to solve." Humans must become the Architects of BUMPS, leaving the "Solving" to AI.
+*   **From Solvers to Transformers:** We need to pivot education and training from "how to solve" to "what to solve." Humans must become the Transformers of BUMPS, leaving the mechanical "Solving" to AI.
 *   **AI Literacy & Governance:** We need widespread understanding of AI capabilities and limitations, coupled with robust "Constitutional AI" frameworks to ensure alignment.
 *   **The Centaur Model:** We must design workflows that integrate human intuition/ethics with machine efficiency, rather than replacing one with the other.
-*   **Epistemic Defense:** We need new verification tools and "Trust Architectures" to validate the origin and authenticity of information in a synthetic world.
+*   **Epistemic Defense:** We need new verification tools and "Trust Frameworks" to validate the origin and authenticity of information in a synthetic world.
 
 ---
