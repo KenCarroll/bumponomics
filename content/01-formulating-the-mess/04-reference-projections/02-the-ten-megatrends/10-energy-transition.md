@@ -5,7 +5,7 @@ description: ""
 order: 10
 status: draft
 ---
-# 1.5.10 Energy Transition
+# 1.4.1.10 Energy Transition
 
 ### Situation
 The global economy is attempting the largest physical overhaul in history: replacing the dense, transportable energy of fossil fuels with diffuse, intermittent renewable sources (solar, wind) and electrification. This is not just a technology swap; it is a civilization-level rebuild of our energy backbone, driven by climate necessity and the plummeting costs of green tech.

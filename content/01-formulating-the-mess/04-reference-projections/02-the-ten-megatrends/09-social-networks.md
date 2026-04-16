@@ -5,7 +5,7 @@ description: ""
 order: 9
 status: draft
 ---
-# 1.5.9 Social Networks
+# 1.4.1.9 Social Networks
 
 ### Situation
 The fundamental human need to connect has been digitized and scaled globally. For the first time in history, billions of individuals are linked in real-time networks that transcend geography, enabling the instant exchange of ideas, culture, and commerce. We have moved from "Dunbar's Number" (village-scale limit of ~150 relationships) to networks of thousands of weak ties, managed by centralized platforms that have become the new public squares of civilization.

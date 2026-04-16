@@ -5,7 +5,7 @@ description: ""
 order: 1
 status: draft
 ---
-# 1.5.1 GeoPolitical Change
+# 1.4.1.1 GeoPolitical Change
 
 ### Situation
 The "End of History"—the brief unipolar moment of American hegemony and liberal democratic consensus following the Cold War—is over. We have entered a volatile era of Multipolarity and Great Power Competition. The Global South is asserting its voice (via BRICS+), the axis of power is shifting East, and the rules-based international order is being actively challenged and rewritten. We are moving from a world of "Globalization" to one of "Fragmentation."

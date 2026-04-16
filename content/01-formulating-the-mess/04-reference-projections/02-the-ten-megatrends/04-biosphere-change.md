@@ -5,7 +5,7 @@ description: ""
 order: 4
 status: draft
 ---
-# 1.5.4 BioSphere Change
+# 1.4.1.4 BioSphere Change
 
 ### Situation
 We have exited the Holocene—the stable climatic epoch that allowed human civilization to flourish—and entered the Anthropocene. Human activity is now the dominant force shaping the Earth's geology and ecosystems. We are colliding with multiple "Planetary Boundaries" simultaneously, from carbon concentration to biodiversity integrity. The stable stage on which we built our economies is crumbling.

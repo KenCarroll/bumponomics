@@ -5,7 +5,7 @@ description: ""
 order: 2
 status: draft
 ---
-# 1.5.2 Population Decline
+# 1.4.1.2 Population Decline
 
 ### Situation
 For the first time in modern history, we are witnessing a global demographic contraction. We have moved from the fear of a "Population Bomb" (overpopulation) to the reality of a "Population Bust." Fertility rates in almost every developed nation—and increasingly in developing ones—have fallen well below the replacement rate of 2.1. Countries like South Korea, Japan, Italy, and China are shrinking. We are entering an era of "PEAK HUMANITY," after which the global workforce will contract, and the ratio of retirees to workers will invert.

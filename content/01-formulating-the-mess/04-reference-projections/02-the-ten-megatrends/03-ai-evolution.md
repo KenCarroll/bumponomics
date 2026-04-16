@@ -5,7 +5,7 @@ description: ""
 order: 3
 status: draft
 ---
-# 1.5.3 AI Evolution
+# 1.4.1.3 AI Evolution
 
 ### Situation
 We are living through the "Intelligence Explosion." Artificial Intelligence has evolved from narrow, rule-based systems to Generative AI capable of reasoning, creating, and coding. Intelligence is decoupling from biological substrates, and the cost of "cognitive labor" is trending toward zero. We are transitioning from the "Information Age" to the "Intelligence Age," where a new, alien species of problem-solver has entered the global ecosystem.

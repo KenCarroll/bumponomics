@@ -5,7 +5,7 @@ description: ""
 order: 5
 status: draft
 ---
-# 1.5.5 Economics Change
+# 1.4.1.5 Economics Change
 
 ### Situation
 "The ultimate goal of economics is to improve the living conditions of people in their everyday life." — Paul Samuelson.

@@ -5,7 +5,7 @@ description: ""
 order: 6
 status: draft
 ---
-# 1.5.6 Quantum Theory
+# 1.4.1.6 Quantum Theory
 
 ### Situation
 We are discovering that the universe is far stranger than we imagined. At its fundamental level, reality is not made of solid, separate "things" bouncing off each other like billiard balls. Instead, it is a shimmering field of potentiality, entanglement, and non-locality. The comfortable "Newtonian" rules of cause-and-effect—where A leads to B in a predictable line—are dissolving. We are building technologies (Quantum Computing) that harness this "weirdness," solving problems in seconds that would take classical supercomputers millennia.

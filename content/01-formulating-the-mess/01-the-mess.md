@@ -4,7 +4,13 @@ Before we can begin to design an ideal future, we must first confront reality as
 
 Russell Ackoff famously observed that managers do not actually solve isolated problems; they manage *messes*. A "mess" is a complex system of highly interacting problems. In the real world, problems do not exist in isolation. You cannot extract one problem, solve it cleanly, and expect the rest of the environment to remain unchanged. 
 
-We don't experience theoretical "problems"; we experience *messes*—complex, dynamic, entangled situations where our needs are not being met, or where our State-of-Being is actively under threat. Formulating the mess requires figuring out the exact system of problematic situations we are experiencing, projecting what will happen if we do nothing, and understanding how they motivate us to take action.
+We don't experience theoretical "problems"; we experience *messes*—complex, dynamic, entangled situations where our needs are not being met, or where our State-of-Being is actively under threat. 
+
+In Ackoff's Interactive Planning, formally formulating the mess involves four distinct phases of preparation:
+1. **Systems Analysis**: A detailed description of how the system currently operates and exactly how problematic situations actively interact.
+2. **Obstruction Analysis**: Identification of the characteristics, properties, and constraints of the organization that obstruct its progress or prevent it from adapting.
+3. **Reference Projections**: Projecting aspects of the organization's future assuming no changes are made to its current plans and its expected future environment remains the same.
+4. **Reference Scenario**: A synthetic description—combining the learnings from the first three phases—of how and why the organization will ultimately destroy or completely destabilize itself if its current assumptions hold true.
 
 ## The Problem Space vs The Artifact Space
 

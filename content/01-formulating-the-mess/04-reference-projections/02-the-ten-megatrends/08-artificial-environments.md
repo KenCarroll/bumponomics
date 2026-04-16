@@ -5,7 +5,7 @@ description: ""
 order: 8
 status: draft
 ---
-# 1.5.8 Artificial Environments
+# 1.4.1.8 Artificial Environments
 
 ### Situation
 Humans have migrated from the biosphere to the "Technosphere"—a constructed reality where our immediate environment is almost entirely man-made. We spend 90% of our time indoors, surrounded by non-living artifacts: concrete, glass, steel, and plastics. Our survival no longer depends on reading the wind or hunting game, but on complex, invisible infrastructures that deliver purified water, climate control, and processed energy. We have successfully insulated ourselves from the raw elements of nature.
