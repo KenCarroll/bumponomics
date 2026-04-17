@@ -120,12 +120,11 @@ function toggleTheme() {
   display: none !important;
 }
 
-/* Move search box to the horizontal center of the app bar */
+/* Push search box to the far right next to hamburger */
 :global(.VPNavBarSearch) {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  margin: 0 !important;
+  position: static !important;
+  transform: none !important;
+  margin-left: auto !important;
 }
 
 /* 
