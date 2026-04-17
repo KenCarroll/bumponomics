@@ -9,7 +9,7 @@ layout: home
 hero:
   name: "BUMPONOMICS"
   text: "The Economics of Progress"
-  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment.<br><br><span style='font-size: 0.85em; color: var(--vp-c-text-2); font-weight: normal; display: inline-flex; align-items: center;'>version: April 17, 2026 <span title='Bumponomics is under development, and you are viewing the latest release!' style='cursor: default; opacity: 0.7; margin-left: 4px; display: inline-flex;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='currentColor'><path d='M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /></svg></span></span>"
+  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment.<br><br><span class='version-stamp'>version: April 17, 2026 <span class='version-tooltip' data-text='Bumponomics is under development, and you are viewing the latest release!'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='currentColor'><path d='M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /></svg></span></span>"
   image:
     src: /bumps-logo.svg
     alt: BUMPS Logo
@@ -125,5 +125,82 @@ The execution of the bumponomics PTO patterns for micro-actions uses the exact s
   .VPHero .actions .action {
     margin: 0 !important;
   }
+}
+
+/* Custom Tooltip for Version Stamp */
+.version-stamp {
+  font-size: 0.85em;
+  color: var(--vp-c-text-2);
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+}
+
+.version-tooltip {
+  position: relative;
+  cursor: pointer;
+  opacity: 0.6;
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.version-tooltip:hover {
+  opacity: 1;
+}
+
+.version-tooltip::after {
+  content: attr(data-text);
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  width: max-content;
+  max-width: 280px;
+  white-space: normal;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid var(--vp-c-divider);
+  z-index: 100;
+}
+
+/* Tooltip Little Triangle Pointer */
+.version-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: var(--vp-c-bg-soft) transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: 101;
+}
+
+.version-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, calc(-100% - 4px));
+}
+
+.version-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+  top: -16px;
 }
 </style>
