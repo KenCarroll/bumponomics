@@ -1,11 +1,11 @@
 ---
 title: "Crossing the Threshold"
 description: "Choosing to embrace the journey of continuous evolution."
-order: 4
+order: 5
 status: draft
 ---
 
-# 4. Crossing the Threshold
+# 5. Crossing the Threshold
 
 If you have made it this far, you have already invested significant time and cognitive energy dismantling the illusions of the status quo. You have conceptually accepted that stability is an illusion, that our biological minds constantly twist reality just to keep us comfortable, and that we must deliberately take charge of our own evolution. 
 
@@ -38,7 +38,7 @@ We should not have to convince you. We will simply lay out the exact costs and r
 ### The Rewards of the Journey
 
 1. **A Surge of Mental Energy:** By giving up the exhausting search for a problem-free life, an enormous amount of trapped mental energy is suddenly set free. You will learn to use everyday frustration as raw fuel for growth, becoming energized by challenges instead of paralyzed by them.
-2. **Clarity in Chaos:** You will gain the cybernetic tools required to map and navigate extreme complexity. You will no longer be a passive victim of megatrends and systemic shocks; you will be positioned to actively metabolize them.
+2. **Clarity in Chaos:** You will gain the mental tools required to map and navigate extreme complexity. You will no longer be a passive victim of megatrends and systemic shocks; you will be positioned to actively metabolize them.
 3. **The Freedom to Thrive:** The ultimate promise of this journey is not temporary relief, but a permanent upgrade to your daily quality of life. You will safely move out of the exhausting, defensive panic of *surviving*, and into the offensive joy of *thriving*.
 
 ### A Shared Exploration
