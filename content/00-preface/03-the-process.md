@@ -27,9 +27,9 @@ There are numerous established strategic frameworks that have been developed ove
    - *The Approach:* Creating contingency plans for multiple distinct, plausible futures (e.g., Best Case, Worst Case).
    - *Why it fails for us:* It is still fundamentally *reactive*. You are waiting for the environment to happen to you, rather than actively designing and pulling the environment toward your desired outcome.
 
-3. **[Lean Optimization (Six Sigma)](https://en.wikipedia.org/wiki/Lean_Six_Sigma):** 
+<!-- 3. **[Lean Optimization (Six Sigma)](https://en.wikipedia.org/wiki/Lean_Six_Sigma):** 
    - *The Approach:* A relentless focus on standardizing processes and hunting down waste and variance to make the system as efficient as possible.
-   - *Why it fails for us:* It treats all variation as a defect. In a turbulent environment, variance is the raw genetic material of evolution. Eliminating it makes a system incredibly fragile.
+   - *Why it fails for us:* It treats all variation as a defect. In a turbulent environment, variance is the raw genetic material of evolution. Eliminating it makes a system incredibly fragile. -->
 
 4. **[Design Thinking (The IDEO Model)](https://en.wikipedia.org/wiki/Design_thinking):** 
    - *The Approach:* Empathizing deeply with the user and rapidly prototyping localized solutions.
@@ -38,10 +38,10 @@ There are numerous established strategic frameworks that have been developed ove
 5. **[The Three Horizons Approach (McKinsey)](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/enduring-ideas-the-three-horizons-of-growth):** 
    - *The Approach:* Managing innovation across three time frames (core business, emerging opportunities, and disruptive futures).
    - *Why it fails for us:* While a useful tracking metric for corporate product pipelines, it lacks the systemic depth to transform human society at scale.
-
+<!-- 
 6. **[Agile Optimization](https://en.wikipedia.org/wiki/Agile_management):** 
    - *The Approach:* Moving fast and incrementally optimizing the existing system through short sprints.
-   - *Why it fails for us:* It merely improves the efficiency of a system that may already be fundamentally broken.
+   - *Why it fails for us:* It merely improves the efficiency of a system that may already be fundamentally broken. -->
 
 7. **[Interactive Planning & Idealized Design](https://en.wikipedia.org/wiki/Interactive_planning):** 
    - *The Approach:* Choosing to ignore the constraints of the present by designing the ultimate system you would build right now if the current one vanished yesterday, and then interactively planning backward. 
@@ -61,4 +61,4 @@ However, there is a critical caveat to this choice. A core principle of Ackoff's
 
 *The framework of questions we just asked—defining the problem, analyzing our transformation options, and selecting the one that achieves our target outcome—is a recursive cognitive pattern that will be repeated throughout this book.*
 
-Let's turn the key.
+You're in the driving seat. Are you ready to turn the key?

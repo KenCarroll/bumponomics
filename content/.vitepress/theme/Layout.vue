@@ -59,6 +59,8 @@ function toggleTheme() {
       </div>
       
       <div class="drawer-content">
+        <a href="/contents" @click="toggleDrawer" class="drawer-standalone-link" :class="{ 'is-active': isActive('/contents') }">Table of Contents</a>
+        
         <!-- Render Sidebar Contents -->
         <details v-for="(group, idx) in theme.sidebar" :key="idx" class="drawer-group" :open="hasActiveChild(group.items) || isActive(group.link)">
           <summary v-if="group.text" class="drawer-main-summary" :class="{ 'has-active-child': hasActiveChild(group.items), 'is-active': isActive(group.link) }">
@@ -211,6 +213,30 @@ function toggleTheme() {
 .drawer-group {
   margin-bottom: 24px;
 }
+.drawer-standalone-link {
+  font-weight: 700;
+  color: var(--vp-c-text-1) !important;
+  margin-bottom: 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  text-decoration: none !important;
+  transition: color 0.2s;
+}
+.drawer-standalone-link:hover {
+  color: var(--vp-c-brand) !important;
+}
+.drawer-standalone-link.is-active {
+  color: var(--vp-c-brand) !important;
+  font-weight: 800 !important;
+  background-color: var(--vp-c-brand-soft);
+  padding: 6px 12px 6px 4px !important;
+  margin-left: -4px;
+  border-left: 4px solid var(--vp-c-brand);
+  border-radius: 0 6px 6px 0;
+}
+
 .drawer-main-summary {
   font-weight: 700;
   color: var(--vp-c-text-1);
