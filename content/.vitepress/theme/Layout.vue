@@ -153,6 +153,73 @@ function toggleTheme() {
   color: var(--vp-c-brand);
 }
 
+/* Instantly render custom tooltips for app bar items */
+.custom-hamburger,
+:global(.VPNavBarSearch),
+:global(.VPNavBarTitle) {
+  position: relative !important;
+}
+
+.custom-hamburger::after,
+:global(.VPNavBarSearch)::after,
+:global(.VPNavBarTitle)::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: var(--vp-font-family-base) !important;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: normal;
+  text-transform: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid var(--vp-c-divider);
+  z-index: 999999;
+}
+
+.custom-hamburger::after {
+  content: "Open Menu";
+  /* Shift slightly to the left since it is flush right against the screen edge */
+  left: auto;
+  right: 0;
+  transform: translateY(4px);
+}
+.custom-hamburger:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(8px);
+}
+
+:global(.VPNavBarSearch)::after {
+  content: "Search Data";
+}
+:global(.VPNavBarTitle)::after {
+  content: "Return Home";
+}
+
+:global(.VPNavBarSearch):hover::after,
+:global(.VPNavBarTitle):hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(8px);
+}
+
+/* Hide the search tooltip on desktop where it's already a giant labeled button */
+@media (min-width: 768px) {
+  :global(.VPNavBarSearch)::after {
+    display: none !important;
+  }
+}
+
 .right-drawer-overlay {
   position: fixed;
   top: 0;
