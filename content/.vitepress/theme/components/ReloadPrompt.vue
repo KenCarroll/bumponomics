@@ -46,37 +46,42 @@ const close = async () => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: 999999;
-  pointer-events: none; /* Let clicks pass through to app underneath when clicking outside the toast */
+  pointer-events: none;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 5vh;
+  align-items: flex-start;
 }
 
 .pwa-toast {
-  pointer-events: auto; /* Block clicks inside the toast */
-  width: calc(100% - 32px);
-  max-width: 420px;
-  background-color: var(--vp-c-brand);
-  background-image: linear-gradient(135deg, var(--vp-c-brand) 0%, var(--vp-c-brand-dark) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 100%;
+  background-color: #10b981; /* Success Green */
+  background-image: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 24px;
+  gap: 16px;
+  padding: 16px 20px 24px;
   color: white;
-  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes slideUp {
-  0% { transform: translateY(100px) scale(0.95); opacity: 0; }
-  100% { transform: translateY(0) scale(1); opacity: 1; }
+@media (min-width: 768px) {
+  .pwa-toast {
+    max-width: 500px;
+  }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 .message {
@@ -109,7 +114,7 @@ button:active {
 
 .update-btn {
   background-color: white;
-  color: var(--vp-c-brand-dark);
+  color: #065f46; /* High contrast dark green text */
   border: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   text-transform: uppercase;
