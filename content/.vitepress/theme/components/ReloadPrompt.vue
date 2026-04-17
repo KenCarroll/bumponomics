@@ -26,68 +26,105 @@ const close = async () => {
 </script>
 
 <template>
-  <div v-if="offlineReady || needRefresh" class="pwa-toast" role="alert">
-    <div class="message">
-      <span v-if="offlineReady">App ready to work offline</span>
-      <span v-else>New content available, click on reload button to update.</span>
-    </div>
-    <div class="buttons">
-      <button v-if="needRefresh" @click="updateServiceWorker?.(true)" class="update-btn">Reload</button>
-      <button @click="close" class="close-btn">Close</button>
+  <div v-if="offlineReady || needRefresh" class="pwa-toast-overlay">
+    <div class="pwa-toast" role="alert">
+      <div class="message">
+        <span v-if="offlineReady">Ready to work offline.</span>
+        <span v-else>🚀 New Updates Found! Reload to synchronize.</span>
+      </div>
+      <div class="buttons">
+        <button v-if="needRefresh" @click="updateServiceWorker?.(true)" class="update-btn">Sync Now</button>
+        <button @click="close" class="close-btn">Dismiss</button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.pwa-toast {
+.pwa-toast-overlay {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 16px;
-  padding: 18px 24px;
-  z-index: 1000;
-  background-color: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  pointer-events: none; /* Let clicks pass through to app underneath when clicking outside the toast */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 5vh;
+}
+
+.pwa-toast {
+  pointer-events: auto; /* Block clicks inside the toast */
+  width: calc(100% - 32px);
+  max-width: 420px;
+  background-color: var(--vp-c-brand);
+  background-image: linear-gradient(135deg, var(--vp-c-brand) 0%, var(--vp-c-brand-dark) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  color: white;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+@keyframes slideUp {
+  0% { transform: translateY(100px) scale(0.95); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
 .message {
-  font-size: 14px;
-  color: var(--vp-c-text-1);
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.4;
 }
+
 .buttons {
   display: flex;
-  gap: 8px;
-  justify-content: flex-end;
+  width: 100%;
+  gap: 12px;
+  justify-content: center;
 }
+
 button {
-  padding: 6px 14px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
+  padding: 12px 24px;
+  flex: 1;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
+  transition: transform 0.15s, background-color 0.2s, filter 0.2s;
 }
+
+button:active {
+  transform: scale(0.96);
+}
+
 .update-btn {
-  background-color: var(--vp-c-brand);
-  color: white;
-  border: 1px solid var(--vp-c-brand);
+  background-color: white;
+  color: var(--vp-c-brand-dark);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-transform: uppercase;
 }
 .update-btn:hover {
-  background-color: transparent;
-  outline: 1px solid var(--vp-c-brand);
-  color: var(--vp-c-brand);
+  background-color: #f8f8f8;
+  filter: brightness(1.1);
 }
+
 .close-btn {
-  background-color: transparent;
-  color: var(--vp-c-text-2);
-  border: 1px solid var(--vp-c-divider);
+  background-color: rgba(0,0,0,0.25);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
 }
 .close-btn:hover {
-  border-color: var(--vp-c-text-1);
-  color: var(--vp-c-text-1);
+  background-color: rgba(0,0,0,0.4);
 }
 </style>
