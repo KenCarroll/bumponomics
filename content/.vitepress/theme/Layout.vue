@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import ReloadPrompt from './components/ReloadPrompt.vue'
 const { Layout } = DefaultTheme
 const { theme, isDark } = useData()
 const route = useRoute()
@@ -43,6 +44,9 @@ function toggleTheme() {
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </svg>
       </button>
+    </template>
+    <template #layout-bottom>
+      <ReloadPrompt />
     </template>
   </Layout>
 

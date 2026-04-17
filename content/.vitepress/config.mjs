@@ -124,7 +124,7 @@ export default withPwa(defineConfig({
   },
   pwa: {
     outDir: '.vitepress/dist',
-    registerType: 'autoUpdate',
+    registerType: 'prompt',
     includeAssets: ['bumps-logo.svg'],
     manifest: {
       name: 'BUMPONOMICS™',
