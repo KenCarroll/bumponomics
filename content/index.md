@@ -9,7 +9,7 @@ layout: home
 hero:
   name: "BUMPONOMICS"
   text: "The Economics of Progress"
-  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment.<br><br><span style='font-size: 0.85em; color: var(--vp-c-text-2); font-weight: normal;'>version: April 17, 2026 <span title='Bumponomics is under development, and you are viewing the latest release!' style='cursor: help; opacity: 0.7; margin-left: 2px;'>ⓘ</span></span>"
+  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment.<br><br><span style='font-size: 0.85em; color: var(--vp-c-text-2); font-weight: normal; display: inline-flex; align-items: center;'>version: April 17, 2026 <span title='Bumponomics is under development, and you are viewing the latest release!' style='cursor: default; opacity: 0.7; margin-left: 4px; display: inline-flex;'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='currentColor'><path d='M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /></svg></span></span>"
   image:
     src: /bumps-logo.svg
     alt: BUMPS Logo
