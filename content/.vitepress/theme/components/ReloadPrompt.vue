@@ -1,12 +1,12 @@
 <script setup>
-import { onBeforeMount, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const offlineReady = ref(false)
 const needRefresh = ref(false)
 
 let updateServiceWorker
 
-onBeforeMount(async () => {
+onMounted(async () => {
   const { registerSW } = await import('virtual:pwa-register')
   updateServiceWorker = registerSW({
     immediate: true,
