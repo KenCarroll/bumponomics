@@ -9,7 +9,7 @@ layout: home
 hero:
   name: "BUMPONOMICS"
   text: "The Economics of Progress"
-  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment."
+  tagline: "A scalable, recursive framework exploring how individuals, organizations, and societies can transform systemic pressures into evolutionary enrichment.<br><br><span style='font-size: 0.85em; color: var(--vp-c-text-2); font-weight: normal;'>version: April 17, 2026 <span title='Bumponomics is under development, and you are viewing the latest release!' style='cursor: help; opacity: 0.7; margin-left: 2px;'>ⓘ</span></span>"
   image:
     src: /bumps-logo.svg
     alt: BUMPS Logo
