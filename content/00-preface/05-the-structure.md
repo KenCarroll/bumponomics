@@ -1,11 +1,11 @@
 ---
 title: "The Structure of the Book"
 description: "The six interactive planning phases of Bumponomics."
-order: 4
+order: 5
 status: draft
 ---
 
-# 4. The Structure of the Book
+# 5. The Structure of the Book
 
 Bumponomics is not simply a theoretical economic model; it is an active exercise in Ackoff's Interactive Planning. To effectively communicate this, the physical structure of this book has been explicitly organized to mirror his six phases:
 
@@ -15,3 +15,7 @@ Bumponomics is not simply a theoretical economic model; it is an active exercise
 4. **Resource Planning:** Mapping the human agency and cultivating the organizational structures needed to fuel the engine.
 5. **Design of Implementation:** Operationalizing the philosophy into a tangible, functioning ecosystem.
 6. **Design of Controls:** Abandoning standard financial transaction metrics (like GDP) to measure progress through pure evolutionary constraints.
+
+***
+
+Phase 1: Formulating the Mess awaits.

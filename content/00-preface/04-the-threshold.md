@@ -1,11 +1,11 @@
 ---
 title: "Crossing the Threshold"
 description: "Choosing to embrace the journey of continuous evolution."
-order: 5
+order: 4
 status: draft
 ---
 
-# 5. Crossing the Threshold
+# 4. Crossing the Threshold
 
 If you have made it this far, you have already invested significant time and cognitive energy dismantling the illusions of the status quo. You have conceptually accepted that stability is an illusion, that our biological minds constantly twist reality just to keep us comfortable, and that we must deliberately take charge of our own evolution. 
 
@@ -55,6 +55,4 @@ I am not here to trick you into a rigid ideology. I am offering a shared explora
 
 You are always welcome to stay here, in the comfort of the world as you know it. 
 
-But if you are willing to walk just a little further to see how deep the mess really goes, turn the page. 
-
-Phase 1: Formulating the Mess awaits.
+But if you are willing to walk just a little further to see how deep the mess really goes, turn the page to view the structural map of the journey ahead.
