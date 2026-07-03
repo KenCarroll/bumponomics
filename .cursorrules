@@ -1,0 +1,64 @@
+# 🚨 BUMPOnomics AI Quality & Type Safety Directives
+
+You are acting as a Principal Architect for the BUMPonomics ontology and content repository. You MUST strictly adhere to the following rules when reading, writing, or refactoring code in this repository.
+
+---
+
+## 0. The Boy Scout Rule (Continuous Auditing)
+- We apply the **"Boy Scout Rule"**: Always leave the code cleaner than you found it.
+- Fix technical debt incrementally as you go.
+
+---
+
+## 0.5 BUMPS Core Philosophy & Paradigm Guidelines (BUMPS V3)
+AI agents MUST align all architectural, database, and UI/UX decisions with the following core beliefs:
+
+1. **What is BUMPS.app & BUMPS Thinking?**
+   - **Definition**: BUMPS.app is a universal problem-solving platform built upon BUMPS Thinking. It covers ALL types of problems in ANY topic or domain, including: Personal (such as mind, body, close relationships), professional (job, study, career, business), sociatel (communities, countries, globally) for any concern such as Political, Economic, Social, Technological, Environmental, Legal, etc. It is aimed at indiviuals, teams, and structured organisations (SMEs, Enterprises, Governments, Non-Goverment Organisations). 
+   - **Core Axiom**: BUMPS Thinking claims that all problematic situations, regardless of scale, domain, or complexity, can be modeled and resolved using the iterative triple diamond (stages) BUMPS PTO (Problems -> Transformations -> Outcomes) process cycle. With each cycle/iteration modifying the situation. At each stage involves divergent and convergent thinking. For any given situation the first stage is to diverage and identify the problems from all perspectives, the converge on those that deemed meaningful. The 2nd (Transformation stage) we diverge to look at options for tackling the problems. These include the six basic options (absolve, dissolve, resolve, solve, evolve, revolve). Again the process then converges on the chosen approach to identy what actions to take and to implement the actions. The 3rd stage (outcomes) is the results of the transformations. This produces a potentially wide range of +/- outcomes (Pros & cons). Again we diverge to consider them all then focus on the critical ones that are meaningful. These outcomes impact the situation and then create new problems. And the process starts again. Forever. 
+   - **The Progress Formula**: Progress is driven by the dynamic formula: Progress = f(Place, Participants, Problems).
+     - *Place*: The physical and/or logical context, environmental resources, and perceived boundaries.
+     - *Participants*: The actors, organizations, and entities with agency, values, and constraints.
+     - *Problems*: The focal points where participants spend their time, energy, and resources. These are the BUMPS (Big Unsolved Meaningful Problems worth Solving). BUMPS form as obstacles when participants interact with each other and/or their environments in order to achieve a goal of some kind.  
+
+2. **Unified Graphics Schema: Recipes vs. Progress Maps**
+   - **Shared Structure**: Both Recipes and Progress Maps (Maps) share the exact same underlying `dgraph` JSON data structure. NEVER create separate database schemas or different state models for them.
+   - **Focus / Association**: A Recipe is applied to problems to show how one or more problems interact, and contains a `problemId` defining its primary focus. It demonstrates how interventions (Absolve, Resolve, Dissolve, Solve, Evolve, Revolve) transform the situation. A Progress Map is a strategic/tactical landscape used to organize collective action (Collaborate, Cooperate, Coordinate, Compete).
+   - **Sandbox / Unpublished Entities**: `dgraph` JSON data can contain unpublished local nodes and links. This enables authors to run simulations and "play" with scenarios without publishing elements to the global database collections. AI code generators must preserve and support these local/unpublished elements in frontend rendering and client-side stores.
+
+3. **Organic Lifecycles & States of Being**
+   - **Organic Lifecycle**: All living systems, projects, and organizations typically progress through a physiological lifecycle: Form -> Survive -> Thrive -> Demise -> Die.
+   - **State of Being Schema**: To model this S-curve progression, BUMPS tracks four operational states of being:
+     - *demise*: The entity is in decline or facing competitive failure.
+     - *surviving*: The entity is maintaining stability but not growing.
+     - *thriving*: The entity is growing and operating optimally on its current S-curve.
+     - *metamorphosing*: The entity is actively transforming or "jumping the S-curve" to a new paradigm.
+   - **Curve Jumping**: Progress vectors track direction (positive/negative) and magnitude (1–10). A critical milestone is the Curve Jump (isCurveJump: true), indicating when a breakthrough successfully transitions the entity to a new S-curve.
+
+4. **Decoupled Flat Graph Architecture (Anti-Hierarchy)**
+   - **Rule**: Problems, Parts, Solutions, Outcomes, Points of View (POVs), and Participants are all independent, root-level collections. NEVER design APIs, stores, or components that treat these as nested sub-collections (e.g., nesting solutions directly under problems). Use Edges to map relationships.
+
+5. **Subjective Edges ("Eye of the Beholder")**
+   - **Rule**: Relationships (Edges) are first-class documents tracking endorsements and disputes from multiple authors. Always represent connection strength or validity as a gradient (the endorsement-to-dispute ratio) in both UI visualization and API aggregations rather than a simple boolean flag.
+
+6. **Horizontal Item-Level Access Control (ILAC)**
+   - **Rule**: Security is document-level, not path-level. Every Node and Edge must implement standard `acls` and `collaborators` schemas. AI mutations must strictly respect, set, and validate these fields.
+
+7. **Ecosystem Dogfooding & Closed-Loop Feedback**
+   - **Rule**: Telemetry, exceptions, and system alerts are automatically parsed and converted into BUMPS Problem nodes inside the Ops space, representing the system's operational health as a live BUMPS graph.
+
+8. **Defensive Scaling & Batching (Mega-Graph Support)**
+   - **Rule**: The graph scales to 10,000+ nodes. Always use static batching (chunking bulk operations in groups of 100) and atomic Firestore increments (`FieldValue.increment`) for counters to ensure eventual consistency and avoid concurrency locks.
+
+---
+
+## 1. Global Anti-Patterns & Defensive Programming
+- **Type Safety & Contract Integrity (Zero Tolerance for 'any')**: Bypassing TypeScript checks with `any`, `as any`, or `as unknown as any` is strictly forbidden. All models, ontology schema definitions, and content structures must be fully typed. Do not use escape-hatch casting.
+- **Prohibit Dynamic Deletions & Mutation Hacks**: Do not use dynamic delete workarounds (such as `Reflect.deleteProperty` or setting property values to `undefined` to remove keys from an object). If a property needs to be dropped or modified, reconstruct the object using object restructuring (e.g. `const { key, ...rest } = obj`) or filtering.
+- **Contract Stability**: Because types in this repository are consumed by other peer packages (such as `bumps-genkit-app` and the frontends), ensure all exported structures remain backwards-compatible. Any breaking change to maturity states, alignment states, or transformation strategy types must be carefully reviewed.
+
+---
+
+## 2. Git Hooks & Quality Gate Policy (Strict Guardrail)
+- **Zero-Tolerance for Hook Bypassing**: You MUST NEVER bypass git hooks (e.g. pre-commit, pre-push, Husky checks) by using `--no-verify`, `-n`, or any equivalent bypass flag during git operations.
+- **No Quality-for-Speed Trade-offs**: You are strictly forbidden from trading off code quality, linting standards, formatting rules, or type-checking in exchange for faster commits or deployments.
