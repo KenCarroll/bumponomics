@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import ReloadPrompt from './components/ReloadPrompt.vue'
@@ -11,6 +11,28 @@ const isDrawerOpen = ref(false)
 function toggleDrawer() {
   isDrawerOpen.value = !isDrawerOpen.value
 }
+
+function openDrawer() {
+  isDrawerOpen.value = true
+}
+
+function handleGlobalClick(e) {
+  const trigger = e.target.closest('[data-open-drawer], a[href="#toc"], a[href="#drawer"]')
+  if (trigger) {
+    e.preventDefault()
+    openDrawer()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('open-drawer', openDrawer)
+  window.addEventListener('click', handleGlobalClick)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('open-drawer', openDrawer)
+  window.removeEventListener('click', handleGlobalClick)
+})
 
 function isActive(link) {
   if (!link) return false
@@ -125,6 +147,56 @@ function toggleTheme() {
   position: static !important;
   transform: none !important;
   margin-left: auto !important;
+  flex-grow: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+/* Ensure consistent icon-only search button format across all screen sizes */
+:global(.DocSearch-Button) {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  color: var(--vp-c-text-1) !important;
+  cursor: pointer !important;
+  transition: color 0.2s, background-color 0.2s !important;
+}
+
+:global(.DocSearch-Button:hover) {
+  background: transparent !important;
+  color: var(--vp-c-brand) !important;
+}
+
+:global(.DocSearch-Button .DocSearch-Button-Placeholder),
+:global(.DocSearch-Button .DocSearch-Button-Keys) {
+  display: none !important;
+}
+
+:global(.DocSearch-Button .DocSearch-Button-Container) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+:global(.DocSearch-Button .DocSearch-Search-Icon) {
+  position: static !important;
+  width: 22px !important;
+  height: 22px !important;
+  margin: 0 !important;
+  color: inherit !important;
+  fill: currentColor !important;
+  transition: color 0.2s !important;
 }
 
 /* 

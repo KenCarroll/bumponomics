@@ -5,6 +5,7 @@ import BumpsImage from './components/BumpsImage.vue'
 import DynamicTOC from './components/DynamicTOC.vue'
 import BumpsVideo from './components/BumpsVideo.vue'
 import BumpsAudio from './components/BumpsAudio.vue'
+import FocusFuelFuture from './components/FocusFuelFuture.vue'
 import './style.css'
 
 export default {
@@ -16,5 +17,6 @@ export default {
     app.component('DynamicTOC', DynamicTOC)
     app.component('BumpsVideo', BumpsVideo)
     app.component('BumpsAudio', BumpsAudio)
+    app.component('FocusFuelFuture', FocusFuelFuture)
   }
 }
