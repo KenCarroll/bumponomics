@@ -64,6 +64,7 @@ flowchart TD
      Audit the output to guarantee: 0 parameter discrepancies against OpenAPI ground truth, 0 domain mismatches, 0 banned tokens (`pov`, `_to_`, `contentNode`), 0 internal path leaks, complete Quad-Layer DoD checklists, and achieving a **Total Prompt QA Score of 100 / 100** (✅ PROMPT ACCEPTED).
    - **Delete Scratchpad**: After obtaining 100/100 verification, delete the temporary scratchpad: `rm scratch/temp_prompt.md`.
    - **Mandatory Terminal Proof in Final Delivery**: Agents are strictly forbidden from outputting prompts in chat or artifacts without embedding the literal terminal verification stdout showing the 100/100 score. Outputting prompts without empirical verification proof is a severe governance violation.
+   - **4-Backtick Raw Transport Protocol**: Always wrap the final deliverable prompt in chat inside an outer 4-backtick ````markdown ... ```` code fence. This guarantees that inner 3-backtick fences (` ```typescript `, ` ```json `) and markdown heading hashes (`###`) are not stripped or degraded by chat UI renderers during copy-paste into the destination repository.
 
 ---
 

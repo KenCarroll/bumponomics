@@ -43,6 +43,7 @@
   - (b) **Mechanical Verification**: Run `npm run prompt:verify scratch/temp_prompt.md` to guarantee 0 parameter discrepancies, 0 domain mismatches, 0 banned tokens (`pov*`, `_to_`, `contentNode`), and achieve a score of **100/100** before handoff.
   - (c) **Mandatory Terminal Proof**: Agents are strictly forbidden from outputting prompts in chat or artifacts without embedding the literal terminal output of `npm run prompt:verify` showing the 100/100 score.
   - (d) **Scratchpad Cleanup**: Once verified and output, delete the temporary scratchpad file (`rm scratch/temp_prompt.md`).
+  - (e) **4-Backtick Raw Transport Protocol**: When outputting prompts in chat, authoring agents MUST wrap the entire deliverable in a 4-backtick ````markdown ... ```` block to prevent chat UI markdown renderers from stripping heading hashes (`###`) and code fences on copy-paste.
 - **The Boy Scout Rule**: Leave every file cleaner, clearer, and more grounded than you found it.
 
 ---
